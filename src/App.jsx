@@ -11,6 +11,7 @@ function App() {
     async function loadPatient(){
       const api="https://health.shrp.dev/items/people"
       try{
+        /*TEST*/
         setLoading(true)
         setError(false)
         const response = await axios.get(api)
