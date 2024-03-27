@@ -1,15 +1,15 @@
 import axios from "axios"
 import './App.css'
 import {useEffect, useState} from "react";
-import PizzaPreview from "./components/PizzaPreview.jsx";
+import PatientPreview from "./components/PatientPreview.jsx";
 
 function App() {
   const [isLoading,setLoading] =useState(false)
   const[isError,setError] =useState(false)
-  const [pizzas, setPizzas] = useState([])
+  const [patients, setPatients] = useState([])
   useEffect(() => {
-    async function loadPizzas(){
-      const api="https://pizzas.shrp.dev/items/pizzas"
+    async function loadPatient(){
+      const api="https://health.shrp.dev/items/people"
       try{
         setLoading(true)
         setError(false)
@@ -19,14 +19,14 @@ function App() {
         setLoading(false)
         setError(false)
 
-        setPizzas(data);
+        setPatients(data);
       }catch (error){
         console.error(error)
         setLoading(false)
         setError(true)
       }
     }
-    loadPizzas()
+    loadPatient()
   }, []);
 
   return (
@@ -34,8 +34,8 @@ function App() {
         {isLoading && <p>Chargement....</p>}
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
-        {pizzas.map((pizza)=> (
-            < PizzaPreview key={pizza.id} pizza={pizza}/> ))
+        {patients.map((patient)=> (
+            < PatientPreview key={patient.id} patient={patient}/> ))
         }
       </div>
   )
