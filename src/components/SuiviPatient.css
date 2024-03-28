@@ -1,0 +1,27 @@
+.icone{
+    position: relative;
+}
+
+.title{
+    position: relative;
+    top: 0px;
+}
+
+#ImageSport{
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin-top: 25px;
+}
+
+#fleche{
+    right: 50px;
+}
+
+#rouage{
+    left: 50px;
+}
+
+#patientName{
+    margin-top: 25px;
+}
