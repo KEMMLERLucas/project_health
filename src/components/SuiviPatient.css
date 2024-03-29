@@ -5,23 +5,47 @@
 .title{
     position: relative;
     top: 0px;
+    font-size: 20px;
 }
 
 #ImageSport{
     position: relative;
     height: 120px;
     width: 120px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 #fleche{
     right: 50px;
+    height: 24px;
 }
 
 #rouage{
     left: 50px;
+    width: 24px;
 }
 
 #patientName{
+    margin-top: 5px;
+    color: #6D350D;
+    font-size: 12px;
+}
+
+.Onglets{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.Onglets:hover{
+    cursor: pointer;
+    color: #DA8243;
+}
+
+#OngletClicked{
+    color: #DA8243;
+}
+
+.OngletsSuivi{
     margin-top: 25px;
 }

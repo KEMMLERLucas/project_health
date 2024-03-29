@@ -7,6 +7,7 @@ function App() {
   const [isLoading,setLoading] =useState(false)
   const[isError,setError] =useState(false)
   const [patients, setPatients] = useState([])
+  
 
   useEffect(() => {
     async function loadPatient(){
@@ -30,7 +31,7 @@ function App() {
     }
     loadPatient()
   }, []);
-  
+
 
   return (
       <div className="App">
