@@ -1,3 +1,8 @@
+/* J'ai pas encore cherché pourquoi ça prend pas la couleur du root, du coup je l'ai ajouté temporairement là*/
+#root{
+    background-color: white;
+}
+
 .icone{
     position: relative;
 }
@@ -6,6 +11,8 @@
     position: relative;
     top: 0px;
     font-size: 20px;
+    color: #000000;
+    font-weight: 400;
 }
 
 #ImageSport{
@@ -18,11 +25,13 @@
 #fleche{
     right: 50px;
     height: 24px;
+    color: #000000;
 }
 
 #rouage{
     left: 50px;
     width: 24px;
+    color: #949494;
 }
 
 #patientName{
@@ -31,21 +40,80 @@
     font-size: 12px;
 }
 
+.OngletsSuivi{
+    display: flex;
+    margin-top: 25px;
+    border-bottom: 1px solid #F0E9E2;
+}
+
 .Onglets{
+    flex: 1;
+    justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 16px;
+    font-weight: 300;
 }
 
 .Onglets:hover{
     cursor: pointer;
     color: #DA8243;
+    font-weight: 400;
 }
 
-#OngletClicked{
+#OngletsClicked {
     color: #DA8243;
 }
 
-.OngletsSuivi{
+.Onglets.active{
+    color: #DA8243;
+}
+
+/*
+*  Statistiques Actuelles
+*/
+
+/* Stats Bar : nom de stat + carré des résultats */
+.statsActuelles {
+    display: flex;
+    justify-content: space-between;
     margin-top: 25px;
+    /* border-bottom à enlever après*/
+    border-bottom: 1px solid #F0E9E2;
+    font-weight: 400;
+}
+
+/*nom de stat*/
+.StatsActu {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+/* carré des résultats */
+
+.CarreStatsAct{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid #A5FBB8;
+    background-color: #F5FEF4;
+}
+.statValue{
+    color: #46DA43;
+    font-size: 24px;
+}
+.statCaption{
+    color: gray;
+    font-weight: lighter;
+    font-size: 12px;
+}
+#CarreStatsActClicked {
+    color: #DA8243;
 }
