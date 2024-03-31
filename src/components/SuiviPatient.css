@@ -15,6 +15,14 @@
     font-weight: 400;
 }
 
+#titleStats, #titleEntrainement{
+    margin-top: 25px;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+
 #ImageSport{
     position: relative;
     height: 120px;
@@ -33,6 +41,16 @@
     width: 24px;
     color: #949494;
 }
+
+#duration{
+    right: 5px;
+    color: white;
+}
+#calories{
+    right: 5px;
+    color: white;
+}
+
 
 #patientName{
     margin-top: 5px;
@@ -69,6 +87,7 @@
     color: #DA8243;
 }
 
+
 /*
 *  Statistiques Actuelles
 */
@@ -77,23 +96,13 @@
 .statsActuelles {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
-    /* border-bottom à enlever après*/
-    border-bottom: 1px solid #F0E9E2;
     font-weight: 400;
 }
 
-/*nom de stat*/
-.StatsActu {
-    flex: 1;
-    text-align: left;
-    font-size: 16px;
-    padding: 0 10px;
-}
 
 /* carré des résultats */
 
-.CarreStatsAct{
+.ChampStatsActu{
     flex: 1;
     text-align: center;
     margin-top: 5px;
@@ -101,7 +110,7 @@
     height: 60px;
     border-radius: 8px;
     gap: 8px;
-    padding: 16px;
+    padding: 10px;
     border: 1px solid #A5FBB8;
     background-color: #F5FEF4;
 }
@@ -114,6 +123,53 @@
     font-weight: lighter;
     font-size: 12px;
 }
-#CarreStatsActClicked {
+#ChampStatsActClicked {
+    color: #DA8243;
+}
+
+
+/*
+*  Derniers Entraînement
+*/
+
+.ChampEntrainement{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #A5FBB8;
+    background-color: black;
+    background-image: url('../public/cyclisme.png'); /* Path to your image */
+    background-size: cover;
+    background-position: bottom;
+}
+.activityName{
+    flex: 2;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.activityDurationCalories{
+    margin: auto;
+    align-content: start;
+}
+
+.activityDuration, .activityCalories{
+    flex: 1;
+    display: flex;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: left;
+}
+
+
+#ChampEntrainementActClicked {
     color: #DA8243;
 }

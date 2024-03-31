@@ -1,5 +1,5 @@
 import "./SuiviPatient.css";
-import CarreStatsActu from "./CarreStatsActu.jsx";
+import ChampStatsActu from "./ChampStatsActu.jsx";
 function StatsActu({ patient, name }) {
     function color() {
         console.log("Cliqué : " + patient.firstname + " " + name);
@@ -20,13 +20,13 @@ function StatsActu({ patient, name }) {
     /* calcul stats pour poids ou IMC actuel */
     const stat = name === "Poids actuel" ? patient.weightStart + "Kg" : imcStart;
 
-    /* calcul l'intervalle en caption pour le poids ou IMC*/
-    const caption = name === "Poids actuel" ? "(~3.1 kg)" : patient.bmiStart;
+    /* calcul l'intervalle en caption pour le poids (dif entre weightGoal et weightStart) ou IMC*/
+    const caption = name === "Poids actuel" ? "~ " + (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
 
     return (
-        <div className="StatsActu" onClick={color}>
+        <div className="title" id="titleStats" onClick={color}>
             {name}
-            <CarreStatsActu stat={stat} caption={caption}/>
+            <ChampStatsActu stat={stat} caption={caption}/>
         </div>
     );
 }

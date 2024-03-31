@@ -6,6 +6,7 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import StatsActu from "./StatsActu.jsx";
 import React, { useState } from 'react';
+import DerniersEntrainements from "./DerniersEntrainements.jsx";
 
 
 function SuiviPatient({patient}){
@@ -24,6 +25,7 @@ function SuiviPatient({patient}){
             </div>
             <div className="statsActuelles"><StatsActu patient={patient} name="Poids actuel"/><StatsActu patient={patient} name="IMC actuel"/></div>
 
+            <DerniersEntrainements patient={patient}/>
 
 
         </div>
