@@ -7,6 +7,7 @@ function App() {
   const [isLoading,setLoading] =useState(false)
   const[isError,setError] =useState(false)
   const [patients, setPatients] = useState([])
+  const [activities, setActivities] = useState([])
   
 
   useEffect(() => {
@@ -32,6 +33,29 @@ function App() {
     loadPatient()
   }, []);
 
+  useEffect(() => {
+    async function loadActivities(){
+    const api="https://health.shrp.dev/items/physicalActivities"
+    try{
+        /*TEST*/
+        setLoading(true)
+        setError(false)
+        const response = await axios.get(api)
+        const data  = await response.data.data
+
+        setLoading(false)
+        setError(false)
+
+        setActivities(data);
+    }catch (error){
+        console.error(error)
+        setLoading(false)
+        setError(true)
+    }
+    }
+    loadActivities()
+}, []);
+
 
   return (
       <div className="App">
@@ -39,7 +63,7 @@ function App() {
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
         {patients.map((patient)=> (
-            < SuiviPatient key={patient.id} patient={patient}/> ))
+            < SuiviPatient key={patient.id} patient={patient} activities={activities}/> ))
         }
       </div>
   )

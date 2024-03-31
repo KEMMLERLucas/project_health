@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 
 
-function SuiviPatient({patient}){
+function SuiviPatient({patient, activities}){
     console.log(patient)
 
     /* Gerer le clicked onglet (active)*/
@@ -25,7 +25,7 @@ function SuiviPatient({patient}){
             </div>
             <div className="statsActuelles"><StatsActu patient={patient} name="Poids actuel"/><StatsActu patient={patient} name="IMC actuel"/></div>
 
-            <DerniersEntrainements patient={patient}/>
+            <DerniersEntrainements patient={patient} activities={activities}/>
 
 
         </div>

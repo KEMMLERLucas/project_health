@@ -1,12 +1,14 @@
 import "./SuiviPatient.css";
 import ChampEntrainement from "./ChampEntrainement.jsx";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
-function DerniersEntrainements ({ patient }) {
+function DerniersEntrainements ({ patient, activities }) {
+    var listActivities = patient.physicalActivities
     function clicked() {
         console.log("Cliqué : " + patient.firstname + " ; activité clicked");
     }
-
 
     /*
     * name, duration and calories should be changed
@@ -17,10 +19,9 @@ function DerniersEntrainements ({ patient }) {
         <div>
             <div className="title" id="titleEntrainement"> Ses derniers entraînements</div>
             <div className="DerniersEntrainements" onClick={clicked}>
-                <ChampEntrainement name="Cyclisme" duration="54 minutes" calories="573 calories"/>
-                <ChampEntrainement name="Cyclisme" duration="54 minutes" calories="573 calories"/>
-                <ChampEntrainement name="Cyclisme" duration="54 minutes" calories="573 calories"/>
-                <ChampEntrainement name="Cyclisme" duration="54 minutes" calories="573 calories"/>
+                {activities.map((activity)=> (
+                    listActivities.includes(activity.id) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}/>))
+                }
             </div>
         </div>
     );
