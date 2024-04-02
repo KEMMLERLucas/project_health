@@ -1,4 +1,5 @@
 import "./SuiviPatient.css";
+import "./PatientName"
 
 
 function ImagePatient(){
