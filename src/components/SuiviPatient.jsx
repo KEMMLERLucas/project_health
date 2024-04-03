@@ -17,7 +17,7 @@ function SuiviPatient({patient, activities}){
 
     return (<div className="title"><FaCaretLeft className="icone" id="fleche"/><span>Suivi du patient</span><FaCog
             className="icone" id="rouage"/>
-            <ImagePatient/>
+            <ImagePatient patient={patient}/>
             <PatientName patient={patient}/>
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"} onClick={() => setActiveTab("Aujourd'hui")} />
