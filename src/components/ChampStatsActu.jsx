@@ -9,9 +9,32 @@ function ChampStatsActu({stat, caption}){
         console.log("Cliqué : "+stat + "" + caption);
     }
 
+    let classNameStat = "ChampStatsActu";
+    let classNameStatValue = "statValue";
+
+    switch(caption){
+        case "overweight": 
+            classNameStat += "Overweight"
+            classNameStatValue += "Overweight"
+            break;
+        case "morbid obesity":
+        case "severe obesity":
+            classNameStat += "MorbidObesity"
+            classNameStatValue += "MorbidObesity"
+            break;
+        case "moderate obesity":
+            classNameStat += "ModerateObesity"
+            classNameStatValue += "ModerateObesity"
+            break;
+        case "underweight":
+            classNameStat += "Underweight"
+            classNameStatValue += "Underweight"
+            break;
+    }
+
     return (
-        <div className="ChampStatsActu" onClick={color}>
-            <div className="statValue">{stat}</div>
+        <div className= {classNameStat} onClick= {color}>
+            <div className={classNameStatValue}>{stat}</div>
             <div className="statCaption">{caption}</div>
         </div>
     )

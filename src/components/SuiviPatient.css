@@ -114,10 +114,84 @@
     border: 1px solid #A5FBB8;
     background-color: #F5FEF4;
 }
+
+.ChampStatsActuOverweight{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #F4FBA5;
+    background-color: #FEFDF4;
+}
+
+.ChampStatsActuMorbidObesity{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #FFC8C8;
+    background-color: #FEF4F4;
+}
+
+.ChampStatsActuModerateObesity{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #FFDCC8;
+    background-color: #FEF9F4;
+}
+
+.ChampStatsActuUnderweight{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #CFF3F3;
+    background-color: #F4FEFE;
+}
+
 .statValue{
     color: #46DA43;
     font-size: 24px;
 }
+
+.statValueUnderweight{
+    color: #43D1DA;
+    font-size: 24px;
+}
+
+.statValueOverweight{
+    color: #DAB943;
+    font-size: 24px;
+}
+
+.statValueMorbidObesity{
+    color: #DA4343;
+    font-size: 24px;
+}
+
+.statValueModerateObesity{
+    color: #DA9D43;
+    font-size: 24px;
+}
+
 .statCaption{
     color: gray;
     font-weight: lighter;

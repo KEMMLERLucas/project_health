@@ -11,7 +11,7 @@ import DerniersEntrainements from "./DerniersEntrainements.jsx";
 
 function SuiviPatient({patient, activities, steps}){
     console.log(patient)
-    console.log(steps)
+    /*console.log(steps)*/
 
     /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
