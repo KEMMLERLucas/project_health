@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON</title>
+</head>
+<body>
+    <div id="json-content"></div>
+
+    <script>
+        fetch('http://localhost:8000/steps')
+            .then(response => response.json())
+            .then(data => {
+                const jsonContentDiv = document.getElementById('json-content');
+                jsonContentDiv.textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
