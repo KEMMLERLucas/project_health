@@ -1,6 +1,6 @@
 import "./SuiviPatient.css";
-import {FaCog} from "react-icons/fa";
-import { FaCaretLeft } from "react-icons/fa";
+import { AiOutlineFire } from "react-icons/ai";
+import { MdOutlineTimer } from "react-icons/md";
 import React from "react";
 
 function ChampEntrainement({ name, duration, calories }) {
@@ -28,11 +28,11 @@ function ChampEntrainement({ name, duration, calories }) {
 
             <div className="activityDurationCalories">
                 <div className="activityDuration">
-                    <FaCog className="icone" id="duration"/>
+                    <MdOutlineTimer className="icone" id="duration"/>
                     <div className="duration">{duration}</div>
                 </div>
                 <div className="activityCalories">
-                    <FaCog className="icone" id="calories"/>
+                    <AiOutlineFire className="icone" id="calories"/>
                     <div className="calories">{calories}</div>
                 </div>
             </div>

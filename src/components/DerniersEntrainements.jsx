@@ -1,7 +1,5 @@
 import "./SuiviPatient.css";
 import ChampEntrainement from "./ChampEntrainement.jsx";
-import {useEffect, useState} from "react";
-import axios from "axios";
 
 
 function DerniersEntrainements ({ patient, activities }) {
