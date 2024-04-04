@@ -9,8 +9,9 @@ import React, { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 
 
-function SuiviPatient({patient, activities}){
+function SuiviPatient({patient, activities, steps}){
     console.log(patient)
+    console.log(steps)
 
     /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
