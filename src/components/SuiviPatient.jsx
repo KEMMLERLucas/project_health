@@ -1,6 +1,5 @@
 import "./SuiviPatient.css";
-import { FaCaretLeft } from "react-icons/fa";
-import { FaCog } from "react-icons/fa";
+import Title from "./Title";
 import ImagePatient from "./ImagePatient";
 import PatientName from "./PatientName";
 import Onglets from "./Onglets";
@@ -16,8 +15,8 @@ function SuiviPatient({patient, activities, steps}){
     /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
-    return (<div className="title"><FaCaretLeft className="icone" id="fleche"/><span>Suivi du patient</span><FaCog
-            className="icone" id="rouage"/>
+    return (<div> 
+            <Title name="Suivi du patient"/>
             <ImagePatient patient={patient}/>
             <PatientName patient={patient}/>
             <div className="OngletsSuivi">
