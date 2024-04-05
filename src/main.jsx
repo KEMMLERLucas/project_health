@@ -7,7 +7,7 @@ import {
 import App from './App.jsx'
 import ErrorPage from "./components/ErrorPage.jsx";
 import './index.css'
-import PatientPreview from "./components/PatientPreview.jsx";
+import PatientList from "./components/PatientList.jsx";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     },
     {
         path :"patients",
-        element : <PatientPreview />,
+        element : <PatientList />,
         errorElement: <ErrorPage />
     }
     /*{

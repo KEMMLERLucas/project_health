@@ -1,4 +1,4 @@
-import "./SuiviPatient.css";
+import "./PatientPreview.css"
 
 
 function PatientName({patient, isSmall}){

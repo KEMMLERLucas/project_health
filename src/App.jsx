@@ -2,6 +2,7 @@ import axios from "axios"
 import './App.css'
 import {useEffect, useState} from "react";
 import SuiviPatient from "./components/SuiviPatient.jsx";
+import PatientList from "./components/PatientList.jsx";
 import PatientPreview from "./components/PatientPreview.jsx";
 
 function App() {

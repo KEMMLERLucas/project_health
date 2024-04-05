@@ -1,13 +1,11 @@
-import "./PatientPreview.css"
-import PatientName from "./PatientName.jsx";
 import React from "react";
-import ImagePatient from "./ImagePatient.jsx";
+import PatientList from "./PatientList.jsx";
 function PatientPreview({patient}){
-    console.log(patient)
-    return <div className="PatientList">
-        <ImagePatient patient={patient}/>
-        <PatientName patient={patient} isSmall={true}/>
-    </div>
+    return (<div className="PatientPreview">
+        <h3>Mes patients</h3>
+        <PatientList patient={patient}/>
+    </div>)
 }
 
 export default PatientPreview
+
