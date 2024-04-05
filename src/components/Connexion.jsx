@@ -20,7 +20,7 @@ function Connexion() {
                     <div className="champ">
                         <label htmlFor="mdp" id="mdp">Mot de passe</label>
                         <input type="password" id="mdp"
-                               placeholder="Saisir votre mot de passe"/> {...register("password")}/>
+                               placeholder="Saisir votre mot de passe" {...register("password")}/>
                     </div>
 
                     <p id="forget_mdp">Mot de passe oublié ?</p>
