@@ -38,7 +38,7 @@ function ChampStatsActu({stat, caption}){
             classNameStatValue += "Underweight"
             caption = "Sous-poids"
             break;
-        default : 
+        case "normal" : 
             caption = "Normal"
             break;
     }
