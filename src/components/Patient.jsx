@@ -1,4 +1,3 @@
-import "./PatientPreview.css"
 import React from "react";
 import ImagePatient from "./ImagePatient.jsx";
 import PatientName from "./PatientName.jsx";

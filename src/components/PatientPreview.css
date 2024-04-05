@@ -1,8 +1,9 @@
-.   patientName{
+.patientName{
     margin-top: 5px;
     color: #6D350D;
     font-size: 12px;
 }
+
 
 .PatientElement{
     display: flex;

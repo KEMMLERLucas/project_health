@@ -18,8 +18,12 @@ function SuiviPatient({patient, activities}){
 
     return (<div> 
             <Title name="Suivi du patient"/>
+            <div className="grid">
+            <div id="pic">
             <ImagePatient patient={patient}/>
+            </div>
             <PatientName patient={patient}/>
+            </div>
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"} onClick={() => setActiveTab("Aujourd'hui")} />
                 <Onglets name="Historique" active={activeTab === "Historique"} onClick={() => setActiveTab("Historique")} />
