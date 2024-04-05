@@ -5,6 +5,7 @@ import Authentication from './components/Authentication.jsx'
 import App from './App.jsx'
 import Connexion from './components/Connexion.jsx'
 import Inscription from './components/Inscription.jsx'
+import "./index.css"
 
 const root = createRoot(document.getElementById('root'));
 
