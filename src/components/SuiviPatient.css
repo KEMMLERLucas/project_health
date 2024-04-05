@@ -193,7 +193,7 @@
 }
 
 .statCaption{
-    color: gray;
+    color: #2D2D2D;
     font-weight: lighter;
     font-size: 12px;
 }
@@ -206,19 +206,58 @@
 *  Derniers Entraînement
 */
 
-.ChampEntrainement{
+.ChampEntrainementBike{
     flex: 1;
     display: flex;
     margin-top: 5px;
     height: 40px;
     border-radius: 8px;
     padding: 10px;
-    border: 1px solid #A5FBB8;
-    background-color: black;
-    background-image: url('../public/cyclisme.png'); /* Path to your image */
-    background-size: cover;
-    background-position: bottom;
+    /*border: 1px solid #A5FBB8;*/
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/cyclisme.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
+
+.ChampEntrainementSwimming{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/natation.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+.ChampEntrainementFooting{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/courseAPieds.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+.ChampEntrainementWalking{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/marche.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
 .activityName{
     flex: 2;
     margin: auto;

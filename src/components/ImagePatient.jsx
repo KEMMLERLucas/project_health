@@ -5,10 +5,9 @@ import "./PatientName"
 function ImagePatient( {patient} ){
     function getImage(sex){
         if(sex == 1){
-            return "_homme2"
+            return "_homme"
         }else{
             let num = Math.floor(Math.random() * (3 - 0) + 0);
-            console.log(num)
             if(num == 2){
                 return "_femme2"
             }else if(num==1){
