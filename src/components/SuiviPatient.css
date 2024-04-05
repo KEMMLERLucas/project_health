@@ -206,19 +206,62 @@
 *  Derniers Entraînement
 */
 
-.ChampEntrainement{
+.ChampEntrainementBike{
     flex: 1;
     display: flex;
     margin-top: 5px;
     height: 40px;
     border-radius: 8px;
     padding: 10px;
-    border: 1px solid #A5FBB8;
+    /*border: 1px solid #A5FBB8;*/
     background-color: black;
     background-image: url('../public/cyclisme.png'); /* Path to your image */
     background-size: cover;
     background-position: bottom;
 }
+
+.ChampEntrainementSwimming{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    background-color: black;
+    background-image: url('../public/natation.png'); /* Path to your image */
+    background-size: cover;
+    background-position: bottom;
+}
+
+.ChampEntrainementFooting{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    background-color: black;
+    background-image: url('../public/courseAPieds.png'); /* Path to your image */
+    background-size: cover;
+    background-position: bottom;
+}
+
+.ChampEntrainementWalking{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    background-color: black;
+    background-image: url('../public/marche.png'); /* Path to your image */
+    background-size: cover;
+    background-position: bottom;
+}
+
 .activityName{
     flex: 2;
     margin: auto;
