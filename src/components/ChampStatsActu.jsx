@@ -16,19 +16,30 @@ function ChampStatsActu({stat, caption}){
         case "overweight": 
             classNameStat += "Overweight"
             classNameStatValue += "Overweight"
+            caption = "Surpoids"
             break;
         case "morbid obesity":
+            classNameStat += "MorbidObesity"
+            classNameStatValue += "MorbidObesity"
+            caption = "Obésité Morbide"
+            break;
         case "severe obesity":
             classNameStat += "MorbidObesity"
             classNameStatValue += "MorbidObesity"
+            caption = "Obésité sévère"
             break;
         case "moderate obesity":
             classNameStat += "ModerateObesity"
             classNameStatValue += "ModerateObesity"
+            caption = "Obésité modérée"
             break;
         case "underweight":
             classNameStat += "Underweight"
             classNameStatValue += "Underweight"
+            caption = "Sous-poids"
+            break;
+        default : 
+            caption = "Normal"
             break;
     }
 
