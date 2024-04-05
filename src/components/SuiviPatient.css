@@ -286,3 +286,8 @@
 #ChampEntrainementActClicked {
     color: #DA8243;
 }
+
+.EvolutionPoids{
+    flex: 1;
+    display: flex;
+}
