@@ -23,6 +23,7 @@ function SuiviPatient({patient, activities, steps}){
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"} onClick={() => setActiveTab("Aujourd'hui")} />
                 <Onglets name="Historique" active={activeTab === "Historique"} onClick={() => setActiveTab("Historique")} />
+                <Onglets name="Badges" active={activeTab === "Badges"} onClick={() => setActiveTab("Badges")} />
             </div>
             <div className="statsActuelles"><StatsActu patient={patient} name="Poids actuel"/><StatsActu patient={patient} name="IMC actuel"/></div>
 
