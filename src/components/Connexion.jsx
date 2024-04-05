@@ -1,4 +1,4 @@
-import "C:/Users/Océane/OneDrive/Documents/GitHub/project_health/src/styles/auth.css"
+import './auth.css'
 import { Link } from 'react-router-dom'
 
 function Connexion() {

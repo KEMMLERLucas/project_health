@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
-import Authentication from './pages/Authentication/index.jsx'
+import Authentication from './components/Authentication.jsx'
 import App from './App.jsx'
-import Connexion from './pages/Connexion/index.jsx'
-import Inscription from './pages/Inscription/index.jsx'
+import Connexion from './components/Connexion.jsx'
+import Inscription from './components/Inscription.jsx'
 
 const root = createRoot(document.getElementById('root'));
 

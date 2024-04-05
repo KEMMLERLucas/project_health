@@ -24,7 +24,7 @@ label{
 .picture{
     height:200px;
     width:140px;
-    background: url(C:/Users/Océane/OneDrive/Documents/GitHub/project_health/public/fond_auth.jpg) lightgray 50% / cover no-repeat;
+    background: url(public/fond_auth.jpg) lightgray 50% / cover no-repeat;
 }
 
 .block{
@@ -38,7 +38,7 @@ label{
 }
 
 .block_log{
-    background-image: url(C:/Users/Océane/OneDrive/Documents/GitHub/project_health/public/fond_log.jpg);
+    background-image: url(/public/fond_log.jpg);
     background-repeat: repeat;
     display: inline-flex;
     width: 270px;
