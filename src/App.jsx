@@ -2,6 +2,7 @@ import axios from "axios"
 import './App.css'
 import {useEffect, useState} from "react";
 import SuiviPatient from "./components/SuiviPatient.jsx";
+import PatientPreview from "./components/PatientPreview.jsx";
 
 function App() {
   const [isLoading,setLoading] =useState(false)
@@ -63,7 +64,7 @@ function App() {
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
         {patients.map((patient)=> (
-            < SuiviPatient key={patient.id} patient={patient} activities={activities}/> ))
+            < PatientPreview key={patient.id} patient={patient}/> ))
         }
       </div>
   )

@@ -1,7 +1,7 @@
 import "./SuiviPatient.css";
 
 
-function PatientName({patient}){
+function PatientName({patient, isSmall}){
 
     function calculAge(year){
         var today = new Date();
@@ -15,8 +15,12 @@ function PatientName({patient}){
             return "Femme"
         }
     }
+    if (isSmall){
+        return (<div id="patientName"><span>{patient.firstname+" "+patient.lastname}</span></div>)
+    }else{
+        return (<div id="patientName"><span>{patient.firstname+" "+patient.lastname+" | "+getSex(patient.sex)+" | "+calculAge(patient.birthyear)+" ans"}</span></div>)
+    }
 
-    return (<div id="patientName"><span>{patient.firstname+" "+patient.lastname+" | "+getSex(patient.sex)+" | "+calculAge(patient.birthyear)+" ans"}</span></div>)
     
 }
 
