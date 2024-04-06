@@ -322,3 +322,86 @@
     justify-content: center;
 }
 
+.badge {
+    width: 44px;
+    height: 34px;
+    padding-top: 15px;
+    position: relative;
+    background: #D0F5D0;
+    color: white;
+    text-align: center;
+    border-radius: 10% 10% 0 0;
+  }
+  .badge:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+  }
+
+  .recompense{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .containerBadge{
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 4px;
+  }
+
+  .nomBadge{
+    align-self: stretch;
+    color: #1E925B;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .descBadge{
+    color: #2D2D2D;
+    text-align: center;
+    font-size: 10px; 
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .totalRecompenses{
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+  .iconBadge{
+    position: relative;
+    transform: rotate(20deg);
+    color: #79C578;
+    text-align: center;
+    font-family: "Font Awesome 6 Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    width: 18px;
+    height: 20px;
+    bottom: 2px;
+  }
