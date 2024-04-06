@@ -5,7 +5,6 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import Recompenses from "./Recompenses.jsx";
 import React, { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 
@@ -37,9 +36,14 @@ function SuiviPatient({patient, activities}){
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} activities={activities}/>}
 
-            {activeTab === "Historique" && <Graphes patient={patient}/>}
+            {activeTab === "Historique" &&
+                <div>
+                    <Graphes patient={patient} name="Suivi du poids" chartType="line"/>
+                    <Graphes patient={patient} name="Suivi des activites" chartType="bar"/>
+                </div>
+            }
 
-            {activeTab === "Récompenses" && <Recompenses />} 
+            {/* {activeTab === "Récompenses" && <Recompenses />} */}
 
 
         </div>

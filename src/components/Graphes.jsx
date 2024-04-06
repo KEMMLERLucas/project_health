@@ -1,29 +1,62 @@
 import "./SuiviPatient.css";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-function Graphes({patient}){
+function Graphes({patient, name, chartType}){
+
+    const [activitiesCount, setActivitiesCount] = useState([]);
     const[physiologicalData, setPhysiology] = useState([])
     let physiologicalDataPatient = patient.physiologicalData
 
     useEffect(() => {
         async function loadPhysiology(){
-          const api="https://health.shrp.dev/items/physiologicalData?filter[people_id][_eq]="+patient.id
-          try{
-            const response = await axios.get(api)
-            const data  = await response.data.data
-    
-            setPhysiology(data);
-          }catch (error){
-            console.error(error)
-          }
+            const api="https://health.shrp.dev/items/physiologicalData?filter[people_id][_eq]="+patient.id
+            try{
+                const response = await axios.get(api)
+                const data  = await response.data.data
+
+                setPhysiology(data);
+            }catch (error){
+                console.error(error)
+            }
         }
         loadPhysiology()
-      }, []);
+    }, []);
 
-      let dataArray = []
-      /* array1.forEach((element) => console.log(element)); */
+
+    useEffect(() => {
+        async function loadPhysicalActivities() {
+            const api = "https://health.shrp.dev/items/physicalActivities";
+            try {
+                const response = await axios.get(api);
+                const allActivities = response.data.data;
+
+                const userActivities = allActivities.filter(activity =>
+                    patient.physicalActivities.includes(activity.id));
+
+                const counts = userActivities.reduce((acc, activity) => {
+                    const activityType = getActivityNameInFrench(activity.type);
+                    acc[activityType] = (acc[activityType] || 0) + 1;
+                    return acc;
+                }, {});
+
+                const chartData = Object.entries(counts).map(([type, count]) => ({
+                    name: type,
+                    count: count
+                }));
+
+                setActivitiesCount(chartData);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        loadPhysicalActivities();
+    }, [patient.physicalActivities]);
+
+
+    let dataArray = []
+    /* array1.forEach((element) => console.log(element)); */
 
     physiologicalData.forEach((poids) => {
         if(physiologicalDataPatient.includes(poids.id)){
@@ -32,15 +65,53 @@ function Graphes({patient}){
     })
 
     return (
-        <div className="EvolutionPoids">
-            <LineChart width={500} height={150} data={dataArray}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis />
-                <YAxis domain={['dataMin - 2', 'dataMax + 2']} />
-                <Line type="monotone" dataKey="weight" stroke="#DA9D43" />
-            </LineChart>
+
+        <div>
+            <div className="title" id="titleStats">
+                {name}
+            </div>
+            {
+                chartType === 'line' ? (
+                        <div className="EvolutionPoids">
+                            <LineChart width={400} height={250} data={dataArray}>
+                                <CartesianGrid strokeDasharray="3 3"/>
+                                <XAxis/>
+                                <YAxis
+                                    domain={['dataMin - 1', 'dataMax + 1']}
+                                    tickFormatter={(value) => value.toFixed(2)}
+                                    type="number"
+                                    allowDecimals={true}
+                                />
+                                <Tooltip />
+                                <Line type="monotone" dataKey="weight" stroke="#DA9D43"/>
+                            </LineChart>
+                        </div>)
+
+                    : chartType === 'bar' ? (
+                        <div className="EvolutionPoids">
+                            <BarChart width={350} height={250} data={activitiesCount}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" tickFormatter={getActivityNameInFrench} />
+                                <YAxis/>
+                                <Bar dataKey="count" fill="#DA9D43" label={{ position: 'insideEnd' }}/>
+                            </BarChart>
+                        </div>
+
+                    )   : null
+
+            }
+
         </div>
     )
+
+    function getActivityNameInFrench(x) {
+        if (x === "bike") return "Cyclisme";
+        if (x === "swimming") return "Natation";
+        if (x === "walking") return "Marche";
+        if (x === "footing") return "Course";
+        return x;
+    }
+
 }
 
 export default Graphes 
