@@ -3,9 +3,14 @@
   flex-wrap: wrap;
 }
 
-.PatientPreview > div {
-  flex: 1 0 calc(33.33% - 20px); /* Largeur de chaque vignette */
-  margin: 0px; /* Espacement entre les vignettes */
+.patients {
+  flex: auto;
+  flex-grow:1;
+}
+
+#title{
+  font-size: 20px;
+  padding-left:32px;
 }
 
 .logo {

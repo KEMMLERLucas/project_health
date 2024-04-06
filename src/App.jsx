@@ -2,6 +2,7 @@ import axios from "axios"
 import './App.css'
 import {useEffect, useState} from "react";
 import PatientPreview from "./components/PatientPreview.jsx";
+import Banner from "./components/Banner.jsx";
 
 function App() {
   const [isLoading,setLoading] =useState(false)
@@ -59,9 +60,13 @@ function App() {
         {isLoading && <p>Chargement....</p>}
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
+        <Banner/>
+        <p id="title">Mes patients</p>
+        <div className="patients">
         {patients.map((patient)=> (
             < PatientPreview key={patient.id} patient={patient}/> ))
         }
+        </div>
       </div>
   )
 }
