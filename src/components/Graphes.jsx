@@ -3,13 +3,13 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-function Graphes({patient, name}){
+function Graphes({patient}){
     const[physiologicalData, setPhysiology] = useState([])
     let physiologicalDataPatient = patient.physiologicalData
 
     useEffect(() => {
         async function loadPhysiology(){
-          const api="https://health.shrp.dev/items/physiologicalData"
+          const api="https://health.shrp.dev/items/physiologicalData?filter[people_id][_eq]="+patient.id
           try{
             const response = await axios.get(api)
             const data  = await response.data.data

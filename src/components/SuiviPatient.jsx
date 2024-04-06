@@ -36,7 +36,7 @@ function SuiviPatient({patient, activities}){
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} activities={activities}/>}
 
-            {activeTab === "Historique" && <Graphes patient={patient} name="iz good ?"/>}
+            {activeTab === "Historique" && <Graphes patient={patient}/>}
 
             {/* {activeTab === "Récompenses" && <Recompenses />} */}
 
