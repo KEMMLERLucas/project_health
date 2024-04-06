@@ -25,7 +25,7 @@ function ImagePatient( {patient} ){
         }
     }
 
-    return (<div><img src={"../public/image_sport"+getImage(patient.sex)+".jpg"} id="ImageSport"/></div>)
+    return (<div><img src={"/image_sport"+getImage(patient.sex)+".jpg"} id="ImageSport"/></div>)
     
 }
 

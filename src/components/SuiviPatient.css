@@ -66,11 +66,9 @@
 
 .Onglets{
     flex: 1;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
     font-size: 16px;
     font-weight: 300;
+    color: #1A202C;
 }
 
 .Onglets:hover{
@@ -291,3 +289,36 @@
     flex: 1;
     display: flex;
 }
+
+/*
+* Info patient formulaire
+*/
+
+.informationPatient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulaire{
+    width: 100%;
+}
+
+.champ{
+    width: 95%;
+}
+
+.champ input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
