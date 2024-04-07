@@ -7,6 +7,8 @@ import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
 import React, { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
+import Recompenses from "./Recompenses.jsx";
+
 
 
 function SuiviPatient({patient, activities}){
@@ -43,7 +45,7 @@ function SuiviPatient({patient, activities}){
                 </div>
             }
 
-            {/* {activeTab === "Récompenses" && <Recompenses />} */}
+            {activeTab === "Récompenses" && <Recompenses />} 
 
 
         </div>
