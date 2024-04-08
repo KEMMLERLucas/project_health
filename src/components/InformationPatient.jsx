@@ -20,6 +20,28 @@ function InformationPatient(){
             return "Femme"
         }
     }
+
+    function getActivityProfile(activityProfile){
+
+        switch(activityProfile){
+            case 'sedentary':
+                return "Sédentaire";
+                break;
+            case 'somewhat active':
+                return "Un peu actif";
+                break;
+            case 'highly active':
+                return "Très actif";
+                break;
+            case 'active':
+                return "actif";
+                break;
+            case 'low active':
+                return "faiblement actif";
+                break;
+        }
+    }
+
     const[patient, setPatient] = useState([])
     
 
@@ -87,7 +109,7 @@ function InformationPatient(){
                     <div className="formulaire">
                         <div className="champ">
                             <label htmlFor="profil">Profil sportif</label>
-                            <input type="text" id="profil" placeholder={patient.activityProfile}/>
+                            <input type="text" id="profil" placeholder={getActivityProfile(patient.activityProfile)}/>
                         </div>
 
                         <div className="champ">
