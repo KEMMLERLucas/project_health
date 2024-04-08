@@ -81,6 +81,29 @@ function InformationPatient(){
                     </div>
                 </div>
             )}
+            
+            {activeTab === "Sportives" && (
+                <div className="informationPatient">
+                    <div className="formulaire">
+                        <div className="champ">
+                            <label htmlFor="profil">Profil sportif</label>
+                            <input type="text" id="profil" placeholder={patient.activityProfile}/>
+                        </div>
+
+                        <div className="champ">
+                            <label htmlFor="poids_dep">Poids de départ</label>
+                            <input type="text" id="poids_dep" placeholder={patient.weightStart}/>
+                        </div>
+
+                        <div className="champ">
+                            <label htmlFor="obj">Objectif de poids</label>
+                            <input type="text" id="obj" placeholder={patient.weightGoal}/>
+                        </div>
+
+                        <span className="button"><button className="primary_button">Modifier l'objectif de poids</button></span>
+                    </div>
+                </div>
+            )}
 
 
         </div>
