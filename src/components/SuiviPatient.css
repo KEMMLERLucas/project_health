@@ -405,3 +405,52 @@
     height: 20px;
     bottom: 2px;
   }
+
+#badgeBleu{
+    background: #D0F5EA;
+}
+
+#iconBleu{
+    color: #78C5C5;
+}
+
+#intituleBleu{
+    color: #1E9276;
+}
+
+#badgeRose{
+    background: #F5D0EB;
+}
+
+#iconRose{
+    color: #C578C1;
+}
+
+#intituleRose{
+    color: #921E8D;
+}
+
+#badgeOrange{
+    background: #F5E6D0;
+}
+
+#iconOrange{
+    color: #C5A178;
+}
+
+#intituleOrange{
+    color: #92641E;
+}
+
+#badgeJaune{
+    background: #F4F5D0;
+}
+
+#iconJaune{
+    color: #C5C178;
+}
+
+#intituleJaune{
+    color: #928D1E;
+}
+

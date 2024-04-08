@@ -2,7 +2,7 @@ import "./SuiviPatient.css";
 import { FaCaretLeft } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { withRouter } from "react-router-dom";
+/*import { withRouter } from "react-router-dom";*/
 
 function Title({name, history}){
     
