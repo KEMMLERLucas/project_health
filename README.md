@@ -22,6 +22,7 @@ Pour utiliser notre application, le coach sportif doit, dans un premier temps, s
 Ensuite, il aura accès à la liste des personnes avec qui il travaille. Pour voir des informations plus précises sur un patient, il peut cliquer sur son nom. Il accède donc à la page de suivi du patient, qui comporte plusieurs onglets : "Aujourd'hui", "Historique" et "Récompenses".  
 
 Tous les onglets montrent le nom, le prénom, le genre et l'âge du patient, avec un avatar qui lui est attribué dans une en-tête : 
+
 ![En_tete](https://github.com/KEMMLERLucas/project_health/assets/101339546/4b84a8b4-1232-4385-83c4-d0e1e3668b0b)
 
 
