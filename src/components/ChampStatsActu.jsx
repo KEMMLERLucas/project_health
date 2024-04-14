@@ -9,32 +9,32 @@ function ChampStatsActu({stat, caption}){
         console.log("Cliqué : "+stat + "" + caption);
     }
 
-    let classNameStat = "ChampStatsActu";
+    let idNameStat = "NameStat";
     let classNameStatValue = "statValue";
 
     switch(caption){
         case "overweight": 
-            classNameStat += "Overweight"
+            idNameStat += "Overweight"
             classNameStatValue += "Overweight"
             caption = "Surpoids"
             break;
         case "morbid obesity":
-            classNameStat += "MorbidObesity"
+            idNameStat += "MorbidObesity"
             classNameStatValue += "MorbidObesity"
             caption = "Obésité Morbide"
             break;
         case "severe obesity":
-            classNameStat += "MorbidObesity"
+            idNameStat += "MorbidObesity"
             classNameStatValue += "MorbidObesity"
             caption = "Obésité sévère"
             break;
         case "moderate obesity":
-            classNameStat += "ModerateObesity"
+            idNameStat += "ModerateObesity"
             classNameStatValue += "ModerateObesity"
             caption = "Obésité modérée"
             break;
         case "underweight":
-            classNameStat += "Underweight"
+            idNameStat += "Underweight"
             classNameStatValue += "Underweight"
             caption = "Sous-poids"
             break;
@@ -44,7 +44,7 @@ function ChampStatsActu({stat, caption}){
     }
 
     return (
-        <div className= {classNameStat} onClick= {color}>
+        <div className="ChampStatsActu" id={idNameStat} onClick= {color}>
             <div className={classNameStatValue}>{stat}</div>
             <div className="statCaption">{caption}</div>
         </div>

@@ -93,7 +93,7 @@ function Graphes({patient, name, chartType}){
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="name" tickFormatter={getActivityNameInFrench} />
                                 <YAxis/>
-                                <Bar dataKey="count" fill="#DA9D43" label={{ position: 'insideEnd' }}/>
+                                <Bar dataKey="count" fill="#BBDCDD" label={{ position: 'insideEnd' }}/>
                             </BarChart>
                         </div>
 

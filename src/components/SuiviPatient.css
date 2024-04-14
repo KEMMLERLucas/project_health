@@ -113,54 +113,22 @@
     background-color: #F5FEF4;
 }
 
-.ChampStatsActuOverweight{
-    flex: 1;
-    text-align: center;
-    margin-top: 5px;
-    width: 120px;
-    height: 60px;
-    border-radius: 8px;
-    gap: 8px;
-    padding: 10px;
+#NameStatOverweight{
     border: 1px solid #F4FBA5;
     background-color: #FEFDF4;
 }
 
-.ChampStatsActuMorbidObesity{
-    flex: 1;
-    text-align: center;
-    margin-top: 5px;
-    width: 120px;
-    height: 60px;
-    border-radius: 8px;
-    gap: 8px;
-    padding: 10px;
+#NameStatMorbidObesity{
     border: 1px solid #FFC8C8;
     background-color: #FEF4F4;
 }
 
-.ChampStatsActuModerateObesity{
-    flex: 1;
-    text-align: center;
-    margin-top: 5px;
-    width: 120px;
-    height: 60px;
-    border-radius: 8px;
-    gap: 8px;
-    padding: 10px;
+#NameStatModerateObesity{
     border: 1px solid #FFDCC8;
     background-color: #FEF9F4;
 }
 
-.ChampStatsActuUnderweight{
-    flex: 1;
-    text-align: center;
-    margin-top: 5px;
-    width: 120px;
-    height: 60px;
-    border-radius: 8px;
-    gap: 8px;
-    padding: 10px;
+#NameStatUnderweight{
     border: 1px solid #CFF3F3;
     background-color: #F4FEFE;
 }
@@ -204,7 +172,7 @@
 *  Derniers Entraînement
 */
 
-.ChampEntrainementBike{
+.ChampEntrainement{
     flex: 1;
     display: flex;
     margin-top: 5px;
@@ -213,45 +181,23 @@
     padding: 10px;
     /*border: 1px solid #A5FBB8;*/
     border-radius: 8px;
+}
+#Bike{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/cyclisme.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
-.ChampEntrainementSwimming{
-    flex: 1;
-    display: flex;
-    margin-top: 5px;
-    height: 40px;
-    border-radius: 8px;
-    padding: 10px;
-    /*border: 1px solid #A5FBB8;*/
-    border-radius: 8px;
+#Swimming{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/natation.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
-.ChampEntrainementFooting{
-    flex: 1;
-    display: flex;
-    margin-top: 5px;
-    height: 40px;
-    border-radius: 8px;
-    padding: 10px;
-    /*border: 1px solid #A5FBB8;*/
-    border-radius: 8px;
+#Footing{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/courseAPieds.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
-.ChampEntrainementWalking{
-    flex: 1;
-    display: flex;
-    margin-top: 5px;
-    height: 40px;
-    border-radius: 8px;
-    padding: 10px;
-    /*border: 1px solid #A5FBB8;*/
-    border-radius: 8px;
+#Walking{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/marche.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }

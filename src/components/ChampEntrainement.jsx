@@ -8,31 +8,30 @@ function ChampEntrainement({ name, duration, calories }) {
         console.log("Cliqué : " + name + " activité clicked" + "; duration : " + duration + "; calos : "+ calories);
     }
 
-    let classNameEntrainement = "ChampEntrainement";
+    let idActivity = "";
     let activityName = "";
 
     switch(name){
         case "bike": 
-            classNameEntrainement += "Bike";
-            console.log(classNameEntrainement)
+            idActivity = "Bike";
             activityName = "Cyclisme";
             break;
         case "swimming":
-            classNameEntrainement += "Swimming"
+            idActivity = "Swimming"
             activityName = "Natation";
             break;
         case "footing":
-            classNameEntrainement += "Footing"
+            idActivity = "Footing"
             activityName = "Course à pied";
             break;
         case "walking":
-            classNameEntrainement += "Walking"
+            idActivity = "Walking"
             activityName = "Marche";
             break;
     }
 
     return (
-        <div className={classNameEntrainement} onClick={clicked}>
+        <div className="ChampEntrainement" id={idActivity} onClick={clicked}>
 
             <div className="activityName">{activityName}</div>
 
