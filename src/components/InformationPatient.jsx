@@ -2,11 +2,13 @@ import "./SuiviPatient.css";
 import axios from "axios"
 import { Link } from 'react-router-dom'
 import Title from "./Title.jsx";
-import PatientName from "./PatientName";
 import React, {useState, useEffect} from "react";
 import Onglets from "./Onglets.jsx";
-import StatsActu from "./StatsActu.jsx";
-import Graphes from "./Graphes.jsx";
+import { FaCouch } from "react-icons/fa6";
+import { GrBike } from "react-icons/gr";
+import { FaRocket } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa6";
+import { FaCar } from "react-icons/fa";
 
 
 function InformationPatient(){
@@ -28,16 +30,56 @@ function InformationPatient(){
                 return "Sédentaire";
                 break;
             case 'somewhat active':
-                return "Un peu actif";
+                return "Peu actif";
                 break;
             case 'highly active':
                 return "Très actif";
                 break;
             case 'active':
-                return "actif";
+                return "Actif";
                 break;
             case 'low active':
-                return "faiblement actif";
+                return "Légèrement actif";
+                break;
+        }
+    }
+
+    function getIdName(activityProfile){
+        switch(activityProfile){
+            case 'sedentary':
+                return "sedentary";
+                break;
+            case 'somewhat active':
+                return "somewhat_active";
+                break;
+            case 'highly active':
+                return "highly_active";
+                break;
+            case 'active':
+                return "active";
+                break;
+            case 'low active':
+                return "low_active";
+                break;
+        }
+    }
+
+    function getIcon(activityProfile){
+        switch(activityProfile){
+            case 'sedentary':
+                return <FaCouch/>;
+                break;
+            case 'somewhat active':
+                return <GrBike/>;
+                break;
+            case 'highly active':
+                return <FaRocket/>;
+                break;
+            case 'active':
+                return <FaPlane/>;
+                break;
+            case 'low active':
+                return <FaCar/>;
                 break;
         }
     }
@@ -60,6 +102,9 @@ function InformationPatient(){
         }
         loadPatient()
     }, []);
+
+    let idProfile = patient.activityProfile;
+    console.log(idProfile);
 
     return (
         <div>
@@ -109,17 +154,18 @@ function InformationPatient(){
                     <div className="formulaire">
                         <div className="champ">
                             <label htmlFor="profil">Profil sportif</label>
+                            <div className="profilActivity" id={getIdName(patient.activityProfile)}>{getIcon(patient.activityProfile)}{getActivityProfile(patient.activityProfile)}</div>
                             <input type="text" id="profil" placeholder={getActivityProfile(patient.activityProfile)}/>
                         </div>
 
                         <div className="champ">
                             <label htmlFor="poids_dep">Poids de départ</label>
-                            <input type="text" id="poids_dep" placeholder={patient.weightStart}/>
+                            <input type="text" id="poids_dep" placeholder={patient.weightStart+" kg"}/>
                         </div>
 
                         <div className="champ">
                             <label htmlFor="obj">Objectif de poids</label>
-                            <input type="text" id="obj" placeholder={patient.weightGoal}/>
+                            <input type="text" id="obj" placeholder={patient.weightGoal+" kg"}/>
                         </div>
 
                         <span className="button"><button className="primary_button">Modifier l'objectif de poids</button></span>

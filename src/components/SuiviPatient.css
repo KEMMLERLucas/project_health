@@ -454,3 +454,40 @@
     color: #928D1E;
 }
 
+.profilActivity{
+    display: flex;
+    padding: 4px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#sedentary{
+    background-color: #FFC8C8;
+    color: #8D1616;
+}
+
+#somewhat_active{
+    background-color: #FFDCC8;
+    color: #AD5516;
+}
+
+#highly_active{
+    background-color: #C8FFD4;
+    color: #084F17;
+}
+
+#active{
+    background-color: #EAFFC8;
+    color: #557D14;
+}
+
+#low_active{
+    background-color: #FFFDC8;
+    color: #797510;
+}
