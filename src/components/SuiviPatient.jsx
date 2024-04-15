@@ -11,7 +11,7 @@ import Recompenses from "./Recompenses.jsx";
 
 
 
-function SuiviPatient({patient, activities}){
+function SuiviPatient({patient}){
     /*console.log(patient)*/
     /*console.log(steps)*/
 
@@ -36,7 +36,7 @@ function SuiviPatient({patient, activities}){
                 <StatsActu patient={patient} name="IMC actuel"/>
             </div>}
 
-            {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} activities={activities}/>}
+            {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
 
             {activeTab === "Historique" &&
                 <div>
@@ -45,7 +45,7 @@ function SuiviPatient({patient, activities}){
                 </div>
             }
 
-            {activeTab === "Récompenses" && <Recompenses />} 
+            {activeTab === "Récompenses" && <Recompenses patient={patient}/>} 
 
 
         </div>
