@@ -32,12 +32,14 @@ Dans l'onglet "Aujourd'hui", il pourra voir le poids du patient, son IMC et l'hi
 
 L'application propose également des graphiques, pour faciliter la visualisation des évolutions du poids du patient, mais également l'historique des activités sportives. Les coachs sportifs pourront donc retrouver ces graphiques dans l'onglet "Historique" de la page de suivi du patient : 
 
-![Historique](https://github.com/KEMMLERLucas/project_health/assets/101339546/8baa4d89-6256-4ae5-ad95-8f7faf5d2645)
+![Historique](https://github.com/KEMMLERLucas/project_health/assets/101339546/fbb5d5ef-c0ca-421e-a3e7-28ecfa19ce8f)
+
 
 Enfin, l'onglet "Récompenses" de la page de suivi propose de voir les badges gagnés par le patient en réalisant des séances de sport. Cela représente une aide pour le suivi du patient, car cela facilite la visualisation des objectifs réalisés, de manière ludique. 
 
 ![Recompenses](https://github.com/KEMMLERLucas/project_health/assets/101339546/22e3a335-0f45-4437-ac4a-70b116485bcd)
 
+Le coach sportif a la possibilité de modifier les informations du patient, en cas de changement de situation ou d'erreur de saisie. Ainsi, une page dédiée est accessible en utilisant le bouton rouage en haut à gauche de la page de suivi du patient. Ainsi, il arrivera sur la page d'informations du patient. 
 
 
 
