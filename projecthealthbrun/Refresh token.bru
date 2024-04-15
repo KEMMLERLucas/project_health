@@ -1,0 +1,17 @@
+meta {
+  name: Refresh token
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://health.shrp.dev/auth/refresh
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "refresh_token": "3TPpuVxf99qmOiB9L1j15Fm50X31uMDrQhQDQAQdxiM8Gf6SlDVGDzsjT0klNmZ_",
+    "mode": "json"}
+}
