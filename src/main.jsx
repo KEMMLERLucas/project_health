@@ -17,6 +17,7 @@ root.render(
         <Route path="/auth" element={<Authentication />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/inscription" element={<Inscription />} />
+          <Route path="/inscription" element={<Inscription />} />
       </Routes>
     </Router>
   </React.StrictMode>

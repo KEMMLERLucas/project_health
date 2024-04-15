@@ -1,0 +1,23 @@
+meta {
+  name: Authenticate
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://health.shrp.dev/users
+  body: json
+  auth: none
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQxYmQxMTg2LTExY2QtNGQ4Yi1iMTNiLTI3NmU2MmZkN2E2ZCIsInJvbGUiOm51bGwsImFwcF9hY2Nlc3MiOm51bGwsImFkbWluX2FjY2VzcyI6bnVsbCwiaWF0IjoxNzEzMTg3NzAwLCJleHAiOjE3MTMxODg2MDAsImlzcyI6ImRpcmVjdHVzIn0.Wu9xm6KyCoIFtYxDn46qLWcEgRU0LngBVifkvWKKIoE
+}
+
+body:json {
+  {
+      "email": "test_admin@gmail.com",
+      "password": "Azertytreza123456",
+    "role" : "5fcd0581-bfbc-4afa-8df9-b40c24e35bfa"
+  }
+}

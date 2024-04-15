@@ -1,0 +1,83 @@
+/* sweetalert.css */
+.custom-container{
+
+}
+.custom-popup{
+
+}
+
+.custom-header {
+    background-color: #ff0000; /* Rouge */
+    color: #ffffff; /* Blanc */
+}
+.custom-title{
+    font-size: 15px !important;
+}
+.custom-closeButton{
+
+}
+.custom-icon{
+
+}
+
+.custom-image{
+
+}
+.custom-htmlContainer{
+
+}
+.custom-input{
+
+}
+
+.custom-inputLabel{
+
+}
+.custom-validationMessage{
+
+}
+.custom-actions{
+
+}
+.custom-confirmButton {
+    background-color: #A240B4 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+.custom-denyButton{
+
+}
+.custom-cancelButton{
+
+}
+.custom-loader{
+
+}
+
+.custom-footer{
+
+}
+
+.custom-timeProgressBar{
+
+}
+
+.swal2-actions .swal2-confirm {
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.swal2-actions .swal2-cancel {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.swal2-confirm:focus, .swal2-cancel:focus {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.swal2-actions button:hover {
+    border: none !important;
+}
