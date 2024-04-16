@@ -4,8 +4,8 @@ import axios from "axios"
 import {useEffect, useState} from "react";
 
 
-
 function DerniersEntrainements ({ patient }) {
+    let activityThisWeek = false;
 
     const[activities, setActivities] = useState([])
 
@@ -34,7 +34,9 @@ function DerniersEntrainements ({ patient }) {
         activityDate = dateWeek(new Date(activity.date));
         if(activityDate === today){
             lastWeek = true;
+            activityThisWeek = true;
         }
+
         return(lastWeek);
     }
 
@@ -58,11 +60,14 @@ function DerniersEntrainements ({ patient }) {
                 {activities.map((activity)=> (
                     getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
+                {
+                    !activityThisWeek && <div class="noActivity">Pas d'activité enregistrée cette semaine...</div>
+                }
             </div>
             <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
             <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
-                    !getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}  date={activity.date}/>))
+                    !getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
             </div>
         </div>

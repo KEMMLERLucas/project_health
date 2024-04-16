@@ -21,6 +21,13 @@
     padding: 0 10px;
 }
 
+.noActivity{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
 
 #ImageSport{
     position: relative;
