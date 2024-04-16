@@ -1,10 +1,9 @@
-/* J'ai pas encore cherché pourquoi ça prend pas la couleur du root, du coup je l'ai ajouté temporairement là*/
-#root{
-    background-color: white;
-}
-
 .icone{
     position: relative;
+}
+
+.icone:hover{
+    cursor: pointer;
 }
 
 .title{

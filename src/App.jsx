@@ -9,7 +9,7 @@ function App() {
   const [patients, setPatients] = useState([])
   useEffect(() => {
     async function loadPatient(){
-      const api="https://health.shrp.dev/items/people/00657896-d299-48a7-8a41-aae1c2b4f606"
+      const api="https://health.shrp.dev/items/people/814daa5b-0ea7-499f-80bf-e79e26da8ca5"
       try{
         setLoading(true)
         setError(false)
@@ -34,9 +34,7 @@ function App() {
         {isLoading && <p>Chargement....</p>}
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
-        {/*patients.map((patient)=> (*/
-            < SuiviPatient key={patients.id} patient={patients}/> /*))*/
-        }
+        < SuiviPatient key={patients.id} patient={patients}/>
       </div>
   )
 }
