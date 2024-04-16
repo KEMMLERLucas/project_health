@@ -57,16 +57,16 @@
     color: white;
 }
 
-
 #patientName{
-    margin-top: 5px;
     color: #6D350D;
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 #name{
     font-size: 16px;
-    margin-bottom: 5px;
 }
 
 .OngletsSuivi{
@@ -460,6 +460,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 8px;
+    font-size: 10px;
 }
 
 .ageAndSex{
