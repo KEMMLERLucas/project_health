@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useCookies } from "react-cookie";
-import swal from 'sweetalert2'
+import swal from 'sweetalert2';
 import axios from "axios";
 import './sweetalert.css'
 import Onglets from "./Onglets";
@@ -52,16 +52,15 @@ function Infos() {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
         // Vérifier la longueur du mot de passe
-        if (data.password.length < 8) {
-            swal.fire({
-                title: 'La longueur du mot de passe doit-être supérieur à 8 caractères !',
-                icon: 'error',
-                confirmButtonText: 'Modifier',
-                customClass:customClass
-            })
-        } else {
-            login(data);
-        }
+        Swal.fire({
+            title: "Êtes-vous sûrs de vouloir vous déconnecter ?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "Annuler",
+            confirmButtonText: "Confirmer",
+          })
     };
 
     return (
