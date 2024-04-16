@@ -41,6 +41,7 @@ function SuiviPatient({patient}){
             {activeTab === "Historique" &&
                 <div>
                     <Graphes patient={patient} name="Suivi du poids" chartType="line"/>
+                    <Graphes patient={patient} name="Evolution psychique" chartType="lineEvo"/>
                     <Graphes patient={patient} name="Suivi des activites" chartType="bar"/>
                 </div>
             }

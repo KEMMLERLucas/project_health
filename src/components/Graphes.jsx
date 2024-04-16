@@ -1,12 +1,22 @@
 import "./SuiviPatient.css";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, BarChart, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
 function Graphes({patient, name, chartType}){
 
     const [activitiesCount, setActivitiesCount] = useState([]);
-    const[physiologicalData, setPhysiology] = useState([])
+    const[physiologicalData, setPhysiology] = useState([]);
+    const [psychicData, setPsychicData] = useState([]);
+
+    const feelingScores = {
+        "hopeless": 1,
+        "lazy": 2,
+        "losing motivation": 3,
+        "enduring": 4,
+        "motivated": 5,
+        "addicted": 6
+    };
 
     useEffect(() => {
         async function loadPhysiology(){
@@ -21,6 +31,38 @@ function Graphes({patient, name, chartType}){
             }
         }
         loadPhysiology()
+    }, []);
+
+    useEffect(() => {
+        async function authenticateAndGetPsychicData() {
+            try {
+                const authResponse = await axios.post('https://health.shrp.dev/auth/login', {
+                    email: 'juju1@gmail.com',
+                    password: '123456'
+                });
+
+                /*  A changer  */
+                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4MDQ4ZjJjLTU1NWEtNGY3Zi1iMzk0LWI3ZTVhMGViYjJmYyIsInJvbGUiOiI1ZmNkMDU4MS1iZmJjLTRhZmEtOGRmOS1iNDBjMjRlMzViZmEiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTcxMzMwNjMzNywiZXhwIjoxNzEzMzA3MjM3LCJpc3MiOiJkaXJlY3R1cyJ9.rULjA8pTPv6eexlPpUqJotGuFYeeYrOYm4ipx8mgoaA"
+
+                const config = {
+                    headers: { Authorization: `Bearer ${token}` }
+                };
+
+                const psychicApi = `https://health.shrp.dev/items/psychicData?filter[people_id][_eq]=814daa5b-0ea7-499f-80bf-e79e26da8ca5`;
+                const response = await axios.get(psychicApi, config);
+                const data = response.data.data.map(item => ({
+                    ...item,
+                    date: item.date,
+                    feelingScore: feelingScores[item.feeling.toLowerCase()]
+                }));
+
+                setPsychicData(data);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        authenticateAndGetPsychicData();
     }, []);
 
 
@@ -87,7 +129,36 @@ function Graphes({patient, name, chartType}){
                             </BarChart>
                         </div>
 
-                    )   : null
+                    )   : chartType === 'lineEvo' ? (
+                        <div className="EvolutionPoids">
+                            <LineChart width={450} height={300} data={psychicData}>
+                                <CartesianGrid strokeDasharray="5 5"/>
+                                <XAxis dataKey="date"
+                                       tickFormatter={(date) => {
+                                           const newDate = new Date(date);
+                                           return `${newDate.getMonth() + 1}/${newDate.getDate()}`; // Converts to MM/DD format
+                                       }}
+                                       angle={-45}
+                                       textAnchor="end"
+                                       height={70}
+                                       style={{fontSize: '10px'}}
+                                >
+                                    <Label value="Year 2023" offset={0} position="insideBottom"/>
+                                </XAxis>
+                                <YAxis
+                                    domain={[1, 6]}
+                                    ticks={[1, 2, 3, 4, 5, 6]}
+                                    tickFormatter={(value) => Object.keys(feelingScores).find(key => feelingScores[key] === value)}
+                                    type="number"
+                                    allowDecimals={false}
+                                    style={{fontSize: '10px'}}
+                                />
+                                <Tooltip
+                                    formatter={(value) => Object.keys(feelingScores).find(key => feelingScores[key] === value)}/>
+                                <Line type="monotone" dataKey="feelingScore" stroke="#DA9D43"/>
+                            </LineChart>
+                        </div>
+                    ) : null
 
             }
 

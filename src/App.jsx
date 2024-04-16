@@ -6,7 +6,7 @@ import SuiviPatient from "./components/SuiviPatient.jsx";
 function App() {
   const [isLoading,setLoading] =useState(false)
   const[isError,setError] =useState(false)
-  const [patients, setPatients] = useState([])
+  const [patients, setPatients] = useState(null)
   useEffect(() => {
     async function loadPatient(){
       const api="https://health.shrp.dev/items/people/00657896-d299-48a7-8a41-aae1c2b4f606"
@@ -34,7 +34,7 @@ function App() {
         {isLoading && <p>Chargement....</p>}
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
-        < SuiviPatient key={patients.id} patient={patients}/>
+          { patients && < SuiviPatient key={patients.id} patient={patients}/>}
       </div>
   )
 }

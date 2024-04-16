@@ -10,20 +10,19 @@ function DerniersEntrainements ({ patient }) {
     const[activities, setActivities] = useState([])
 
     useEffect(() => {
-        async function loadActivities(){
-        const api=`https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]=${patient.id}`
-        try{
+        async function loadActivities() {
 
-            const response = await axios.get(api)
-            const data  = await response.data.data
-    
-            setActivities(data);
-        }catch (error){
-            console.error(error)
+            const api = `https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]=${patient.id}`;
+            try {
+                const response = await axios.get(api);
+                const data = response.data.data;
+                setActivities(data);
+            } catch (error) {
+                console.error(error);
+            }
+        }
 
-        }
-        }
-        loadActivities()
+        loadActivities();
     }, [patient]);
 
     activities.sort(function(a,b){
@@ -85,7 +84,7 @@ function DerniersEntrainements ({ patient }) {
                     getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
                 {
-                    !activityThisWeek && <div class="noActivity">Pas d'activité enregistrée cette semaine...</div>
+                    !activityThisWeek && <div className="noActivity">Pas d'activité enregistrée cette semaine...</div>
                 }
             </div>
             <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
