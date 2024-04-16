@@ -1,6 +1,7 @@
 import "./SuiviPatient.css";
 import axios from "axios"
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import Title from "./Title.jsx";
 import React, {useState, useEffect} from "react";
 import Onglets from "./Onglets.jsx";
@@ -9,44 +10,13 @@ import Onglets from "./Onglets.jsx";
 
 function InformationPatient(){
 
+    const { patientId } = useParams();
     const [activeTab, setActiveTab] = useState("Personnelles");
-
-    function getSexeText(sex){
-        if(sex == 1){
-            return "Homme"
-        }else{
-            return "Femme"
-        }
-    }
-
-    function getActivityProfile(activityProfile){
-
-        switch(activityProfile){
-            case 'sedentary':
-                return "Sédentaire";
-                break;
-            case 'somewhat active':
-                return "Peu actif";
-                break;
-            case 'highly active':
-                return "Très actif";
-                break;
-            case 'active':
-                return "Actif";
-                break;
-            case 'low active':
-                return "Légèrement actif";
-                break;
-        }
-    }
-
-
     const[patient, setPatient] = useState([])
-    
 
     useEffect(() => {
         async function loadPatient(){
-        const api="https://health.shrp.dev/items/people/00657896-d299-48a7-8a41-aae1c2b4f606"
+        const api=`https://health.shrp.dev/items/people/${patientId}`
         try{
             const response = await axios.get(api)
             const data  = await response.data.data
@@ -65,7 +35,7 @@ function InformationPatient(){
 
     return (
         <div>
-            <Title name="Informations du patient"/>
+            <Title name="Informations du patient" flecheOn={true} infoOn={false}/>
             <div className="OngletsSuivi">
                 <Onglets name="Personnelles" active={activeTab === "Personnelles"}
                          onClick={() => setActiveTab("Personnelles")}/>
@@ -132,6 +102,39 @@ function InformationPatient(){
 
         </div>
     )
+
+
+
+    function getSexeText(sex){
+        if(sex == 1){
+            return "Homme"
+        }else{
+            return "Femme"
+        }
+    }
+
+    function getActivityProfile(activityProfile){
+
+        switch(activityProfile){
+            case 'sedentary':
+                return "Sédentaire";
+                break;
+            case 'somewhat active':
+                return "Peu actif";
+                break;
+            case 'highly active':
+                return "Très actif";
+                break;
+            case 'active':
+                return "Actif";
+                break;
+            case 'low active':
+                return "Légèrement actif";
+                break;
+        }
+    }
+
+
 }
 
 export default InformationPatient

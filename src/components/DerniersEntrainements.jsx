@@ -6,9 +6,6 @@ import {useEffect, useState} from "react";
 
 
 function DerniersEntrainements ({ patient }) {
-    function clicked() {
-        console.log("Cliqué : " + patient.firstname + " ; activité clicked");
-    }
 
     const[activities, setActivities] = useState([])
 
@@ -59,7 +56,7 @@ function DerniersEntrainements ({ patient }) {
     return (
         <div>
             <div className="title" id="titleEntrainement"> Ses derniers entraînements</div>
-            <div className="DerniersEntrainements" onClick={clicked}>
+            <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
                     getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}/>))
                 }

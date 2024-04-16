@@ -19,7 +19,7 @@ function SuiviPatient({patient}){
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
     return (<div>
-            <Title name="Suivi du patient"/>
+            <Title name="Suivi du patient" patientId={patient.id} />
             <ImagePatient patient={patient}/>
             <PatientName patient={patient}/>
             <div className="OngletsSuivi">

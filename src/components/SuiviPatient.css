@@ -42,6 +42,12 @@
     color: #949494;
 }
 
+#signOut{
+    left: 50px;
+    width: 24px;
+    color: #DA4343;
+}
+
 #duration{
     right: 5px;
     color: white;
@@ -55,7 +61,12 @@
 #patientName{
     margin-top: 5px;
     color: #6D350D;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+#name{
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .OngletsSuivi{

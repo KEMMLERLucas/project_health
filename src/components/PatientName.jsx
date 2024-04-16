@@ -93,7 +93,7 @@ function PatientName({patient}){
         }
     }
 
-    return (<div id="patientName"><span>{patient.firstname+" "+patient.lastname}</span>
+    return (<div id="patientName"><span id="name">{patient.firstname+" "+patient.lastname}</span>
     <div className="tags">
         <div className="ageAndSex">{getSexIcon(patient.sex)}{getSex(patient.sex)}</div>
         <div className="ageAndSex"><FaCakeCandles/>{calculAge(patient.birthyear)}</div>
