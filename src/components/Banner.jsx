@@ -11,7 +11,7 @@ function Banner(){
         <div class="test">
             <div id="photo"></div>
             <div id="text">
-        Bienvenue Yoann !
+        Bienvenue LE NOM DU CONNECTE !
         <div className="online">
         <FaCircle className="icone" id="circle"/> Connecté
         </div>

@@ -7,6 +7,7 @@ import swal from 'sweetalert2'
 import axios from "axios";
 import './sweetalert.css'
 import Onglets from "./Onglets";
+import Title from "./Title";
 
 function Infos() {
     /*Constantes pour la classe connexion
@@ -66,7 +67,7 @@ function Infos() {
     return (
         <div className="block_log">
             <div className="formulaire">
-                <h2>Connexion</h2>
+            <Title name="Mon profil"/>
                 <div className="OngletsSuivi">
                 <Onglets name="Informations"/>
                 <Onglets name="Mot de passe"/>
