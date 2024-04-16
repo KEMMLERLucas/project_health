@@ -29,8 +29,6 @@ label{
 .block{
     background-color: #FFDD00;
     display: inline-flex;
-    width: 270px;
-    height: 500px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -40,8 +38,6 @@ label{
     background-image: url(/public/fond_log.jpg);
     background-repeat: repeat;
     display: inline-flex;
-    width: 270px;
-    height: 500px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -49,8 +45,6 @@ label{
 
 .formulaire{
     background-color: white;
-    width:206px;
-    height:436px;
 }
 
 .primary_button{

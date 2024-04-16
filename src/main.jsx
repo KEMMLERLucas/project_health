@@ -11,6 +11,7 @@ import InformationPatient from "./components/InformationPatient.jsx";
 import PatientPreview from './components/PatientPreview.jsx'
 import Menu from './components/Menu.jsx'
 import Banner from './components/Banner.jsx'
+import Infos from './components/Infos.jsx'
 
 const root = createRoot(document.getElementById('root'));
 
@@ -26,6 +27,7 @@ root.render(
         <Route path="/patient" element={<PatientPreview />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/banner" element={<Banner />} />
+        <Route path="/infos" element={<Infos />} />
       </Routes>
     </Router>
   </React.StrictMode>
