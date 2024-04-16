@@ -5,17 +5,41 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
+import {useParams} from "react-router-dom";
+import { withCookies, Cookies } from 'react-cookie';
+import axios from "axios";
 
 
 
-function SuiviPatient({patient}){
-    /*console.log(patient)*/
-    /*console.log(steps)*/
+function SuiviPatient(){
+    let { patientId } = useParams();
+    const [isLoading, setLoading] = useState(false);
+    const [isError, setError] = useState(false);
+    const [patient, setPatient] = useState([])
+    useEffect(() => {
+        async function getPatient(){
+            const api = `https://health.shrp.dev/items/people/${patientId}`
+            try{
+                setLoading(true)
+                setError(false)
+                const response = await axios.get(api)
+                const data  = await response.data.data
 
-    /* Gerer le clicked onglet (active)*/
+                setLoading(false)
+                setError(false)
+
+                setPatient(data);
+            }catch (error){
+                console.error(error)
+                setLoading(false)
+                setError(true)
+            }
+        }
+        getPatient()
+    }, [patientId]);
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
     return (<div>
@@ -45,7 +69,7 @@ function SuiviPatient({patient}){
                 </div>
             }
 
-            {activeTab === "Récompenses" && <Recompenses patient={patient}/>} 
+            {activeTab === "Récompenses" && <Recompenses patient={patient}/>}
 
 
         </div>

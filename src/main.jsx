@@ -29,8 +29,8 @@ root.render(
                 <Route path="/info" element={<InformationPatient/>} errorElement={<ErrorPage/>}/>
                 <Route path="/infos" element={<Infos/>}/>
                 <Route path="/banner" element={<Banner/>} errorElement={<ErrorPage/>}/>
+                <Route path="/patients/:patientId/info/:patientId" element={<InformationPatient/>} errorElement={<ErrorPage/>}/>
             </Routes>
         </Router>
     </React.StrictMode>
-
 )

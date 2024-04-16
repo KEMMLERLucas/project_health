@@ -1,7 +1,7 @@
 import "./SuiviPatient.css";
 import axios from "axios"
 import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import Title from "./Title.jsx";
 import React, {useState, useEffect} from "react";
 import Onglets from "./Onglets.jsx";

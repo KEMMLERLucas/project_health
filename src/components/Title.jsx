@@ -1,51 +1,37 @@
 import "./SuiviPatient.css";
-import { FaCaretLeft } from "react-icons/fa";
-import { FaCog } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaCaretLeft, FaCog, FaSignOutAlt } from "react-icons/fa";
+import { useNavigate, Link } from "react-router-dom";
 /*import { withRouter } from "react-router-dom";*/
-import { MdOutlineExitToApp } from "react-icons/md";
-import swal from 'sweetalert2';
-import './sweetalert.css';
 
-function Title({name, history}){
-    
+function Title({name, patientId, flecheOn = true, infoOn = true, signoutOn = false}) {
+
+    const navigate = useNavigate();
+
     const handleGoBack = () => {
-        history.goBack();
+        navigate(-1); // Go back in history
     };
 
-    function showAlert(){
-        swal.fire({
-            title: "Êtes-vous sûrs de vouloir vous déconnecter ?",
-            icon: "info",
-            showCancelButton: true,
-            confirmButtonColor: "#E26666",
-            cancelButtonColor: "#B5B5B5",
-            cancelButtonText: "Annuler",
-            confirmButtonText: "Confirmer",
-          });
-        }
+    const handleSignOut = () => {
+        console.log("Signing out...");
+        navigate('/');
+    };
 
-    switch(name){
-        case "Suivi du patient":
-            return (
-                <div className="title">
-                    <FaCaretLeft className="icone" id="fleche" onClick={handleGoBack}/>
-                    <span>{name}</span>
-                    <Link to="/info">
-                        <FaCog className="icone" id="rouage"/>
-                    </Link>
-                </div>)
-            break;
-        
-        case "Mon profil":
-            return (
-                <div className="title">
-                    <FaCaretLeft className="icone" id="fleche" onClick={handleGoBack}/>
-                    <span>{name}</span>
-                    <MdOutlineExitToApp className="icone" id="exit" onClick={showAlert}/>
-                </div>)
-            break;
-    }
+    return (
+        <div className="title">
+            {flecheOn && (
+                <FaCaretLeft className="icone" id="fleche" onClick={handleGoBack}/>
+            )}
+            <span>{name}</span>
+            {infoOn && (
+                <Link to={`/patients/${patientId}/info/${patientId}`}>
+                    <FaCog className="icone" id="rouage"/>
+                </Link>
+            )}
+            {signoutOn && (
+                <FaSignOutAlt className="icone" id="signOut" onClick={handleSignOut}/>
+            )}
+
+        </div>)
 }
 
 export default Title

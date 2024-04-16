@@ -8,7 +8,7 @@ function Banner(){
     return (<div className="banner">
         <div className="infos_banner">
         <Link to="/infos">
-        <div class="test">
+        <div className="test">
             <div id="photo"></div>
             <div id="text">
         Bienvenue LE NOM DU CONNECTE !
