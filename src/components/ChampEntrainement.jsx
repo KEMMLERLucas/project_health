@@ -29,15 +29,16 @@ function ChampEntrainement({ name, duration, calories, date }) {
 
     function getDate(){
         let activityDate = new Date(date);
-        let day = activityDate.getDay()+1;
-        let month = activityDate.getMonth()+1;
+        let day = activityDate.getDate();
+        let month = activityDate.getMonth()+1; /* Car ici le premier mois de l'année est 0 */
         let year = activityDate.getFullYear();
+        let today = new Date();
 
         if(day<10){
             day = "0"+day;
         }
 
-        if(month<=4){
+        if(month<today.getMonth()+1 || (month === today.getMonth()+1 && day <= today.getDate())){
             year++;
         }
 

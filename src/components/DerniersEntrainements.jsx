@@ -26,18 +26,42 @@ function DerniersEntrainements ({ patient }) {
         loadActivities()
     }, [patient]);
 
+    activities.sort(function(a,b){
+        return new Date(b.date) > new Date(a.date);
+      });
+
     function getDate(activity){
-        let today = dateWeek(new Date());
-        let activityDate;
+        let today = new Date();
+        let activityDate = new Date(activity.date);
         let lastWeek = false;
 
-        activityDate = dateWeek(new Date(activity.date));
-        if(activityDate === today){
+        if(activityDate.getMonth() < today.getMonth() || ( activityDate.getMonth() === today.getMonth() && activityDate.getDate() < today.getDate())){
+            activityDate.setFullYear(activityDate.getFullYear()+1);
+        }
+
+        let thisWeek = dateWeek(today)
+        let activityWeek = dateWeek(activityDate);
+
+        if((thisWeek === activityWeek && activityDate.getDate() < today.getDate()) ){
             lastWeek = true;
             activityThisWeek = true;
         }
 
         return(lastWeek);
+    }
+
+    function getLastYear(activity){
+        let activityDate = new Date(activity.date);
+        let today = new Date();
+
+        if(activityDate.getMonth() < today.getMonth() || ( activityDate.getMonth() === today.getMonth() && activityDate.getDate() < today.getDate())){
+            activityDate.setFullYear(activityDate.getFullYear()+1);
+        }
+
+        if(activityDate.getFullYear() != today.getFullYear()){
+            return true;
+        }
+        return false;
     }
 
     function dateWeek(a) {
@@ -67,7 +91,13 @@ function DerniersEntrainements ({ patient }) {
             <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
             <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
-                    !getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
+                    !getDate(activity) && !getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
+                }
+            </div>
+            <div className="title" id="titleEntrainement">L'année dernière : </div>
+            <div className="DerniersEntrainements">
+                {activities.map((activity)=> (
+                    !getDate(activity) && getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
             </div>
         </div>
