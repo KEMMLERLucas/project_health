@@ -1,0 +1,475 @@
+.icone{
+    position: relative;
+}
+
+.icone:hover{
+    cursor: pointer;
+}
+
+.title{
+    position: relative;
+    top: 0px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+}
+
+#titleStats, #titleEntrainement{
+    margin-top: 25px;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+
+#ImageSport{
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin-top: 30px;
+}
+
+#fleche{
+    right: 50px;
+    height: 24px;
+    color: #000000;
+}
+
+#rouage{
+    left: 50px;
+    width: 24px;
+    color: #949494;
+}
+
+#signOut{
+    left: 50px;
+    width: 24px;
+    color: #DA4343;
+}
+
+#duration{
+    right: 5px;
+    color: white;
+}
+#calories{
+    right: 5px;
+    color: white;
+}
+
+#patientName{
+    color: #6D350D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#name{
+    font-size: 16px;
+}
+
+.OngletsSuivi{
+    display: flex;
+    margin-top: 25px;
+    border-bottom: 1px solid #F0E9E2;
+}
+
+.Onglets{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1A202C;
+}
+
+.Onglets:hover{
+    cursor: pointer;
+    color: #DA8243;
+    font-weight: 400;
+}
+
+#OngletsClicked {
+    color: #DA8243;
+}
+
+.Onglets.active{
+    color: #DA8243;
+}
+
+
+/*
+*  Statistiques Actuelles
+*/
+
+/* Stats Bar : nom de stat + carré des résultats */
+.statsActuelles {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+
+/* carré des résultats */
+
+.ChampStatsActu{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #A5FBB8;
+    background-color: #F5FEF4;
+    box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
+}
+
+#NameStatOverweight{
+    border: 1px solid #F4FBA5;
+    background-color: #FEFDF4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
+}
+
+#NameStatMorbidObesity{
+    border: 1px solid #FFC8C8;
+    background-color: #FEF4F4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
+}
+
+#NameStatModerateObesity{
+    border: 1px solid #FFDCC8;
+    background-color: #FEF9F4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
+}
+
+#NameStatUnderweight{
+    border: 1px solid #CFF3F3;
+    background-color: #F4FEFE;
+    box-shadow: 0px 1px 4px 0px rgba(67, 200, 218, 0.25);
+}
+
+.statValue{
+    color: #46DA43;
+    font-size: 24px;
+}
+
+.statValueUnderweight{
+    color: #43D1DA;
+    font-size: 24px;
+}
+
+.statValueOverweight{
+    color: #DAB943;
+    font-size: 24px;
+}
+
+.statValueMorbidObesity{
+    color: #DA4343;
+    font-size: 24px;
+}
+
+.statValueModerateObesity{
+    color: #DA9D43;
+    font-size: 24px;
+}
+
+.statCaption{
+    color: #2D2D2D;
+    font-weight: lighter;
+    font-size: 12px;
+}
+#ChampStatsActClicked {
+    color: #DA8243;
+}
+
+
+/*
+*  Derniers Entraînement
+*/
+
+.ChampEntrainement{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    /*border: 1px solid #A5FBB8;*/
+    border-radius: 8px;
+}
+#Bike{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/cyclisme.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Swimming{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/natation.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Footing{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/courseAPieds.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Walking{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/marche.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+.activityName{
+    flex: 2;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.activityDurationCalories{
+    margin: auto;
+    align-content: start;
+}
+
+.activityDuration, .activityCalories{
+    flex: 1;
+    display: flex;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: left;
+}
+
+
+#ChampEntrainementActClicked {
+    color: #DA8243;
+}
+
+.EvolutionPoids{
+    flex: 1;
+    display: flex;
+}
+
+/*
+* Info patient formulaire
+*/
+
+.informationPatient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulaire{
+    width: 100%;
+}
+
+.champ{
+    width: 95%;
+}
+
+.champ input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.badge {
+    width: 44px;
+    height: 34px;
+    padding-top: 15px;
+    position: relative;
+    background: #D0F5D0;
+    color: white;
+    text-align: center;
+    border-radius: 10% 10% 0 0;
+  }
+  .badge:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+  }
+
+  .recompense{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .containerBadge{
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 4px;
+  }
+
+  .nomBadge{
+    align-self: stretch;
+    color: #1E925B;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .descBadge{
+    color: #2D2D2D;
+    text-align: center;
+    font-size: 10px; 
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .totalRecompenses{
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+  .iconBadge{
+    position: relative;
+    transform: rotate(20deg);
+    color: #79C578;
+    text-align: center;
+    font-family: "Font Awesome 6 Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    width: 18px;
+    height: 20px;
+    bottom: 2px;
+  }
+
+#badgeBleu{
+    background: #D0F5EA;
+}
+
+#iconBleu{
+    color: #78C5C5;
+}
+
+#intituleBleu{
+    color: #1E9276;
+}
+
+#badgeRose{
+    background: #F5D0EB;
+}
+
+#iconRose{
+    color: #C578C1;
+}
+
+#intituleRose{
+    color: #921E8D;
+}
+
+#badgeOrange{
+    background: #F5E6D0;
+}
+
+#iconOrange{
+    color: #C5A178;
+}
+
+#intituleOrange{
+    color: #92641E;
+}
+
+#badgeJaune{
+    background: #F4F5D0;
+}
+
+#iconJaune{
+    color: #C5C178;
+}
+
+#intituleJaune{
+    color: #928D1E;
+}
+
+.profilActivity{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+}
+
+#sedentary{
+    background-color: #FFC8C8;
+    color: #8D1616;
+    box-shadow: 0px 1px 4px 0px rgba(141, 22, 22, 0.25);
+}
+
+#somewhat_active{
+    background-color: #FFDCC8;
+    color: #AD5516;
+    box-shadow: 0px 1px 4px 0px rgba(173, 85, 22, 0.25);
+}
+
+#highly_active{
+    background-color: #C8FFD4;
+    color: #084F17;
+    box-shadow: 0px 1px 4px 0px rgba(8, 79, 23, 0.25);
+}
+
+#active{
+    background-color: #EAFFC8;
+    color: #557D14;
+    box-shadow: 0px 1px 4px 0px rgba(85, 125, 20, 0.25);
+}
+
+#low_active{
+    background-color: #FFFDC8;
+    color: #797510;
+    box-shadow: 0px 1px 4px 0px rgba(121, 117, 16, 0.25);
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 10px;
+}
+
+.ageAndSex{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    color: #959595;
+    background: rgba(234, 234, 234, 0.25);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}

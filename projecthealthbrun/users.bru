@@ -1,0 +1,15 @@
+meta {
+  name: users
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://health.shrp.dev/users?filter[id].=08097bbd-69c9-4400-8ad5-449a80945195
+  body: none
+  auth: none
+}
+
+query {
+  filter[id].: 08097bbd-69c9-4400-8ad5-449a80945195
+}

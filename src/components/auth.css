@@ -1,0 +1,106 @@
+h1{
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-family: Impact;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2{
+    font-family:'Arial Narrow';
+    color:#E26666;
+    font-size:32px;
+}
+
+label{
+    color:#3F0949;
+}
+
+.picture{
+    height:200px;
+    width:140px;
+    background: url(public/fond_auth.jpg) lightgray 50% / cover no-repeat;
+}
+
+.block{
+    background-color: #FFDD00;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.block_log{
+    background-image: url(/public/fond_log.jpg);
+    background-repeat: repeat;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulaire{
+    background-color: white;
+}
+
+.primary_button{
+    text-align: center;
+    line-height: 40px;
+    background-color: #A240B4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.secondary_button{
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    border: 1px solid #A240B4;
+    color: #A240B4;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button{
+    display:flex;
+    flex-direction: column;
+    align-self:stretch;
+    margin:16px;
+    gap:8px;
+}
+
+#forget_mdp{
+    color:#DA8243;
+}
+
+.champ{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self:stretch;
+    gap:8px;
+    padding:16px;
+}
+
+#register{
+    color:#DA8243;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p{
+    font-size:12px;
+}
+
+.champs{
+    overflow-x: auto;
+    height:200px;
+}

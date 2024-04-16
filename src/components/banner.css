@@ -1,0 +1,45 @@
+.banner{
+    width:90vw;
+    border-bottom: 1px solid yellow;
+    padding:24px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.online{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:8px;
+    color:green;
+}
+
+#circle{
+    color:green;
+}
+
+#bell{
+    color:grey;
+    font-size: 24px;
+}
+
+.infos_banner{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+#photo{
+    background: url(../assets/pdp_coach.jpg);
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.test{
+    display:flex;
+    flex-direction: row;
+    gap:16px;
+}
