@@ -8,6 +8,9 @@ import Inscription from './components/Inscription.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 import "./index.css"
 import InformationPatient from "./components/InformationPatient.jsx";
+import PatientPreview from './components/PatientPreview.jsx'
+import Menu from './components/Menu.jsx'
+import Banner from './components/Banner.jsx'
 
 const root = createRoot(document.getElementById('root'));
 
@@ -15,13 +18,14 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path='/patients' element={<App />} errorElement={<ErrorPage />} />
-        <Route path="/auth" element={<Authentication />} errorElement={<ErrorPage />} />
-        <Route path="/connexion" element={<Connexion />} errorElement={<ErrorPage />} />
-        <Route path="/inscription" element={<Inscription />} errorElement={<ErrorPage />} />
-          <Route path="/info" element={<InformationPatient />} errorElement={<ErrorPage />} />
-
-
+        <Route path='/' element={<App />} />
+        <Route path="/auth" element={<Authentication />} />
+        <Route path="/connexion" element={<Connexion />} />
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/info" element={<InformationPatient />} errorElement={<ErrorPage />} />
+        <Route path="/patient" element={<PatientPreview />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/banner" element={<Banner />} />
       </Routes>
     </Router>
   </React.StrictMode>

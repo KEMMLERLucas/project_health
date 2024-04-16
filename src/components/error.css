@@ -1,7 +1,7 @@
 .picture{
     height:200px;
     width:200px;
-    background: url(public/error.png) lightgray 50% / cover no-repeat;
+    background: url(src/assets/error.png) lightgray 50% / cover no-repeat;
 }
 
 .block{
