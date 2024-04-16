@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom'
 import Title from "./Title.jsx";
 import React, {useState, useEffect} from "react";
 import Onglets from "./Onglets.jsx";
-import { FaCouch } from "react-icons/fa6";
-import { GrBike } from "react-icons/gr";
-import { FaRocket } from "react-icons/fa";
-import { FaPlane } from "react-icons/fa6";
-import { FaCar } from "react-icons/fa";
+
 
 
 function InformationPatient(){
@@ -44,45 +40,6 @@ function InformationPatient(){
         }
     }
 
-    function getIdName(activityProfile){
-        switch(activityProfile){
-            case 'sedentary':
-                return "sedentary";
-                break;
-            case 'somewhat active':
-                return "somewhat_active";
-                break;
-            case 'highly active':
-                return "highly_active";
-                break;
-            case 'active':
-                return "active";
-                break;
-            case 'low active':
-                return "low_active";
-                break;
-        }
-    }
-
-    function getIcon(activityProfile){
-        switch(activityProfile){
-            case 'sedentary':
-                return <FaCouch/>;
-                break;
-            case 'somewhat active':
-                return <GrBike/>;
-                break;
-            case 'highly active':
-                return <FaRocket/>;
-                break;
-            case 'active':
-                return <FaPlane/>;
-                break;
-            case 'low active':
-                return <FaCar/>;
-                break;
-        }
-    }
 
     const[patient, setPatient] = useState([])
     
@@ -154,7 +111,6 @@ function InformationPatient(){
                     <div className="formulaire">
                         <div className="champ">
                             <label htmlFor="profil">Profil sportif</label>
-                            <div className="profilActivity" id={getIdName(patient.activityProfile)}>{getIcon(patient.activityProfile)}{getActivityProfile(patient.activityProfile)}</div>
                             <input type="text" id="profil" placeholder={getActivityProfile(patient.activityProfile)}/>
                         </div>
 

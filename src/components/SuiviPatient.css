@@ -403,37 +403,57 @@
 .profilActivity{
     display: flex;
     padding: 4px;
-    border-radius: 8px;
     justify-content: center;
     align-items: center;
     gap: 4px;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    border-radius: 8px;
 }
 
 #sedentary{
     background-color: #FFC8C8;
     color: #8D1616;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
 #somewhat_active{
     background-color: #FFDCC8;
     color: #AD5516;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
 #highly_active{
     background-color: #C8FFD4;
     color: #084F17;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
 #active{
     background-color: #EAFFC8;
     color: #557D14;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
 #low_active{
     background-color: #FFFDC8;
     color: #797510;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ageAndSex{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    color: #959595;
+    background: rgba(234, 234, 234, 0.25);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
 }
