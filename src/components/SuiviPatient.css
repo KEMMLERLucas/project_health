@@ -45,6 +45,12 @@
     color: #949494;
 }
 
+#exit{
+    left: 50px;
+    width: 24px;
+    color: red;
+}
+
 #duration{
     right: 5px;
     color: white;
