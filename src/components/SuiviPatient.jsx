@@ -5,7 +5,7 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
 

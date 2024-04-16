@@ -56,13 +56,13 @@ function DerniersEntrainements ({ patient }) {
             <div className="title" id="titleEntrainement">Vos activités de la semaine : </div>
             <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
-                    getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}/>))
+                    getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
             </div>
             <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
             <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
-                    !getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}/>))
+                    !getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}  date={activity.date}/>))
                 }
             </div>
         </div>
