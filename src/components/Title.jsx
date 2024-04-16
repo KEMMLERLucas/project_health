@@ -18,8 +18,8 @@ function Title({name, history}){
             title: "Êtes-vous sûrs de vouloir vous déconnecter ?",
             icon: "info",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
+            confirmButtonColor: "#E26666",
+            cancelButtonColor: "#B5B5B5",
             cancelButtonText: "Annuler",
             confirmButtonText: "Confirmer",
           });

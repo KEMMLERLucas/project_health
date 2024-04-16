@@ -12,6 +12,8 @@ import Title from "./Title";
 function Infos() {
     /*Constantes pour la classe connexion
     * */
+    const [activeTab, setActiveTab] = useState("Informations");
+
     const [isLoading, setLoading] = useState(false);
     const [isError, setError] = useState(false);
     const [cookies, setCookie] = useCookies(["access_token", "refresh_token"]);
@@ -68,11 +70,59 @@ function Infos() {
             <div className="formulaire">
             <Title name="Mon profil"/>
                 <div className="OngletsSuivi">
-                <Onglets name="Informations"/>
-                <Onglets name="Mot de passe"/>
+                <Onglets name="Informations" active={activeTab === "Informations"}
+                         onClick={() => setActiveTab("Informations")}/>
+                <Onglets name="Mot de passe" active={activeTab === "Mot de passe"}
+                         onClick={() => setActiveTab("Mot de passe")}/>
                 </div>
+
+            {activeTab === "Mot de passe" && (
+        <div className="block_log">
+            <div className="formulaire">
                 <form onSubmit={handleSubmit(onSubmit)}>
 
+                <div className="champ">
+                        <label htmlFor="old_mdp">Ancien mot de passe</label>
+                        <input
+                            type="text"
+                            id="old_mdp"
+                            placeholder="L'ancien mot de passe du connecté"
+                            {...register("old_mdp", { required: true, maxLength: 90 })}
+                        />
+                    </div>
+
+                    <div className="champ">
+                        <label htmlFor="new_mdp">Nouveau mot de passe</label>
+                        <input
+                            type="text"
+                            id="new_mdp"
+                            placeholder="Le nouveau mot de passe du connecté"
+                            {...register("new_mdp", { required: true, maxLength: 90 })}
+                        />
+                    </div>
+
+                    <div className="champ">
+                        <label htmlFor="conf">Confirmation</label>
+                        <input
+                            type="text"
+                            id="conf"
+                            placeholder="Confirmer le nouveau mot de passe du connecté"
+                            {...register("conf", { required: true, maxLength: 90 })}
+                        />
+                    </div>
+
+                    <span className="button">
+            <button className="primary_button">Modifier le mot de passe</button>
+          </span>
+                </form>
+            </div>
+        </div>
+    )}
+    
+    {activeTab === "Informations" && (
+        <div className="block_log">
+        <div className="formulaire">
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="champ">
                         <label htmlFor="first_name">Prénom</label>
                         <input
@@ -109,7 +159,9 @@ function Infos() {
                 </form>
             </div>
         </div>
-    );
-}
+    )}
+    </div>
+    </div>
+)}
 
-export default Infos;
+export default Infos
