@@ -15,11 +15,13 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path='/' element={<App />} errorElement={<ErrorPage />} />
+        <Route path='/patients' element={<App />} errorElement={<ErrorPage />} />
         <Route path="/auth" element={<Authentication />} errorElement={<ErrorPage />} />
         <Route path="/connexion" element={<Connexion />} errorElement={<ErrorPage />} />
         <Route path="/inscription" element={<Inscription />} errorElement={<ErrorPage />} />
           <Route path="/info" element={<InformationPatient />} errorElement={<ErrorPage />} />
+
+
       </Routes>
     </Router>
   </React.StrictMode>

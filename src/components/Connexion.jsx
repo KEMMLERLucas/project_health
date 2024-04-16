@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useCookies } from "react-cookie";
 import swal from 'sweetalert2'
@@ -12,6 +13,7 @@ function Connexion() {
     const [isLoading, setLoading] = useState(false);
     const [isError, setError] = useState(false);
     const [cookies, setCookie] = useCookies(["access_token", "refresh_token"]);
+    const navigate=useNavigate()
     const customClass = {
         title:'custom-title',
         header: 'custom-header',
@@ -31,7 +33,7 @@ function Connexion() {
             setError(false);
             setCookie("access_token", data.access_token, { path: "/", expires });
             setCookie("refresh_token", data.refresh_token, { path: "/", expires });
-
+            navigate("/patients");
         } catch (error) {
             //console.error(error);
             await swal.fire({

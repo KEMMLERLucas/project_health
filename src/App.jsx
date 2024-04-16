@@ -1,7 +1,7 @@
 import axios from "axios"
 import './App.css'
 import {useEffect, useState} from "react";
-import SuiviPatient from "./components/SuiviPatient.jsx";
+import PatientPreview from "./components/PatientPreview.jsx";
 
 function App() {
   const [isLoading,setLoading] =useState(false)
@@ -9,7 +9,7 @@ function App() {
   const [patients, setPatients] = useState([])
   useEffect(() => {
     async function loadPatient(){
-      const api="https://health.shrp.dev/items/people/00657896-d299-48a7-8a41-aae1c2b4f606"
+      const api="https://health.shrp.dev/items/people"
       try{
         setLoading(true)
         setError(false)
@@ -34,8 +34,8 @@ function App() {
         {isLoading && <p>Chargement....</p>}
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         {isError && <p> Une erreur s'est produite</p>}
-        {/*patients.map((patient)=> (*/
-            < SuiviPatient key={patients.id} patient={patients}/> /*))*/
+        {patients.map((patient)=> (
+            < PatientPreview key={patient.id} patient={patient}/> ))
         }
       </div>
   )
