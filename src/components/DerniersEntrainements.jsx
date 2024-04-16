@@ -11,7 +11,7 @@ function DerniersEntrainements ({ patient }) {
 
     useEffect(() => {
         async function loadActivities(){
-        const api="https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]="+patient.id
+        const api=`https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]=${patient.id}`
         try{
 
             const response = await axios.get(api)
