@@ -4,9 +4,6 @@ import { MdOutlineTimer } from "react-icons/md";
 import React from "react";
 
 function ChampEntrainement({ name, duration, calories }) {
-    function clicked() {
-        console.log("Cliqué : " + name + " activité clicked" + "; duration : " + duration + "; calos : "+ calories);
-    }
 
     let idActivity = "";
     let activityName = "";
@@ -31,7 +28,7 @@ function ChampEntrainement({ name, duration, calories }) {
     }
 
     return (
-        <div className="ChampEntrainement" id={idActivity} onClick={clicked}>
+        <div className="ChampEntrainement" id={idActivity}>
 
             <div className="activityName">{activityName}</div>
 

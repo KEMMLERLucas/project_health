@@ -1,9 +1,7 @@
 import "./SuiviPatient.css";
 import ChampStatsActu from "./ChampStatsActu.jsx";
 function StatsActu({ patient, name }) {
-    function color() {
-        console.log("Cliqué : " + patient.firstname + " " + name);
-    }
+
 
     /*
     * Calcul de stat actuel : poids ou IMC
@@ -24,7 +22,7 @@ function StatsActu({ patient, name }) {
     const caption = name === "Poids actuel" ? "~ " + (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
 
     return (
-        <div className="title" id="titleStats" onClick={color}>
+        <div className="title" id="titleStats">
             {name}
             <ChampStatsActu stat={stat} caption={caption}/>
         </div>

@@ -5,9 +5,6 @@ import "./SuiviPatient.css";
 * caption = l'infos dans la 2eme ligne du champs
 * */
 function ChampStatsActu({stat, caption}){
-    function color(){
-        console.log("Cliqué : "+stat + "" + caption);
-    }
 
     let idNameStat = "NameStat";
     let classNameStatValue = "statValue";
@@ -44,7 +41,7 @@ function ChampStatsActu({stat, caption}){
     }
 
     return (
-        <div className="ChampStatsActu" id={idNameStat} onClick= {color}>
+        <div className="ChampStatsActu" id={idNameStat}>
             <div className={classNameStatValue}>{stat}</div>
             <div className="statCaption">{caption}</div>
         </div>

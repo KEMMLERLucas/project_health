@@ -6,15 +6,12 @@ import {useEffect, useState} from "react";
 
 
 function DerniersEntrainements ({ patient }) {
-    function clicked() {
-        console.log("Cliqué : " + patient.firstname + " ; activité clicked");
-    }
 
     const[activities, setActivities] = useState([])
 
     useEffect(() => {
         async function loadActivities(){
-        const api="https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]="+patient.id
+        const api=`https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]=${patient.id}`
         try{
 
             const response = await axios.get(api)
@@ -27,7 +24,7 @@ function DerniersEntrainements ({ patient }) {
         }
         }
         loadActivities()
-    }, []);
+    }, [patient]);
 
     function getDate(activity){
         let today = dateWeek(new Date());
@@ -39,8 +36,6 @@ function DerniersEntrainements ({ patient }) {
             lastWeek = true;
         }
         return(lastWeek);
-            /*console.log(today);*/
-            /*console.log(new Date());*/
     }
 
     function dateWeek(a) {
@@ -58,10 +53,16 @@ function DerniersEntrainements ({ patient }) {
 
     return (
         <div>
-            <div className="title" id="titleEntrainement"> Ses derniers entraînements</div>
-            <div className="DerniersEntrainements" onClick={clicked}>
+            <div className="title" id="titleEntrainement">Vos activités de la semaine : </div>
+            <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
                     getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}/>))
+                }
+            </div>
+            <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
+            <div className="DerniersEntrainements">
+                {activities.map((activity)=> (
+                    !getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"}/>))
                 }
             </div>
         </div>

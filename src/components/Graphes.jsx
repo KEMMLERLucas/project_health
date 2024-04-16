@@ -7,7 +7,6 @@ function Graphes({patient, name, chartType}){
 
     const [activitiesCount, setActivitiesCount] = useState([]);
     const[physiologicalData, setPhysiology] = useState([])
-    let physiologicalDataPatient = patient.physiologicalData
 
     useEffect(() => {
         async function loadPhysiology(){
@@ -27,13 +26,14 @@ function Graphes({patient, name, chartType}){
 
     useEffect(() => {
         async function loadPhysicalActivities() {
-            const api = "https://health.shrp.dev/items/physicalActivities";
+            const api = "https://health.shrp.dev/items/physicalActivities?filter[people_id][_eq]="+patient.id;
             try {
                 const response = await axios.get(api);
-                const allActivities = response.data.data;
+                /*const allActivities = response.data.data;*/
+                const userActivities = response.data.data;
 
-                const userActivities = allActivities.filter(activity =>
-                    patient.physicalActivities.includes(activity.id));
+                /*const userActivities = allActivities.filter(activity =>
+                    patient.physicalActivities.includes(activity.id));*/
 
                 const counts = userActivities.reduce((acc, activity) => {
                     const activityType = getActivityNameInFrench(activity.type);
@@ -54,16 +54,6 @@ function Graphes({patient, name, chartType}){
         loadPhysicalActivities();
     }, [patient.physicalActivities]);
 
-
-    let dataArray = []
-    /* array1.forEach((element) => console.log(element)); */
-
-    physiologicalData.forEach((poids) => {
-        if(physiologicalDataPatient.includes(poids.id)){
-            dataArray.push(poids)
-        }
-    })
-
     return (
 
         <div>
@@ -73,7 +63,7 @@ function Graphes({patient, name, chartType}){
             {
                 chartType === 'line' ? (
                         <div className="EvolutionPoids">
-                            <LineChart width={400} height={250} data={dataArray}>
+                            <LineChart width={400} height={250} data={physiologicalData}>
                                 <CartesianGrid strokeDasharray="3 3"/>
                                 <XAxis/>
                                 <YAxis
