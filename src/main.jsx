@@ -8,7 +8,6 @@ import Inscription from './components/Inscription.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 import "./index.css"
 import InformationPatient from "./components/InformationPatient.jsx";
-import PatientPreview from './components/PatientPreview.jsx'
 import Menu from './components/Menu.jsx'
 import Banner from './components/Banner.jsx'
 import SuiviPatient from "./components/SuiviPatient.jsx";
