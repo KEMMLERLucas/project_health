@@ -12,8 +12,12 @@ import Recompenses from "./Recompenses.jsx";
 
 
 function SuiviPatient({patient}){
-    /*console.log(patient)*/
-    /*console.log(steps)*/
+    let authenticate = true; /*Permet de savoir si l'utilisateur est admin ou non. Si il l'est, on affiche l'évolution psychique 
+    du patient sous forme de graphique (onglet Historique), sinon on ne l'affiche pas (évite des erreurs sur les requêtes si le token n'est 
+    pas bon)
+    Passer à true pour tester + trouver un token admin  
+    A voir comment le gérer au moment de merge, mais je pense qu'on pourrait connaître le rôle de l'utilisateur avec les cookies ? 
+    */ 
 
     /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
@@ -41,7 +45,7 @@ function SuiviPatient({patient}){
             {activeTab === "Historique" &&
                 <div>
                     <Graphes patient={patient} name="Suivi du poids" chartType="line"/>
-                    <Graphes patient={patient} name="Evolution psychique" chartType="lineEvo"/>
+                    {authenticate && <Graphes patient={patient} name="Evolution psychique" chartType="lineEvo"/>}
                     <Graphes patient={patient} name="Suivi des activites" chartType="bar"/>
                 </div>
             }

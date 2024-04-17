@@ -10,12 +10,12 @@ function Graphes({patient, name, chartType}){
     const [psychicData, setPsychicData] = useState([]);
 
     const feelingScores = {
-        "hopeless": 1,
-        "lazy": 2,
-        "losing motivation": 3,
-        "enduring": 4,
-        "motivated": 5,
-        "addicted": 6
+        "Désespéré": 1,
+        "Feignant": 2,
+        "Perte de motivation": 3,
+        "Motivé": 4,
+        "Persistant": 5,
+        "Passionné": 6
     };
 
     useEffect(() => {
@@ -42,7 +42,7 @@ function Graphes({patient, name, chartType}){
                 });
 
                 /*  A changer  */
-                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4MDQ4ZjJjLTU1NWEtNGY3Zi1iMzk0LWI3ZTVhMGViYjJmYyIsInJvbGUiOiI1ZmNkMDU4MS1iZmJjLTRhZmEtOGRmOS1iNDBjMjRlMzViZmEiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTcxMzMwNjMzNywiZXhwIjoxNzEzMzA3MjM3LCJpc3MiOiJkaXJlY3R1cyJ9.rULjA8pTPv6eexlPpUqJotGuFYeeYrOYm4ipx8mgoaA"
+                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4MDQ4ZjJjLTU1NWEtNGY3Zi1iMzk0LWI3ZTVhMGViYjJmYyIsInJvbGUiOiI1ZmNkMDU4MS1iZmJjLTRhZmEtOGRmOS1iNDBjMjRlMzViZmEiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTcxMzM1ODIyNCwiZXhwIjoxNzEzMzU5MTI0LCJpc3MiOiJkaXJlY3R1cyJ9.Q2O9FOYghEZelrvUVYQ9h2oj0EPDJ1DFbP2BI51VmqI"
 
                 const config = {
                     headers: { Authorization: `Bearer ${token}` }
@@ -65,6 +65,9 @@ function Graphes({patient, name, chartType}){
         authenticateAndGetPsychicData();
     }, []);
 
+    psychicData.sort(function(a,b){
+        return new Date(b.date) < new Date(a.date);
+    });
 
     useEffect(() => {
         async function loadPhysicalActivities() {
@@ -136,14 +139,19 @@ function Graphes({patient, name, chartType}){
                                 <XAxis dataKey="date"
                                        tickFormatter={(date) => {
                                            const newDate = new Date(date);
-                                           return `${newDate.getMonth() + 1}/${newDate.getDate()}`; // Converts to MM/DD format
+                                           const today = new Date();
+                                           let day = newDate.getDate();
+                                           let month = newDate.getMonth() + 1;
+                                           if(month<10){ month = "0"+month }
+                                           if(day<10){ day = "0"+day }
+                                           return `${day}/${month}`; // Converts to DD/MM/YY format
                                        }}
                                        angle={-45}
                                        textAnchor="end"
                                        height={70}
-                                       style={{fontSize: '10px'}}
+                                       style={{fontSize: '14px'}}
                                 >
-                                    <Label value="Year 2023" offset={0} position="insideBottom"/>
+                                    <Label value="Année 2023" offset={0} position="insideBottom"/>
                                 </XAxis>
                                 <YAxis
                                     domain={[1, 6]}
