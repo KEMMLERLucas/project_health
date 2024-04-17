@@ -27,8 +27,6 @@ function Connexion() {
             const response = await axios.post(api, values);
             const data = await response.data.data;
             let expires = new Date();
-            console.log(data);
-            expires.setTime(expires.getTime() + data.expires/24);
             setLoading(false);
             setError(false);
             Cookies.set("data",data, data.expires)
@@ -62,7 +60,6 @@ function Connexion() {
     };
 
     return (
-        <CookiesProvider defaultSetOptions={{path: '/'}}>
             <div className="block_log">
                 <div className="formulaire">
                     <h2>Connexion</h2>
@@ -102,7 +99,6 @@ function Connexion() {
                     </form>
                 </div>
             </div>
-        </CookiesProvider>
 
     );
 }

@@ -40,6 +40,7 @@ function SuiviPatient(){
         }
         getPatient()
     }, [patientId]);
+
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
     return (<div>
