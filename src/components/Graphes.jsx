@@ -99,6 +99,10 @@ function Graphes({patient, name, chartType}){
         loadPhysicalActivities();
     }, [patient.physicalActivities]);
 
+    physiologicalData.sort(function(a,b){
+        return new Date(b.date) < new Date(a.date);
+    });
+
     return (
 
         <div>
@@ -110,12 +114,30 @@ function Graphes({patient, name, chartType}){
                         <div className="EvolutionPoids">
                             <LineChart width={400} height={250} data={physiologicalData}>
                                 <CartesianGrid strokeDasharray="3 3"/>
-                                <XAxis/>
+                                <XAxis
+                                    dataKey="date"
+                                    tickFormatter={(date) => {
+                                        const newDate = new Date(date);
+                                        const today = new Date();
+                                        let day = newDate.getDate();
+                                        let month = newDate.getMonth() + 1;
+                                        if(month<10){ month = "0"+month }
+                                        if(day<10){ day = "0"+day }
+                                        return `${day}/${month}`; // Converts to DD/MM/YY format
+                                    }}
+                                    angle={-45}
+                                    textAnchor="end"
+                                    height={70}
+                                    style={{fontSize: '14px'}}
+                                >
+                                    <Label value="Année 2023" offset={0} position="insideBottom"/>
+                                </XAxis>
                                 <YAxis
                                     domain={['dataMin - 1', 'dataMax + 1']}
                                     tickFormatter={(value) => value.toFixed(2)}
                                     type="number"
                                     allowDecimals={true}
+                                    style={{fontSize: '14px'}}
                                 />
                                 <Tooltip />
                                 <Line type="monotone" dataKey="weight" stroke="#DA9D43"/>
@@ -126,7 +148,9 @@ function Graphes({patient, name, chartType}){
                         <div className="EvolutionPoids">
                             <BarChart width={350} height={250} data={activitiesCount}>
                                 <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" tickFormatter={getActivityNameInFrench} />
+                                <XAxis dataKey="name" 
+                                tickFormatter={getActivityNameInFrench} 
+                                />
                                 <YAxis/>
                                 <Bar dataKey="count" fill="#BBDCDD" label={{ position: 'insideEnd' }}/>
                             </BarChart>
