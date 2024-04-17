@@ -11,8 +11,7 @@ import Recompenses from "./Recompenses.jsx";
 import {useParams} from "react-router-dom";
 import { withCookies, Cookies } from 'react-cookie';
 import axios from "axios";
-
-
+import Compteur from "./compteur.jsx";
 
 function SuiviPatient(){
     let { patientId } = useParams();
@@ -56,9 +55,12 @@ function SuiviPatient(){
                          onClick={() => setActiveTab("Récompenses")}/>
             </div>
 
-            {activeTab === "Aujourd'hui" && <div className="statsActuelles">
+            {activeTab === "Aujourd'hui" && <div className="all">
+                <Compteur patient={patient} name="Nombre de pas journaliers"/>
+                <div className="statsActuelles">
                 <StatsActu patient={patient} name="Poids actuel"/>
                 <StatsActu patient={patient} name="IMC actuel"/>
+            </div>
             </div>}
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}

@@ -1,9 +1,4 @@
-const http = require('http');
-const host = "localhost";
-const port = 8000;
-
-let steps = {
-    "data": [
+[
     {
         "id": 1,
         "steps": 340,
@@ -153,22 +148,5 @@ let steps = {
         "id": 30,
         "steps": 1083,
         "people_id": "552607e4-e081-462f-bd32-4f70a7e6e462"
-    },
-]
-};
-
-const requestSteps = function(req, res) {
-    if (req.url === "/steps" && req.method === "GET") {
-        res.writeHead(200, { "Content-Type": "application/json" });
-        res.end(JSON.stringify(steps));
-    } else {
-        res.writeHead(404);
-        res.end("Not Found");
     }
-};
-
-const server = http.createServer(requestSteps);
-
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
-});
+]

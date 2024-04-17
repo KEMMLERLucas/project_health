@@ -1,0 +1,96 @@
+.container{
+    width:180px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:4px;
+}
+
+.progress-bar{
+    width:100%;
+    height:16px;
+    border-radius:8px;
+    border:1px solid black;
+}
+
+.progress-bar-fill{
+    height:100%;
+    border-radius:8px;
+    transition: width 0.5s ease-out;
+}
+
+/* Pour les patients ayant atteint plus de 75% de leur objectif quotidien */
+
+.high-progress{
+    background-color: #43DA64;
+}
+
+.high-text{
+    background-color: #43DA64;
+    padding:4px;
+    border-radius:4px;
+    font-size: 12px;
+    color:white;
+}
+
+.high-border{
+    border: 1px solid #43DA64;
+    background-color: white;
+}
+
+/* Pour les patients ayant atteint plus de 50% de leur objectif quotidien */
+
+.medium-progress{
+    background-color: #DAB943;
+}
+
+.medium-text{
+    background-color: #DAB943;
+    padding:4px;
+    border-radius:4px;
+    font-size: 12px;
+    color:white;
+}
+
+.medium-border{
+    border: 1px solid #DAB943;
+    background-color: white;
+}
+
+/* Pour les patients ayant atteint plus de 25% de leur objectif quotidien */
+
+.low-progress{
+    background-color: #DA8243;
+}
+
+.low-text{
+    background-color: #DA8243;
+    padding:4px;
+    border-radius:4px;
+    font-size: 12px;
+    color:white;
+}
+
+.low-border{
+    border: 1px solid #DA8243;
+    background-color: white;
+}
+
+/* Pour les patients ayant atteint moins de 25% de leur objectif quotidien */
+
+.very-low-progress{
+    background-color:#DA4343;
+}
+
+.very-low-text{
+    background-color: #DA4343;
+    padding:4px;
+    border-radius:4px;
+    font-size: 12px;
+    color:white;
+}
+
+.very-low-border{
+    border: 1px solid #DA4343;
+    background-color: white;
+}
