@@ -5,10 +5,6 @@ import { FaCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Banner(){
-    const [username, setUsername] = useState("");
-    useEffect(() => {
-        const JSWTK = Cookies.get('name')
-    }, []);
     return (<div className="banner">
         <div className="infos_banner">
         <Link to="/infos">
