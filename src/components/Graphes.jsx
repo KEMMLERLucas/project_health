@@ -10,12 +10,12 @@ function Graphes({patient, name, chartType}){
     const [psychicData, setPsychicData] = useState([]);
 
     const feelingScores = {
-        "Désespéré": 1,
-        "Feignant": 2,
-        "Perte de motivation": 3,
-        "Motivé": 4,
-        "Persistant": 5,
-        "Passionné": 6
+        "hopeless": 1,
+        "lazy": 2,
+        "losing motivation": 3,
+        "motivated": 4,
+        "enduring": 5,
+        "addicted": 6
     };
 
     useEffect(() => {
@@ -42,7 +42,7 @@ function Graphes({patient, name, chartType}){
                 });
 
                 /*  A changer  */
-                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4MDQ4ZjJjLTU1NWEtNGY3Zi1iMzk0LWI3ZTVhMGViYjJmYyIsInJvbGUiOiI1ZmNkMDU4MS1iZmJjLTRhZmEtOGRmOS1iNDBjMjRlMzViZmEiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTcxMzM1ODIyNCwiZXhwIjoxNzEzMzU5MTI0LCJpc3MiOiJkaXJlY3R1cyJ9.Q2O9FOYghEZelrvUVYQ9h2oj0EPDJ1DFbP2BI51VmqI"
+                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4MDQ4ZjJjLTU1NWEtNGY3Zi1iMzk0LWI3ZTVhMGViYjJmYyIsInJvbGUiOiI1ZmNkMDU4MS1iZmJjLTRhZmEtOGRmOS1iNDBjMjRlMzViZmEiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTcxMzM2Mjk2MiwiZXhwIjoxNzEzMzYzODYyLCJpc3MiOiJkaXJlY3R1cyJ9.ZYRgUhaCJNGRAJTnEHjmJUFrRtIJNadPIwApUOJ31Ns"
 
                 const config = {
                     headers: { Authorization: `Bearer ${token}` }
