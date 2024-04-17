@@ -5,7 +5,10 @@ import {useEffect, useState} from "react";
 
 
 function DerniersEntrainements ({ patient }) {
-    let activityThisWeek = false;
+    /** Ces trois variables permettent d'afficher des messages si aucune activité n'a été réalisée */
+    let activityThisWeek = false; /** Vrai si il y a eu au moins une activité cette semaine, faux sinon */
+    let activityLastYear = false; /** Vrai si il y a eu au moins une activité l'année dernière, faux sinon */
+    let activityThisYear = false; /** Vrai si il y a eu au moins une activité cette année (avant la semaine courante), faux sinon */
 
     const[activities, setActivities] = useState([])
 
@@ -29,6 +32,7 @@ function DerniersEntrainements ({ patient }) {
         return new Date(b.date) > new Date(a.date);
       });
 
+    /** Renvoie vrai si l'activité a été réalisée dans la semaine, faux sinon */
     function getDate(activity){
         let today = new Date();
         let activityDate = new Date(activity.date);
@@ -49,6 +53,7 @@ function DerniersEntrainements ({ patient }) {
         return(lastWeek);
     }
 
+    /** Renvoie vrai si l'activité a été réalisée l'année dernière, faux sinon */
     function getLastYear(activity){
         let activityDate = new Date(activity.date);
         let today = new Date();
@@ -58,11 +63,21 @@ function DerniersEntrainements ({ patient }) {
         }
 
         if(activityDate.getFullYear() != today.getFullYear()){
+            activityLastYear = true;
             return true;
         }
         return false;
     }
 
+    /** Renvoie vrai si l'activité a été réalisée cette année, mais pas cette semaine (donc avant), faux si elle a été réalisée 
+     * cette semaine ou l'année dernière 
+     */
+    function getThisYear(activity){
+        activityThisYear = true;
+        return !getDate(activity) && !getLastYear(activity);
+    }
+
+    /** Permet de savoir si une date donnée est dans la semaine courante */
     function dateWeek(a) {
         var d = a ? new Date(a) : new Date();
         d.setHours(0,0,0,0);
@@ -90,13 +105,19 @@ function DerniersEntrainements ({ patient }) {
             <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
             <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
-                    !getDate(activity) && !getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
+                    getThisYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
+                }
+                {
+                    !activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>
                 }
             </div>
             <div className="title" id="titleEntrainement">L'année dernière : </div>
             <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
-                    !getDate(activity) && getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
+                    getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
+                }
+                {
+                    !activityLastYear && <div className="noActivity">Pas d'activité enregistrée l'année dernière...</div>
                 }
             </div>
         </div>
