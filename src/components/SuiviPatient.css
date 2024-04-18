@@ -2,6 +2,11 @@
     position: relative;
 }
 
+.all{
+    height:100%;
+    width:100%;
+}
+
 .icone:hover{
     cursor: pointer;
 }
@@ -145,8 +150,14 @@
 
 .OngletsSuivi{
     display: flex;
+    flex-wrap:nowrap;
     margin-top: 25px;
     border-bottom: 1px solid #F0E9E2;
+}
+
+.horizontal-menu-container{
+    width:100%;
+    overflow-x:auto;
 }
 
 .Onglets{

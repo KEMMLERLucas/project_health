@@ -12,6 +12,7 @@ import {useParams} from "react-router-dom";
 import { withCookies, Cookies } from 'react-cookie';
 import axios from "axios";
 import Compteur from "./compteur.jsx";
+import Training from "./Training.jsx";
 
 function SuiviPatient(){
     let { patientId } = useParams();
@@ -42,10 +43,11 @@ function SuiviPatient(){
 
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
-    return (<div>
+    return (<div className="all">
             <Title name="Suivi du patient" patientId={patient.id} />
             <ImagePatient patient={patient}/>
             <PatientName patient={patient}/>
+            <div className="horizontal-menu-container">
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"}
                          onClick={() => setActiveTab("Aujourd'hui")}/>
@@ -54,8 +56,10 @@ function SuiviPatient(){
                 <Onglets name="Récompenses" active={activeTab === "Récompenses"}
                          onClick={() => setActiveTab("Récompenses")}/>
             </div>
+            </div>
 
             {activeTab === "Aujourd'hui" && <div className="all">
+                <Training patient={patient} name="Plan d'entraînement"/>
                 <Compteur patient={patient} name="Nombre de pas journaliers"/>
                 <div className="statsActuelles">
                 <StatsActu patient={patient} name="Poids actuel"/>

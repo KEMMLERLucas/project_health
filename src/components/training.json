@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "name" : "Séance bras",
+        "number_ex" : 8,
+        "timer" : 30,
+        "people_id" : "00657896-d299-48a7-8a41-aae1c2b4f606",
+        "entraînements": {
+            "act_1" :{
+                "name" : "Standing dumbbell biceps curls",
+                "number_series" : 3,
+                "number_repet" : 15
+            },
+            "act_2" : {
+                "name" : "Standing dumbbell biceps curls",
+                "number_series" : 3,
+                "number_repet" : 15
+            }
+        }
+    }
+]
