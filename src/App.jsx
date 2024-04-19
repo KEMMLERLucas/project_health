@@ -52,9 +52,10 @@ function App() {
             localStorage.setItem("patients", JSON.stringify(json))
             let pat = JSON.parse(localStorage.getItem("patients"))
         }
-        if (JSON.parse(localStorage.getItem("patients"))==null || localStorage.length===1){
+        if (JSON.parse(localStorage.getItem("patients"))==null || Object.keys(JSON.parse(localStorage.getItem("patients"))).length===0){
             savePatientImagesInLocalStorage()
         }
+
     }, [patients]);
 
     return (
