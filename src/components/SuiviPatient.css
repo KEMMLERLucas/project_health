@@ -14,9 +14,13 @@
 .title{
     position: relative;
     top: 0px;
+    align-items:center;
+    width:100%;
     font-size: 20px;
     color: #000000;
     font-weight: 400;
+    display:flex;
+    justify-content: space-between;
 }
 
 .steps_block{
@@ -111,15 +115,22 @@
 }
 
 #fleche{
-    right: 50px;
-    height: 24px;
     color: #000000;
+    font-size: 20px;
+}
+
+.border{
+    display:flex;
+    padding:8px;
+    align-items:center;
+    justify-content: center;
+    border:1px solid lightgrey;
+    border-radius:32px;
 }
 
 #rouage{
-    left: 50px;
-    width: 24px;
-    color: #949494;
+    color: black;
+    font-size: 20px;
 }
 
 #signOut{
