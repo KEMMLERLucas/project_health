@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import data from "./training.json";
+import ChampEntrainement from "./ChampEntrainement.jsx";
+
 
 function Training({ patient, name }) {
     
@@ -19,18 +21,19 @@ function Training({ patient, name }) {
                 <div>
                     {filteredData.map(training => (
                         <div key={training.id}>
-                            <h3>{training.name}</h3>
+                            <ChampEntrainement name={training.name} duration={training.timer + " minutes"} calories={training.number_ex + " exercices"} train = {true}/>
+                            {/*<h3>{/*training.name}</h3>
                             <p>Number of exercises: {training.number_ex}</p>
-                            <p>Timer: {training.timer}</p>
-                            <div>
-                                {Object.keys(training.entraînements).map(key => (
+                            <p>Timer: {training.timer}</p> */}
+                            {/*<div>
+                                Object.keys(training.entraînements).map(key => (
                                     <div key={key}>
                                         <h4>{training.entraînements[key].name}</h4>
                                         <p>Number of series: {training.entraînements[key].number_series}</p>
                                         <p>Number of repetitions: {training.entraînements[key].number_repet}</p>
                                     </div>
-                                ))}
-                            </div>
+                                ))
+                            </div>*/}
                         </div>
                     ))}
                 </div>
