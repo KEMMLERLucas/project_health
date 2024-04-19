@@ -35,7 +35,6 @@ function App() {
         function savePatientImagesInLocalStorage() {
             let json = {};
             patients.map((patient) => {
-                console.log(patient)
                 let sex = patient.sex
                 let eof
                 let i = 0
@@ -50,11 +49,8 @@ function App() {
                 console.log(eof)
                 json[patient.id]=`/image_sport${eof}.jpg`
             });
-            console.log("Hey")
-            console.log(json)
             localStorage.setItem("patients", JSON.stringify(json))
             let pat = JSON.parse(localStorage.getItem("patients"))
-            console.log(pat)
         }
         if (JSON.parse(localStorage.getItem("patients"))==null || localStorage.length===1){
             savePatientImagesInLocalStorage()
