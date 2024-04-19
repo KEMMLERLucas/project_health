@@ -6,12 +6,14 @@ import Cookies from 'js-cookie';
 import swal from 'sweetalert2'
 import axios from "axios";
 import './sweetalert.css'
+import {useCookies} from "react-cookie";
 
 function Connexion() {
     /*Constantes pour la classe connexion
     * */
     const [isLoading, setLoading] = useState(false);
     const [isError, setError] = useState(false);
+    const [cookies, setCookie] = useCookies(['data'])
     const navigate = useNavigate()
     const customClass = {
         title: 'custom-title',
@@ -29,7 +31,8 @@ function Connexion() {
             let expires = new Date();
             setLoading(false);
             setError(false);
-            Cookies.set("data",data, data.expires)
+            //Cookies.set("data",data, data.expires)
+            setCookie('data',data, data.expires)
             navigate("/patients");
         } catch (error) {
             //console.error(error);
