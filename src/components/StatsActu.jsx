@@ -22,7 +22,7 @@ function StatsActu({ patient, name }) {
     const caption = name === "Poids actuel" ? "~ " + (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
 
     return (
-        <div className="title" id="titleStats">
+        <div id="titleStats">
             {name}
             <ChampStatsActu stat={stat} caption={caption}/>
         </div>

@@ -31,6 +31,10 @@ function ChampEntrainement({ name, duration, calories, train = false, onClick })
             idActivity = "Arm";
             activityName = name;
             break;
+        case "Séance fesses":
+            idActivity = "Ass";
+            activityName = name;
+            break;
     }
 
     const color = () => {

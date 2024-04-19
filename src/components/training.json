@@ -4,7 +4,7 @@
         "name" : "Séance bras",
         "number_ex" : 8,
         "timer" : 30,
-        "people_id" : "00657896-d299-48a7-8a41-aae1c2b4f606",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
         "entraînements": {
             "act_1" :{
                 "name" : "Standing dumbbell biceps curls",
@@ -17,5 +17,19 @@
                 "number_repet" : 15
             }
         }
+    },
+    {
+        "id": 2,
+        "name" : "Séance fesses",
+        "number_ex" : 3,
+        "timer" : 15,
+        "who" : "03267270-c67d-41c2-97f5-daeca0474952",
+        "entraînements": {
+            "act_1" :{
+                "name" : "test",
+                "number_series" : 3,
+                "number_repet" : 15
+        }
     }
+}
 ]

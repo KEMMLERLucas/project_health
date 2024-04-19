@@ -12,7 +12,7 @@ import {useParams} from "react-router-dom";
 import { withCookies, Cookies } from 'react-cookie';
 import axios from "axios";
 import Compteur from "./compteur.jsx";
-import Training from "./Training.jsx";
+import Training2 from "./Training2.jsx";
 
 function SuiviPatient(){
     let { patientId } = useParams();
@@ -69,7 +69,7 @@ function SuiviPatient(){
             </div>}
 
             {activeTab === "Entraînements" && <div className="all">
-                <Training patient={patient} name="Plan d'entraînement"/>
+                <Training2 patient={patient} name="Plan d'entraînement"/>
             </div>}
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
