@@ -50,7 +50,9 @@ function SuiviPatient(){
             <div className="horizontal-menu-container">
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"}
-                         onClick={() => setActiveTab("Aujourd'hui")}/>
+                         onClick={() => setActiveTab("Aujourd'hui")} className="test"/>
+                <Onglets name="Entraînements" active={activeTab === "Entraînements"}
+                         onClick={() => setActiveTab("Entraînements")}/>
                 <Onglets name="Historique" active={activeTab === "Historique"}
                          onClick={() => setActiveTab("Historique")}/>
                 <Onglets name="Récompenses" active={activeTab === "Récompenses"}
@@ -59,12 +61,15 @@ function SuiviPatient(){
             </div>
 
             {activeTab === "Aujourd'hui" && <div className="all">
-                <Training patient={patient} name="Plan d'entraînement"/>
                 <Compteur patient={patient} name="Nombre de pas journaliers"/>
                 <div className="statsActuelles">
                 <StatsActu patient={patient} name="Poids actuel"/>
                 <StatsActu patient={patient} name="IMC actuel"/>
             </div>
+            </div>}
+
+            {activeTab === "Entraînements" && <div className="all">
+                <Training patient={patient} name="Plan d'entraînement"/>
             </div>}
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
