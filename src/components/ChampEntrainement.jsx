@@ -4,10 +4,11 @@ import { MdOutlineTimer } from "react-icons/md";
 import { MdOutlineSports } from "react-icons/md";
 import React from "react";
 
-function ChampEntrainement({ name, duration, calories, train = false}) {
+function ChampEntrainement({ name, duration, calories, train = false, onClick }) {
 
     let idActivity = "";
     let activityName = "";
+    let classChamp = "ChampEntrainement";
 
     switch(name){
         case "bike": 
@@ -32,8 +33,17 @@ function ChampEntrainement({ name, duration, calories, train = false}) {
             break;
     }
 
+    const color = () => {
+        console.log("Cliqué : " + name);
+        if (onClick) onClick();
+    };
+
+    if(train){
+        classChamp += "Train";
+    }
+
     return (
-        <div className="ChampEntrainement" id={idActivity}>
+        <div className={classChamp} id={idActivity} onClick={color}>
 
             <div className="activityName">{activityName}</div>
 
