@@ -6,12 +6,16 @@
     cursor: pointer;
 }
 
-.title{
+.title, .titleLastYear{
     position: relative;
     top: 0px;
     font-size: 20px;
     color: #000000;
     font-weight: 400;
+}
+
+.titleLastYear:hover{
+    cursor: pointer;
 }
 
 #titleStats, #titleEntrainement{

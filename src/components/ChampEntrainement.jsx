@@ -38,7 +38,7 @@ function ChampEntrainement({ name, duration, calories, date }) {
             day = "0"+day;
         }
 
-        if(month<today.getMonth()+1 || (month === today.getMonth()+1 && day <= today.getDate())){
+        if(month<today.getMonth()+1 || (month === today.getMonth()+1 && day < today.getDate())){
             year++;
         }
 

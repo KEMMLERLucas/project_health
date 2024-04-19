@@ -11,6 +11,7 @@ function DerniersEntrainements ({ patient }) {
     let activityThisYear = false; /** Vrai si il y a eu au moins une activité cette année (avant la semaine courante), faux sinon */
 
     const[activities, setActivities] = useState([])
+    const [activeTab, setActiveTab] = useState(false);
 
     useEffect(() => {
         async function loadActivities() {
@@ -86,11 +87,6 @@ function DerniersEntrainements ({ patient }) {
         return ('0' + (1 + Math.round(((d.getTime() - w.getTime()) / 86400000 - 3 + (w.getDay() + 6) % 7) / 7))).slice(-2);
     }
 
-    /*
-    * name, duration and calories should be changed
-    * string here to give an example just
-    * */
-
     return (
         <div>
             <div className="title" id="titleEntrainement">Vos activités de la semaine : </div>
@@ -111,15 +107,15 @@ function DerniersEntrainements ({ patient }) {
                     !activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>
                 }
             </div>
-            <div className="title" id="titleEntrainement">L'année dernière : </div>
-            <div className="DerniersEntrainements">
+            <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>Voir plus </div>
+            {activeTab && <div className="DerniersEntrainements">
                 {activities.map((activity)=> (
                     getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
                 {
                     !activityLastYear && <div className="noActivity">Pas d'activité enregistrée l'année dernière...</div>
                 }
-            </div>
+            </div>}
         </div>
     );
 }
