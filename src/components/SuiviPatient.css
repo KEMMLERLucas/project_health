@@ -349,6 +349,15 @@
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
+.all{
+    display:flex;
+    flex-direction: column;
+}
+
+.date{
+    color:white;
+}
+
 .activityName{
     flex: 2;
     margin: auto;

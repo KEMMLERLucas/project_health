@@ -100,13 +100,21 @@ function DerniersEntrainements ({ patient }) {
             </div>
             <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
             <div className="DerniersEntrainements">
-                {activities.map((activity)=> (
-                    getThisYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
-                }
-                {
-                    !activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>
-                }
-            </div>
+    {activities
+        .filter(activity => getThisYear(activity)) // Filtrer les activités de cette année
+        .sort((a, b) => new Date(b.date) - new Date(a.date)) // Trier les activités par date décroissante
+        .map(activity => (
+            <ChampEntrainement
+                key={activity.id}
+                name={activity.type}
+                duration={activity.duration + " minutes"}
+                calories={activity.consumedCalories + " calories"}
+                date={activity.date}
+            />
+        ))}
+    {!activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>}
+</div>
+
             <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>Voir plus </div>
             {activeTab && <div className="DerniersEntrainements">
                 {activities.map((activity)=> (

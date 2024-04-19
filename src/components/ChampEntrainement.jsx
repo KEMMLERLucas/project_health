@@ -4,7 +4,7 @@ import { MdOutlineTimer } from "react-icons/md";
 import { MdOutlineSports } from "react-icons/md";
 import React from "react";
 
-function ChampEntrainement({ name, duration, calories, train = false, onClick }) {
+function ChampEntrainement({ name, duration, calories, date, train = false, onClick }) {
 
     let idActivity = "";
     let activityName = "";
@@ -37,6 +37,28 @@ function ChampEntrainement({ name, duration, calories, train = false, onClick })
             break;
     }
 
+    function getDate(){
+        let activityDate = new Date(date);
+        let day = activityDate.getDate();
+        let month = activityDate.getMonth()+1; /* Car ici le premier mois de l'année est 0 */
+        let year = activityDate.getFullYear();
+        let today = new Date();
+
+        if(day<10){
+            day = "0"+day;
+        }
+
+        if(month<today.getMonth()+1 || (month === today.getMonth()+1 && day < today.getDate())){
+            year++;
+        }
+
+        if(month<10){
+            month = "0"+month;
+        }
+
+        return(day+"/"+month+"/"+year);
+    }
+
     const color = () => {
         console.log("Cliqué : " + name);
         if (onClick) onClick();
@@ -49,7 +71,10 @@ function ChampEntrainement({ name, duration, calories, train = false, onClick })
     return (
         <div className={classChamp} id={idActivity} onClick={color}>
 
+            <div className="all">
             <div className="activityName">{activityName}</div>
+            <div className="date">{getDate(date)}</div>
+            </div>
 
             <div className="activityDurationCalories">
                 <div className="activityDuration">
