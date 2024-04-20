@@ -4,6 +4,7 @@
         "name" : "Séance bras",
         "number_ex" : 8,
         "timer" : 30,
+        "level" : "Débutant",
         "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
         "entraînements": {
             "act_1" :{

@@ -4,7 +4,7 @@ import { MdOutlineTimer } from "react-icons/md";
 import { MdOutlineSports } from "react-icons/md";
 import React from "react";
 
-function ChampEntrainement({ name, duration, calories, date, train = false, onClick }) {
+function ChampEntrainement({ name, duration, calories, date, level, train = false, onClick }) {
 
     let idActivity = "";
     let activityName = "";
@@ -87,6 +87,11 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
             {!train && 
                 <div className="date">{getDate(date)}</div>
             }
+            
+            {train &&
+                <div className="level">{level}</div>
+            }
+
             </div>
 
             <div className="activityDurationCalories">

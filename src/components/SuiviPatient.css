@@ -173,6 +173,7 @@
     font-weight: bold;
     color: #A240B4;
     letter-spacing:2px;
+    padding-bottom:4px;
     text-align: left;
 }
 
@@ -369,7 +370,7 @@
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
-.date{
+.date, .level{
     color:white;
     text-align:left;
     font-size: 10px;

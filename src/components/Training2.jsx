@@ -24,6 +24,7 @@ function Training2({ patient, name }) {
                         <div key={training.id}>
                             <ChampEntrainement
                                 name={training.name}
+                                level={training.level}
                                 duration={training.timer + " minutes"}
                                 calories={training.number_ex + " exercices"}
                                 train={true}
