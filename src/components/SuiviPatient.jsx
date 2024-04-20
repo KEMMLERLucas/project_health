@@ -12,7 +12,7 @@ import Recompenses from "./Recompenses.jsx";
 
 
 function SuiviPatient({patient}){
-    let authenticate = false; /*Permet de savoir si l'utilisateur est admin ou non. Si il l'est, on affiche l'évolution psychique 
+    let authenticate = false; /*Permet de savoir si l'utilisateur est admin ou non. Si il l'est, on affiche l'évolution psychique
     du patient sous forme de graphique (onglet Historique), sinon on ne l'affiche pas (évite des erreurs sur les requêtes si le token n'est 
     pas bon)
     Passer à true pour tester + trouver un token admin  
@@ -43,7 +43,7 @@ function SuiviPatient({patient}){
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
 
             {activeTab === "Historique" &&
-                <div>
+                <div className="graphes">
                     <Graphes patient={patient} name="Suivi du poids" chartType="line"/>
                     {authenticate && <Graphes patient={patient} name="Evolution psychique" chartType="lineEvo"/>}
                     <Graphes patient={patient} name="Suivi des activites" chartType="bar"/>
