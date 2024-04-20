@@ -5,41 +5,21 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import React, {useEffect, useState} from 'react';
+import { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
-import {useParams} from "react-router-dom";
-import { withCookies, Cookies } from 'react-cookie';
-import axios from "axios";
-import Compteur from "./compteur.jsx";
 
-function SuiviPatient(){
-    let { patientId } = useParams();
-    const [isLoading, setLoading] = useState(false);
-    const [isError, setError] = useState(false);
-    const [patient, setPatient] = useState([])
-    useEffect(() => {
-        async function getPatient(){
-            const api = `https://health.shrp.dev/items/people/${patientId}`
-            try{
-                setLoading(true)
-                setError(false)
-                const response = await axios.get(api)
-                const data  = await response.data.data
 
-                setLoading(false)
-                setError(false)
 
-                setPatient(data);
-            }catch (error){
-                console.error(error)
-                setLoading(false)
-                setError(true)
-            }
-        }
-        getPatient()
-    }, [patientId]);
+function SuiviPatient({patient}){
+    let authenticate = false; /*Permet de savoir si l'utilisateur est admin ou non. Si il l'est, on affiche l'évolution psychique
+    du patient sous forme de graphique (onglet Historique), sinon on ne l'affiche pas (évite des erreurs sur les requêtes si le token n'est 
+    pas bon)
+    Passer à true pour tester + trouver un token admin  
+    A voir comment le gérer au moment de merge, mais je pense qu'on pourrait connaître le rôle de l'utilisateur avec les cookies ? 
+    */ 
 
+    /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
     return (<div>
@@ -55,24 +35,22 @@ function SuiviPatient(){
                          onClick={() => setActiveTab("Récompenses")}/>
             </div>
 
-            {activeTab === "Aujourd'hui" && <div className="all">
-                <Compteur patient={patient} name="Nombre de pas journaliers"/>
-                <div className="statsActuelles">
+            {activeTab === "Aujourd'hui" && <div className="statsActuelles">
                 <StatsActu patient={patient} name="Poids actuel"/>
                 <StatsActu patient={patient} name="IMC actuel"/>
-            </div>
             </div>}
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
 
             {activeTab === "Historique" &&
-                <div>
+                <div className="graphes">
                     <Graphes patient={patient} name="Suivi du poids" chartType="line"/>
+                    {authenticate && <Graphes patient={patient} name="Evolution psychique" chartType="lineEvo"/>}
                     <Graphes patient={patient} name="Suivi des activites" chartType="bar"/>
                 </div>
             }
 
-            {activeTab === "Récompenses" && <Recompenses patient={patient}/>}
+            {activeTab === "Récompenses" && <Recompenses patient={patient}/>} 
 
 
         </div>

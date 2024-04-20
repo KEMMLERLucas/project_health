@@ -3,7 +3,7 @@ import { AiOutlineFire } from "react-icons/ai";
 import { MdOutlineTimer } from "react-icons/md";
 import React from "react";
 
-function ChampEntrainement({ name, duration, calories }) {
+function ChampEntrainement({ name, duration, calories, date }) {
 
     let idActivity = "";
     let activityName = "";
@@ -27,10 +27,35 @@ function ChampEntrainement({ name, duration, calories }) {
             break;
     }
 
+    function getDate(){
+        let activityDate = new Date(date);
+        let day = activityDate.getDate();
+        let month = activityDate.getMonth()+1; /* Car ici le premier mois de l'année est 0 */
+        let year = activityDate.getFullYear();
+        let today = new Date();
+
+        if(day<10){
+            day = "0"+day;
+        }
+
+        if(month<today.getMonth()+1 || (month === today.getMonth()+1 && day < today.getDate())){
+            year++;
+        }
+
+        if(month<10){
+            month = "0"+month;
+        }
+
+        return(day+"/"+month+"/"+year);
+    }
+
     return (
         <div className="ChampEntrainement" id={idActivity}>
 
-            <div className="activityName">{activityName}</div>
+            <div className="activityNameAndDate">
+                <div className="activityName">{activityName}</div>
+                <div className="activityDate">{getDate()}</div>
+            </div>
 
             <div className="activityDurationCalories">
                 <div className="activityDuration">
