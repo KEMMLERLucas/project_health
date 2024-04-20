@@ -35,6 +35,10 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
             idActivity = "Ass";
             activityName = name;
             break;
+        case "Breakfast 1":
+            idActivity = "Breakfast_1";
+            activityName = name;
+            break;
     }
 
     function getDate(){

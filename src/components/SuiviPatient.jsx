@@ -13,6 +13,7 @@ import { withCookies, Cookies } from 'react-cookie';
 import axios from "axios";
 import Compteur from "./compteur.jsx";
 import Training2 from "./Training2.jsx";
+import Nutrition from "./Nutrition.jsx";
 
 function SuiviPatient(){
     let { patientId } = useParams();
@@ -46,6 +47,7 @@ function SuiviPatient(){
     return (<div className="all">
             <Title name="Suivi du patient" patientId={patient.id} />
             <ImagePatient patient={patient}/>
+
             <PatientName patient={patient}/>
             <div className="horizontal-menu-container">
             <div className="OngletsSuivi">
@@ -55,6 +57,8 @@ function SuiviPatient(){
                          onClick={() => setActiveTab("Entraînements")}/>
                 <Onglets name="Historique" active={activeTab === "Historique"}
                          onClick={() => setActiveTab("Historique")}/>
+                <Onglets name="Nutrition" active={activeTab === "Nutrition"}
+                         onClick={() => setActiveTab("Nutrition")}/>                         
                 <Onglets name="Récompenses" active={activeTab === "Récompenses"}
                          onClick={() => setActiveTab("Récompenses")}/>
             </div>
@@ -71,6 +75,10 @@ function SuiviPatient(){
             {activeTab === "Entraînements" && <div className="all">
                 <Training2 patient={patient} name="Plan d'entraînement"/>
             </div>}
+
+            {activeTab === "Nutrition" && <div className="all">
+                <Nutrition patient={patient} name="Nutrition"/>
+                </div>}
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
 

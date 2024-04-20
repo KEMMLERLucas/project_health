@@ -4,14 +4,17 @@ import axios from "axios"
 import {useEffect, useState} from "react";
 
 
-function DerniersEntrainements ({ patient }) {
+function DerniersEntrainements ({ patient, latestActivityOnly}) {
     /** Ces trois variables permettent d'afficher des messages si aucune activité n'a été réalisée */
     let activityThisWeek = false; /** Vrai si il y a eu au moins une activité cette semaine, faux sinon */
     let activityLastYear = false; /** Vrai si il y a eu au moins une activité l'année dernière, faux sinon */
     let activityThisYear = false; /** Vrai si il y a eu au moins une activité cette année (avant la semaine courante), faux sinon */
+    let activitiesToShow = patient.activities;
 
     const[activities, setActivities] = useState([])
     const [activeTab, setActiveTab] = useState(false);
+
+    console.log(Date.UTC())
 
     useEffect(() => {
         async function loadActivities() {
@@ -87,10 +90,23 @@ function DerniersEntrainements ({ patient }) {
         return ('0' + (1 + Math.round(((d.getTime() - w.getTime()) / 86400000 - 3 + (w.getDay() + 6) % 7) / 7))).slice(-2);
     }
 
+    const first = activities.find(activity => getDate(activity));
+
     return (
         <div>
+
+        <p>La dernière activité</p>
+        {first && <ChampEntrainement
+                key={first.id}
+                name={first.type}
+                duration={first.duration+" minutes"}
+                calories={first.consumedCalories+" calories"}
+                date={first.date}/>
+        }
+
             <div className="title" id="titleEntrainement">Vos activités de la semaine : </div>
             <div className="DerniersEntrainements">
+
                 {activities.map((activity)=> (
                     getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
@@ -117,7 +133,7 @@ function DerniersEntrainements ({ patient }) {
 
             <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>Voir plus </div>
             {activeTab && <div className="DerniersEntrainements">
-                {activities.map((activity)=> (
+                {activities.sort((a, b) => new Date(b.date) - new Date(a.date)).map((activity)=> (
                     getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
                 {

@@ -18,7 +18,9 @@ function Banner(){
         </div>
         </div></Link>
         </div>
-        <FaRegBell className="icone" id="bell"/>        
+        <Link to="/notifs">
+        <FaRegBell className="icone" id="bell"/>
+        </Link>        
     </div>)
 }
 

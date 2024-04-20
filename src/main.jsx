@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {createRoot} from 'react-dom/client'
+import { PatientsProvider } from './components/PatientContext.jsx'
 import Authentication from './components/Authentication.jsx'
 import App from './App.jsx'
 import Connexion from './components/Connexion.jsx'
@@ -12,12 +13,13 @@ import Menu from './components/Menu.jsx'
 import Banner from './components/Banner.jsx'
 import SuiviPatient from "./components/SuiviPatient.jsx";
 import Infos from './components/Infos.jsx'
-
+import Notifs from './components/Notifs.jsx'
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
+        <PatientsProvider>
         <Router>
             <Routes>
                 <Route path='/patients' element={<App/>} errorElement={<ErrorPage/>}/>
@@ -30,7 +32,9 @@ root.render(
                 <Route path="/infos" element={<Infos/>}/>
                 <Route path="/banner" element={<Banner/>} errorElement={<ErrorPage/>}/>
                 <Route path="/patients/:patientId/info/:patientId" element={<InformationPatient/>} errorElement={<ErrorPage/>}/>
+                <Route path="/notifs" element={<Notifs/>} errorElement={<ErrorPage/>}/>
             </Routes>
         </Router>
+        </PatientsProvider>
     </React.StrictMode>
 )
