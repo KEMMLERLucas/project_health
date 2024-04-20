@@ -17,7 +17,12 @@ h2{
 }
 
 label{
-    color:#3F0949;
+    text-transform: uppercase;
+    font-size:10px;
+    font-weight: bold;
+    color: #A240B4;
+    letter-spacing:2px;
+    text-align: left;
 }
 
 .picture{
@@ -35,12 +40,12 @@ label{
 }
 
 .block_log{
-    background-image: url(/public/fond_log.jpg);
-    background-repeat: repeat;
-    display: inline-flex;
+    /*background-image: url(/public/fond_log.jpg);
+    background-repeat: repeat;*/
+    display: flex;
+    width:100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items:center;
 }
 
 .formulaire{
