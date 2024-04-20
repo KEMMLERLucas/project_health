@@ -8,6 +8,8 @@
 .PatientElement{
     padding: 8px;
     display: grid;
+    width:120px;
+    height:180px;
     border-radius: 8px;
     border: 1px solid  #DA8243;
     background: white;

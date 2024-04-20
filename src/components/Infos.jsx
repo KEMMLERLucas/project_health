@@ -69,7 +69,12 @@ function Infos() {
     return (
         <div className="block_log">
             <div className="formulaire">
-            <Title name="Mon profil" signoutOn/>
+            <Title
+                name="Mon profil"
+                signoutOn={true}
+                flecheOn={true}
+                infoOn={false}
+                />
                 <div className="OngletsSuivi">
                 <Onglets name="Informations" active={activeTab === "Informations"}
                          onClick={() => setActiveTab("Informations")}/>

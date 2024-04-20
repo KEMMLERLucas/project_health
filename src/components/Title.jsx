@@ -3,6 +3,8 @@ import { FaCog, FaSignOutAlt } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate, Link } from "react-router-dom";
 /*import { withRouter } from "react-router-dom";*/
+import swal from 'sweetalert2';
+import './sweetalert.css'
 
 function Title({name, patientId, flecheOn = true, infoOn = true, signoutOn = false}) {
 
@@ -12,9 +14,17 @@ function Title({name, patientId, flecheOn = true, infoOn = true, signoutOn = fal
         navigate(-1); // Go back in history
     };
 
-    const handleSignOut = () => {
-        console.log("Signing out...");
-        navigate('/');
+    const onSubmit = (data) => {
+        // Vérifier la longueur du mot de passe
+        swal.fire({
+            title: "Êtes-vous sûrs de vouloir vous déconnecter ?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "Annuler",
+            confirmButtonText: "Confirmer",
+          })
     };
 
     return (
@@ -32,7 +42,7 @@ function Title({name, patientId, flecheOn = true, infoOn = true, signoutOn = fal
             )}
             {signoutOn && (
                 <span className="border">
-                <FaSignOutAlt className="icone" id="signOut" onClick={handleSignOut}/>
+                <FaSignOutAlt className="icone" id="signOut" onClick={onSubmit}/>
                 </span>
             )}
 
