@@ -35,10 +35,22 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
             idActivity = "Ass";
             activityName = name;
             break;
-        case "Breakfast 1":
-            idActivity = "Breakfast_1";
+        case "Breakfast":
+            idActivity = "Breakfast";
             activityName = name;
             break;
+        case "Snack":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;
+        case "Lunch":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;
+        case "Dinner":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;    
     }
 
     function getDate(){

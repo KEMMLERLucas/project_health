@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import data from "./nutrition.json";
-import ChampEntrainement from './ChampEntrainement';
-import Exercice from './Exercice';
-import "./SuiviPatient.css";
+import ChampNutrition from './ChampNutrition';
+import Ingrédients from './Ingrédients';
+import "./nutrition.css";
 
 function Nutrition({patient, name}){
 
@@ -19,22 +19,17 @@ function Nutrition({patient, name}){
 
     return (
         <div className="steps_block">
-            <div className="name">{name}</div>
             <div>
                 {filteredData.map(nutrition => (
-                    <div key={nutrition.id}>
-                        <ChampEntrainement
+                    <div key={nutrition.id} className="all">
+                        <ChampNutrition
                             name={nutrition.name}
                             onClick={() => {
                                     setSelectedNutritionId(nutrition.id === selectedNutritionId ? null : nutrition.id);
                                 }}/>
-                            {selectedNutritionId === nutrition.id &&
-                                <div>
                                     {Object.keys(nutrition.menu).map(key => (
-                                        <Exercice name = {nutrition.menu[key].name} series = {nutrition.menu[key].quantity} repetitions = {nutrition.menu[key].kcal}/> 
+                                        <Ingrédients name = {nutrition.menu[key].name} series = {nutrition.menu[key].quantity} repetitions = {nutrition.menu[key].kcal}/> 
                                     ))}
-                    </div>
-                    }
                     </div>
                 ))}
             </div>
