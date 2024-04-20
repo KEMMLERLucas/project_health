@@ -92,19 +92,10 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
 
     const first = activities.find(activity => getDate(activity));
 
-    return (
+    return ( 
         <div>
 
-        <p>La dernière activité</p>
-        {first && <ChampEntrainement
-                key={first.id}
-                name={first.type}
-                duration={first.duration+" minutes"}
-                calories={first.consumedCalories+" calories"}
-                date={first.date}/>
-        }
-
-            <div className="title" id="titleEntrainement">Vos activités de la semaine : </div>
+            <div id="titleEntrainement" className="name">Activités de la semaine</div>
             <div className="DerniersEntrainements">
 
                 {activities.map((activity)=> (
@@ -114,7 +105,7 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
                     !activityThisWeek && <div className="noActivity">Pas d'activité enregistrée cette semaine...</div>
                 }
             </div>
-            <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
+            <div className="name" id="titleEntrainement">Activités plus anciennes</div>
             <div className="DerniersEntrainements">
     {activities
         .filter(activity => getThisYear(activity)) // Filtrer les activités de cette année

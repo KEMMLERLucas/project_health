@@ -75,17 +75,12 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
         return(day+"/"+month+"/"+year);
     }
 
-    const color = () => {
-        console.log("Cliqué : " + name);
-        if (onClick) onClick();
-    };
-
     if(train){
         classChamp += "Train";
     }
 
     return (
-        <div className={classChamp} id={idActivity} onClick={color}>
+        <div className={classChamp} id={idActivity}>
 
             <div className="all">
             <div className="activityName">{activityName}</div>
@@ -93,10 +88,10 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
             </div>
 
             <div className="activityDurationCalories">
-                <div className="activityDuration">
+                <span className="activityDuration">
                     <MdOutlineTimer className="icone" id="duration"/>
                     <div className="duration">{duration}</div>
-                </div>
+                </span>
                 <div className="activityCalories">
                     { !train &&
                         <AiOutlineFire className="icone" id="calories"/>
@@ -107,7 +102,6 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
                     <div className="calories">{calories}</div>
                 </div>
             </div>
-
         </div>
     );
 }

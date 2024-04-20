@@ -57,7 +57,7 @@ function Graphes({patient, name, chartType}){
     return (
 
         <div>
-            <div className="title" id="titleStats">
+            <div className="name" id="titleStats">
                 {name}
             </div>
             {

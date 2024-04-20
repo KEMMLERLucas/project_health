@@ -7,10 +7,6 @@
     width:100%;
 }
 
-.icone:hover{
-    cursor: pointer;
-}
-
 .title{
     position: relative;
     top: 0px;
@@ -103,14 +99,12 @@
 #titleStats, #titleEntrainement{
     margin-top: 25px;
     text-align: left;
-    font-size: 16px;
-    padding: 0 10px;
 }
 
 #ImageSport{
     position: relative;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     margin-top: 30px;
 }
 
@@ -144,6 +138,7 @@
     right: 5px;
     color: white;
 }
+
 #calories{
     right: 5px;
     color: white;
@@ -159,6 +154,20 @@
 
 #name{
     font-size: 16px;
+}
+
+.name{
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight: bold;
+    color: #A240B4;
+    letter-spacing:2px;
+    text-align: left;
+}
+
+#padding{
+    padding-left:32px;
+    margin-top:32px;
 }
 
 .OngletsSuivi{
@@ -349,13 +358,10 @@
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
-.all{
-    display:flex;
-    flex-direction: column;
-}
-
 .date{
     color:white;
+    text-align:left;
+    font-size: 10px;
 }
 
 .activityName{
@@ -365,6 +371,15 @@
     color: white;
     font-size: 16px;
     font-weight: 600;
+}
+
+.activityDurationCalories{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    align-items: flex-end;
+    gap:4px;
 }
 
 .exerciceName{
@@ -378,14 +393,7 @@
     line-height: normal;
 }
 
-.activityDurationCalories, .exerciceSeriesRep{
-    margin: auto;
-    align-content: start;
-    gap: 4px;
-}
-
 .activityDuration, .activityCalories{
-    flex: 1;
     display: flex;
     color: white;
     font-weight: 400;

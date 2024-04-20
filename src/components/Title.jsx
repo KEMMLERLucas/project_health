@@ -1,5 +1,5 @@
 import "./SuiviPatient.css";
-import { FaArrowLeft, FaCog, FaSignOutAlt } from "react-icons/fa";
+import { FaCog, FaSignOutAlt } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate, Link } from "react-router-dom";
 /*import { withRouter } from "react-router-dom";*/

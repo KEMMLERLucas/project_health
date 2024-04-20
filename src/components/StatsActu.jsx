@@ -23,7 +23,7 @@ function StatsActu({ patient, name }) {
 
     return (
         <div id="titleStats">
-            {name}
+            <span className="name">{name}</span>
             <ChampStatsActu stat={stat} caption={caption}/>
         </div>
     );

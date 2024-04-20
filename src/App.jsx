@@ -64,7 +64,7 @@ function App() {
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             {isError && <p> Une erreur s'est produite</p>}
             <Banner/>
-            <p id="title">Mes patients</p>
+            <p className="name" id="padding">Mes patients</p>
             <div className="patients">
                 {patients.map((patient) => (
                     < PatientPreview key={patient.id} patient={patient}/>))

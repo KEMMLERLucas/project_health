@@ -1,27 +1,28 @@
 import "./banner.css";
-import React, {useEffect, useState} from 'react';
-import { FaRegBell } from "react-icons/fa";
-import { FaCircle } from "react-icons/fa";
+import React from 'react';
+import { FaCircle, FaCog } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Banner(){
-    return (<div className="banner">
-        <div className="infos_banner">
+    return (
+    <div className="banner">
         <Link to="/infos">
-        <div className="test">
-            <div id="photo"></div>
-            <div id="text">
-        Bienvenue LE NOM DU CONNECTE !
-        <div className="online">
-        <FaCircle className="icone" id="circle"/> Connecté
-        </div>
-        </div>
-        </div></Link>
-        </div>
-        <Link to="/notifs">
-        <FaRegBell className="icone" id="bell"/>
-        </Link>        
-    </div>)
+            <span className="banner_container">
+            <span className="banner_infos">
+            <div id="photo_de_profil"></div>
+            <div id="nom_connecté">
+                <span id="texte">Nom</span>
+                <div className="online">
+                    <FaCircle className="icone" id="circle"/> Connecté
+                </div>
+            </div>
+            </span>
+            <span className="border">
+                <FaCog className="icone" id="rouage"/></span>
+            </span>
+        </Link>     
+    </div>
+    )
 }
 
 export default Banner
