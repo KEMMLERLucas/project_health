@@ -1,0 +1,117 @@
+[
+    {
+        "id": 1,
+        "name" : "Breakfast",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "bread" :{
+                "name" : "Tranches de pain de seigle",
+                "quantity" : "2 unités",
+                "kcal" : 202
+            },
+            "fruit" : {
+                "name" : "Fruit",
+                "quantity" : "1 unité",
+                "kcal" : 98
+            },
+            "dairy" : {
+                "name" : "Laitage",
+                "quantity" : "1 unité",
+                "kcal" : 120
+            },
+            "prot" : {
+                "name" : "Oeufs brouillés",
+                "quantity" : "2 unités",
+                "kcal" : 415
+            }
+        }
+    },
+    {
+        "id" : 2,
+        "name" : "Snack",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "fruit" : {
+                "name" : "Fruit",
+                "quantity" : "1 unité",
+                "kcal" : 172
+            }
+        }
+    },
+    {
+        "id": 3,
+        "name" : "Lunch",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "starter" :{
+                "name" : "Crudités",
+                "quantity" : "1 assiette",
+                "kcal" : 202
+            },
+            "prot" : {
+                "name" : "Viande maigre",
+                "quantity" : "175g",
+                "kcal" : 239
+            },
+            "starchy" : {
+                "name" : "Féculents cuits",
+                "quantity" : "150g",
+                "kcal" : 120
+            },
+            "vegetables" :{
+                "name" : "Légumes verts",
+                "quantity" : "200g",
+                "kcal" : 162
+            },
+            "dairy" :{
+                "name" : "Laitage",
+                "quantity" : "1 unité",
+                "kcal" : 92
+            }
+        }
+    },
+    {
+        "id" : 4,
+        "name" : "Snack",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "dairy" : {
+                "name" : "Laitage",
+                "quantity" : "1 unité",
+                "kcal" : 172
+            },
+            "fruit" :{
+                "name" : "Fruit",
+                "quantity" : "1 unité",
+                "kcal" : 172
+            }
+        }
+    },
+    {
+        "id": 5,
+        "name" : "Dinner",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606", "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "starter" :{
+                "name" : "Crudités",
+                "quantity" : "1 assiette",
+                "kcal" : 202
+            },
+            "prot" : {
+                "name" : "Poisson",
+                "quantity" : "175g",
+                "kcal" : 239
+            },
+            "vegetables" :{
+                "name" : "Légumes verts",
+                "quantity" : "250g",
+                "kcal" : 162
+            },
+            "dairy" :{
+                "name" : "Laitage",
+                "quantity" : "1 unité",
+                "kcal" : 92
+            }
+        }
+    }
+]

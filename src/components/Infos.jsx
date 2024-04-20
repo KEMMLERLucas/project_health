@@ -8,6 +8,7 @@ import axios from "axios";
 import './sweetalert.css'
 import Onglets from "./Onglets";
 import Title from "./Title";
+import "./auth.css";
 
 function Infos() {
     /*Constantes pour la classe connexion
@@ -68,7 +69,12 @@ function Infos() {
     return (
         <div className="block_log">
             <div className="formulaire">
-            <Title name="Mon profil"/>
+            <Title
+                name="Mon profil"
+                signoutOn={true}
+                flecheOn={true}
+                infoOn={false}
+                />
                 <div className="OngletsSuivi">
                 <Onglets name="Informations" active={activeTab === "Informations"}
                          onClick={() => setActiveTab("Informations")}/>
@@ -80,9 +86,9 @@ function Infos() {
         <div className="block_log">
             <div className="formulaire">
                 <form onSubmit={handleSubmit(onSubmit)}>
-
+                    
                 <div className="champ">
-                        <label htmlFor="old_mdp">Ancien mot de passe</label>
+                        <label className="name" htmlFor="old_mdp">Ancien mot de passe</label>
                         <input
                             type="text"
                             id="old_mdp"
@@ -92,7 +98,7 @@ function Infos() {
                     </div>
 
                     <div className="champ">
-                        <label htmlFor="new_mdp">Nouveau mot de passe</label>
+                        <label className="name" htmlFor="new_mdp">Nouveau mot de passe</label>
                         <input
                             type="text"
                             id="new_mdp"
@@ -102,7 +108,7 @@ function Infos() {
                     </div>
 
                     <div className="champ">
-                        <label htmlFor="conf">Confirmation</label>
+                        <label className="name" htmlFor="conf">Confirmation</label>
                         <input
                             type="text"
                             id="conf"
@@ -124,7 +130,7 @@ function Infos() {
         <div className="formulaire">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="champ">
-                        <label htmlFor="first_name">Prénom</label>
+                        <label className="name" htmlFor="first_name">Prénom</label>
                         <input
                             type="text"
                             id="first_name"
@@ -134,7 +140,7 @@ function Infos() {
                     </div>
 
                     <div className="champ">
-                        <label htmlFor="last_name">Nom</label>
+                        <label className="name" htmlFor="last_name">Nom</label>
                         <input
                             type="text"
                             id="last_name"
@@ -144,17 +150,17 @@ function Infos() {
                     </div>
 
                     <div className="champ">
-                        <label htmlFor="email">Adresse e-mail</label>
+                        <label className="name" htmlFor="email">Adresse e-mail</label>
                         <input
                             type="text"
                             id="email"
-                            placeholder="Saisir votre adresse e-mail"
+                            placeholder="L'adresse e-mail du connecté"
                             {...register("email", { required: true, maxLength: 90 })}
                         />
                     </div>
 
                     <span className="button">
-            <button className="primary_button">Mettre à jour les informations</button>
+            <button className="primary_button" id="test">Mettre à jour les informations</button>
           </span>
                 </form>
             </div>

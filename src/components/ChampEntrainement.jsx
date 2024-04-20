@@ -1,12 +1,14 @@
 import "./SuiviPatient.css";
 import { AiOutlineFire } from "react-icons/ai";
 import { MdOutlineTimer } from "react-icons/md";
+import { MdOutlineSports } from "react-icons/md";
 import React from "react";
 
-function ChampEntrainement({ name, duration, calories, date }) {
+function ChampEntrainement({ name, duration, calories, date, train = false, onClick }) {
 
     let idActivity = "";
     let activityName = "";
+    let classChamp = "ChampEntrainement";
 
     switch(name){
         case "bike": 
@@ -14,17 +16,41 @@ function ChampEntrainement({ name, duration, calories, date }) {
             activityName = "Cyclisme";
             break;
         case "swimming":
-            idActivity = "Swimming"
+            idActivity = "Swimming";
             activityName = "Natation";
             break;
         case "footing":
-            idActivity = "Footing"
+            idActivity = "Footing";
             activityName = "Course à pied";
             break;
         case "walking":
-            idActivity = "Walking"
+            idActivity = "Walking";
             activityName = "Marche";
             break;
+        case "Séance bras":
+            idActivity = "Arm";
+            activityName = name;
+            break;
+        case "Séance fesses":
+            idActivity = "Ass";
+            activityName = name;
+            break;
+        case "Breakfast":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;
+        case "Snack":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;
+        case "Lunch":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;
+        case "Dinner":
+            idActivity = "Breakfast";
+            activityName = name;
+            break;    
     }
 
     function getDate(){
@@ -49,25 +75,35 @@ function ChampEntrainement({ name, duration, calories, date }) {
         return(day+"/"+month+"/"+year);
     }
 
-    return (
-        <div className="ChampEntrainement" id={idActivity}>
+    if(train){
+        classChamp += "Train";
+    }
 
-            <div className="activityNameAndDate">
-                <div className="activityName">{activityName}</div>
-                <div className="activityDate">{getDate()}</div>
+    return (
+        <div className={classChamp} id={idActivity} onClick={onClick}>
+
+            <div className="all">
+            <div className="activityName">{activityName}</div>
+            {!train && 
+                <div className="date">{getDate(date)}</div>
+            }
             </div>
 
             <div className="activityDurationCalories">
-                <div className="activityDuration">
+                <span className="activityDuration">
                     <MdOutlineTimer className="icone" id="duration"/>
                     <div className="duration">{duration}</div>
-                </div>
+                </span>
                 <div className="activityCalories">
-                    <AiOutlineFire className="icone" id="calories"/>
+                    { !train &&
+                        <AiOutlineFire className="icone" id="calories"/>
+                    }
+                    { train &&
+                        <MdOutlineSports className="icone" id="calories"/>
+                    }
                     <div className="calories">{calories}</div>
                 </div>
             </div>
-
         </div>
     );
 }

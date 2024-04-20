@@ -9,6 +9,13 @@ import { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
 
+import {useParams} from "react-router-dom";
+import { withCookies, Cookies } from 'react-cookie';
+import axios from "axios";
+import Compteur from "./compteur.jsx";
+import Training2 from "./Training2.jsx";
+import Nutrition from "./Nutrition.jsx";
+
 
 
 function SuiviPatient({patient}){
@@ -22,23 +29,38 @@ function SuiviPatient({patient}){
     /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
-    return (<div>
+    return (<div className="all">
             <Title name="Suivi du patient" patientId={patient.id} />
             <ImagePatient patient={patient}/>
+
             <PatientName patient={patient}/>
+            <div className="horizontal-menu-container">
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"}
-                         onClick={() => setActiveTab("Aujourd'hui")}/>
+                         onClick={() => setActiveTab("Aujourd'hui")} className="test"/>
+                <Onglets name="Entraînements" active={activeTab === "Entraînements"}
+                         onClick={() => setActiveTab("Entraînements")}/>
                 <Onglets name="Historique" active={activeTab === "Historique"}
                          onClick={() => setActiveTab("Historique")}/>
+                <Onglets name="Nutrition" active={activeTab === "Nutrition"}
+                         onClick={() => setActiveTab("Nutrition")}/>                         
                 <Onglets name="Récompenses" active={activeTab === "Récompenses"}
                          onClick={() => setActiveTab("Récompenses")}/>
+            </div>
             </div>
 
             {activeTab === "Aujourd'hui" && <div className="statsActuelles">
                 <StatsActu patient={patient} name="Poids actuel"/>
                 <StatsActu patient={patient} name="IMC actuel"/>
             </div>}
+
+            {activeTab === "Entraînements" && <div className="all">
+                <Training2 patient={patient} name="Plan d'entraînement"/>
+            </div>}
+
+            {activeTab === "Nutrition" && <div className="all">
+                <Nutrition patient={patient} name="Nutrition"/>
+                </div>}
 
             {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient} />}
 

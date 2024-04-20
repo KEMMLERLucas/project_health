@@ -4,7 +4,7 @@ import axios from "axios"
 import {useEffect, useState} from "react";
 
 
-function DerniersEntrainements ({ patient }) {
+function DerniersEntrainements ({ patient, latestActivityOnly}) {
     /** Ces trois variables permettent d'afficher des messages si aucune activité n'a été réalisée */
     let activityThisWeek = false; /** Vrai si il y a eu au moins une activité cette semaine, faux sinon */
     let activityLastYear = false; /** Vrai si il y a eu au moins une activité l'année dernière, faux sinon */
@@ -87,10 +87,14 @@ function DerniersEntrainements ({ patient }) {
         return ('0' + (1 + Math.round(((d.getTime() - w.getTime()) / 86400000 - 3 + (w.getDay() + 6) % 7) / 7))).slice(-2);
     }
 
-    return (
+    const first = activities.find(activity => getDate(activity));
+
+    return ( 
         <div>
-            <div className="title" id="titleEntrainement">Vos activités de la semaine : </div>
+
+            <div id="titleStats" className="name">Activités de la semaine</div>
             <div className="DerniersEntrainements">
+
                 {activities.map((activity)=> (
                     getDate(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
@@ -98,18 +102,26 @@ function DerniersEntrainements ({ patient }) {
                     !activityThisWeek && <div className="noActivity">Pas d'activité enregistrée cette semaine...</div>
                 }
             </div>
-            <div className="title" id="titleEntrainement">Vos activités plus anciennes : </div>
+            <div className="name" id="titleStats">Activités plus anciennes</div>
             <div className="DerniersEntrainements">
-                {activities.map((activity)=> (
-                    getThisYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
-                }
-                {
-                    !activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>
-                }
-            </div>
-            <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>Voir plus </div>
+    {activities
+        .filter(activity => getThisYear(activity)) // Filtrer les activités de cette année
+        .sort((a, b) => new Date(b.date) - new Date(a.date)) // Trier les activités par date décroissante
+        .map(activity => (
+            <ChampEntrainement
+                key={activity.id}
+                name={activity.type}
+                duration={activity.duration + " minutes"}
+                calories={activity.consumedCalories + " calories"}
+                date={activity.date}
+            />
+        ))}
+    {!activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>}
+</div>
+
+            <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>{activeTab ? "Voir moins" : "Voir plus"}</div>
             {activeTab && <div className="DerniersEntrainements">
-                {activities.map((activity)=> (
+                {activities.sort((a, b) => new Date(b.date) - new Date(a.date)).map((activity)=> (
                     getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))
                 }
                 {

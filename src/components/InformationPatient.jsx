@@ -34,7 +34,7 @@ function InformationPatient(){
     console.log(idProfile);
 
     return (
-        <div>
+        <div className="all">
             <Title name="Informations du patient" flecheOn={true} infoOn={false}/>
             <div className="OngletsSuivi">
                 <Onglets name="Personnelles" active={activeTab === "Personnelles"}

@@ -14,7 +14,7 @@ function Onglets({ name, active, onClick }) {
     }
 
     return (
-        <span className={classNameActive} onClick={color}>
+        <span className={classNameActive} onClick={color} id="test">
             {name}
         </span>
     );
