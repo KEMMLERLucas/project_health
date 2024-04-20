@@ -22,13 +22,14 @@ function Nutrition({patient, name}){
             <div>
                 {filteredData.map(nutrition => (
                     <div key={nutrition.id} className="all">
+                        <span className="title">
                         <ChampNutrition
                             name={nutrition.name}
                             onClick={() => {
                                     setSelectedNutritionId(nutrition.id === selectedNutritionId ? null : nutrition.id);
-                                }}/>
+                                }}/></span>
                                     {Object.keys(nutrition.menu).map(key => (
-                                        <Ingrédients name = {nutrition.menu[key].name} series = {nutrition.menu[key].quantity} repetitions = {nutrition.menu[key].kcal}/> 
+                                        <Ingrédients name = {nutrition.menu[key].name} quantity = {nutrition.menu[key].quantity} kcal = {nutrition.menu[key].kcal}/> 
                                     ))}
                     </div>
                 ))}

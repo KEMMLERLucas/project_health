@@ -9,12 +9,9 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
     let activityThisWeek = false; /** Vrai si il y a eu au moins une activité cette semaine, faux sinon */
     let activityLastYear = false; /** Vrai si il y a eu au moins une activité l'année dernière, faux sinon */
     let activityThisYear = false; /** Vrai si il y a eu au moins une activité cette année (avant la semaine courante), faux sinon */
-    let activitiesToShow = patient.activities;
 
     const[activities, setActivities] = useState([])
     const [activeTab, setActiveTab] = useState(false);
-
-    console.log(Date.UTC())
 
     useEffect(() => {
         async function loadActivities() {
@@ -95,7 +92,7 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
     return ( 
         <div>
 
-            <div id="titleEntrainement" className="name">Activités de la semaine</div>
+            <div id="titleStats" className="name">Activités de la semaine</div>
             <div className="DerniersEntrainements">
 
                 {activities.map((activity)=> (
@@ -105,7 +102,7 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
                     !activityThisWeek && <div className="noActivity">Pas d'activité enregistrée cette semaine...</div>
                 }
             </div>
-            <div className="name" id="titleEntrainement">Activités plus anciennes</div>
+            <div className="name" id="titleStats">Activités plus anciennes</div>
             <div className="DerniersEntrainements">
     {activities
         .filter(activity => getThisYear(activity)) // Filtrer les activités de cette année
@@ -122,7 +119,7 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
     {!activityThisYear && <div className="noActivity">Pas d'activité plus ancienne enregistrée...</div>}
 </div>
 
-            <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>Voir plus </div>
+            <div className="titleLastYear" id="titleEntrainement" onClick={() => setActiveTab(!activeTab)}>{activeTab ? "Voir moins" : "Voir plus"}</div>
             {activeTab && <div className="DerniersEntrainements">
                 {activities.sort((a, b) => new Date(b.date) - new Date(a.date)).map((activity)=> (
                     getLastYear(activity) && <ChampEntrainement key={activity.id} name={activity.type} duration={activity.duration+" minutes"} calories={activity.consumedCalories+" calories"} date={activity.date}/>))

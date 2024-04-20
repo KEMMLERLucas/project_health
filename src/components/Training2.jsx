@@ -26,10 +26,12 @@ function Training2({ patient, name }) {
                                 name={training.name}
                                 duration={training.timer + " minutes"}
                                 calories={training.number_ex + " exercices"}
-                                train = {true}
+                                train={true}
                                 onClick={() => {
                                     setSelectedTrainingId(training.id === selectedTrainingId ? null : training.id);
-                                }}/>
+                                    }}
+                                    />
+
                             {selectedTrainingId === training.id &&
                                 <div>
                                     {Object.keys(training.entraînements).map(key => (

@@ -80,11 +80,13 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
     }
 
     return (
-        <div className={classChamp} id={idActivity}>
+        <div className={classChamp} id={idActivity} onClick={onClick}>
 
             <div className="all">
             <div className="activityName">{activityName}</div>
-            <div className="date">{getDate(date)}</div>
+            {!train && 
+                <div className="date">{getDate(date)}</div>
+            }
             </div>
 
             <div className="activityDurationCalories">

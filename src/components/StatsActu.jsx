@@ -16,10 +16,10 @@ function StatsActu({ patient, name }) {
     const imcStart = (patient.weightStart / (heightInMeters ** 2)).toFixed(1);
 
     /* calcul stats pour poids ou IMC actuel */
-    const stat = name === "Poids actuel" ? patient.weightStart + "Kg" : imcStart;
+    const stat = name === "Poids actuel" ? patient.weightStart + "kg" : imcStart;
 
     /* calcul l'intervalle en caption pour le poids (dif entre weightGoal et weightStart) ou IMC*/
-    const caption = name === "Poids actuel" ? "~ " + (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
+    const caption = name === "Poids actuel" ? (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
 
     return (
         <div id="titleStats">

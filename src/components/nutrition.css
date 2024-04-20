@@ -1,3 +1,56 @@
 .test{
     padding:16px;
 }
+
+.ChampNutrition{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    border: 1px solid lightgrey;
+    padding: 8px 16px;
+    align-items: center;
+}
+
+.nutritionName{
+    margin: auto;
+    text-align: left;
+    color: grey;
+    font-size: 16px;
+    font-weight: 600;
+    width:100%;
+}
+
+.nutritionMenu{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    align-items: flex-end;
+    gap:4px;
+}
+
+.nutrition_kcal{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap:8px;
+}
+
+#calories, #bread, #fruit, #milk, #egg, #meat, #cru, #feculent, #vert, #fish{
+    color:grey;
+}
+
+.activityCalories{
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: left;
+}
+
+.title{
+    margin-top:8px;
+    margin-bottom:8px;
+}

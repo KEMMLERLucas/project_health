@@ -1,6 +1,6 @@
 h1{
     text-transform: uppercase;
-    color: white;
+    color:yellow;
     text-align: center;
     font-variant-numeric: lining-nums tabular-nums;
     font-family: Impact;
@@ -37,6 +37,7 @@ label{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    height:100%;
 }
 
 .block_log{
