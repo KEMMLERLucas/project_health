@@ -365,8 +365,26 @@
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
+#Back{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_back.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: center;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Leg{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_legs.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
 #Ass{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/arm_sport.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_ass.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: bottom;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Abs{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_abs.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: center;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 

@@ -31,26 +31,22 @@ function ChampEntrainement({ name, duration, calories, date, level, train = fals
             idActivity = "Arm";
             activityName = name;
             break;
-        case "Séance fesses":
+        case "Séance fessiers":
             idActivity = "Ass";
             activityName = name;
             break;
-        case "Breakfast":
-            idActivity = "Breakfast";
+        case "Séance cuisses":
+            idActivity = "Leg";
             activityName = name;
             break;
-        case "Snack":
-            idActivity = "Breakfast";
+        case "Séance dos":
+            idActivity = "Back";
+            activityName = name;
+            break;  
+        case "Séance abdos":
+            idActivity = "Abs";
             activityName = name;
             break;
-        case "Lunch":
-            idActivity = "Breakfast";
-            activityName = name;
-            break;
-        case "Dinner":
-            idActivity = "Breakfast";
-            activityName = name;
-            break;    
     }
 
     function getDate(){
