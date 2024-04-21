@@ -12,7 +12,7 @@ function Ingrédients({ name, quantity, kcal}) {
 
     const getIcon = () => {
         switch(true){
-            case name.toLowercase().includes("pain"):
+            case name.toLowerCase().includes("pain"):
                 return <GiSlicedBread className="icone" id="icone"/>;
             case name.includes("Fruit"):
                 return <GiFruitBowl className="icone" id="icone"/>;
@@ -32,7 +32,7 @@ function Ingrédients({ name, quantity, kcal}) {
                 return <FaFish className="icone" id="icone"/>;
             case name.includes("Soupe"):
                 return <TbSoup className="icone" id="icone"/>;
-            case name.toLowercase().includes("arachides"):
+            case name.toLowerCase().includes("arachides"):
                 return <LuNut className="icone" id="icone"/>;
             case name.includes("Carottes"):
                 return <TbCarrot className="icone" id="icone"/>;
@@ -42,7 +42,7 @@ function Ingrédients({ name, quantity, kcal}) {
                 return <FaBowlFood className="icone" id="icone"/>;
             case name.includes("Jus"):
                 return <FaGlassWater className="icone" id="icone"/>;
-            case name.toLowercase().includes("avocat"):
+            case name.toLowerCase().includes("avocat"):
                 return <GiAvocado className="icone" id="icone"/>;
                 default:
                 return null;
