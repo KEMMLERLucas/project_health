@@ -28,6 +28,7 @@ function Training2({name}) {
                             name={training.name}
                             duration={training.timer + " minutes"}
                             calories={training.number_ex + " exercices"}
+                            level={training.level}
                             train={true}
                             onClick={() => {
                                 setSelectedTrainingId(training.id === selectedTrainingId ? null : training.id);
