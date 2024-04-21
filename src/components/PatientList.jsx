@@ -1,6 +1,6 @@
 import React from "react";
 import Patient from "./Patient.jsx";
-import OnePatientContext from "./OnePatientContext.jsx";
+import OnePatientContext from "../context/OnePatientContext.jsx";
 
 
 function PatientList({patient}){

@@ -1,20 +1,20 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {createRoot} from 'react-dom/client'
-import { PatientsProvider } from './components/PatientContext.jsx'
-import Authentication from './components/Authentication.jsx'
-import Connexion from './components/Connexion.jsx'
-import Inscription from './components/Inscription.jsx'
-import ErrorPage from './components/ErrorPage.jsx'
+import { PatientsProvider } from './context/PatientContext.jsx'
+import Authentication from './page/Authentication.jsx'
+import Connexion from './page/Connexion.jsx'
+import Inscription from './page/Inscription.jsx'
+import ErrorPage from './page/ErrorPage.jsx'
 import "./index.css"
-import InformationPatient from "./components/InformationPatient.jsx";
+import InformationPatient from "./page/InformationPatient.jsx";
 import Menu from './components/Menu.jsx'
 import Banner from './components/Banner.jsx'
-import SuiviPatient from "./components/SuiviPatient.jsx";
-import Infos from './components/Infos.jsx'
+import SuiviPatient from "./page/SuiviPatient.jsx";
+import Infos from './page/Infos.jsx'
 import Patients from "./components/Patients.jsx";
 import App from "./App.jsx";
-import Notifs from './components/Notifs.jsx'
+import Notifs from './page/Notifs.jsx'
 
 const root = createRoot(document.getElementById('root'));
 

@@ -42,7 +42,7 @@
 }
 
 #photo_de_profil{
-    background: url(../assets/pdp_coach.jpg);
+    background: url(../../assets/pdp_coach.jpg);
     background-size:cover;
     height:50px;
     width:50px;

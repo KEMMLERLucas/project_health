@@ -1,19 +1,19 @@
-import "./SuiviPatient.css";
-import Title from "./Title";
-import ImagePatient from "./ImagePatient";
-import PatientName from "./PatientName";
-import Onglets from "./Onglets";
-import Graphes from "./Graphes";
-import StatsActu from "./StatsActu.jsx";
+import "../components/css/SuiviPatient.css";
+import Title from "../components/Title.jsx";
+import ImagePatient from "../components/ImagePatient.jsx";
+import PatientName from "../components/PatientName.jsx";
+import Onglets from "../components/Onglets.jsx";
+import Graphes from "../components/Graphes.jsx";
+import StatsActu from "../components/StatsActu.jsx";
 import { useState } from 'react';
-import DerniersEntrainements from "./DerniersEntrainements.jsx";
-import Recompenses from "./Recompenses.jsx";
+import DerniersEntrainements from "../components/DerniersEntrainements.jsx";
+import Recompenses from "../components/Recompenses.jsx";
 import {jwtDecode} from "jwt-decode";
 import {useLocation} from 'react-router-dom';
-import Training2 from "./Training2.jsx";
-import Nutrition from "./Nutrition.jsx";
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
-import Compteur from "./compteur.jsx";
+import Training2 from "../components/Training2.jsx";
+import Nutrition from "../components/Nutrition.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
+import Compteur from "../components/compteur.jsx";
 
 function SuiviPatient() {
     let authenticate=false

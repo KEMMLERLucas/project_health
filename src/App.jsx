@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import {CookiesProvider, useCookies} from "react-cookie";
 
-import Authentication from './components/Authentication';
-import Connexion from './components/Connexion';
+import Authentication from './page/Authentication.jsx';
+import Connexion from './page/Connexion.jsx';
 import Patients from './components/Patients';
-import HandleLoginContext from "./components/HandleLoginContext.jsx";
+import HandleLoginContext from "./context/HandleLoginContext.jsx";
 
 function App() {
     const [cookies, setCookie] = useCookies(['data'])

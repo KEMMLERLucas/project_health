@@ -1,8 +1,8 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import "./PatientName"
 import {useContext, useEffect, useState} from "react";
-import OnePatientContext from "./OnePatientContext.jsx";
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import OnePatientContext from "../context/OnePatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
 function ImagePatient({patient} ){
     const [img, setImg] = useState("");

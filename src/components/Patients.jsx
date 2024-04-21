@@ -3,8 +3,8 @@ import {useEffect, useState} from "react";
 import Banner from "./Banner.jsx";
 import PatientPreview from "./PatientPreview.jsx";
 import React from 'react';
-import TokenContext from './TokenContext.jsx';
-import ContextPatient from "./TokenContext.jsx";
+import TokenContext from '../context/TokenContext.jsx';
+import ContextPatient from "../context/TokenContext.jsx";
 
 
 

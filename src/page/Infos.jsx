@@ -5,10 +5,10 @@ import { useForm } from "react-hook-form";
 import { useCookies } from "react-cookie";
 import swal from 'sweetalert2';
 import axios from "axios";
-import './sweetalert.css'
-import Onglets from "./Onglets";
-import Title from "./Title";
-import "./auth.css";
+import '../components/css/sweetalert.css'
+import Onglets from "../components/Onglets.jsx";
+import Title from "../components/Title.jsx";
+import "../components/css/auth.css";
 
 function Infos() {
     /*Constantes pour la classe connexion

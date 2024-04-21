@@ -1,6 +1,6 @@
 import React from 'react';
-import { usePatients } from './PatientContext'; // Importez le hook usePatients
-import Title from './Title';
+import { usePatients } from '../context/PatientContext.jsx'; // Importez le hook usePatients
+import Title from '../components/Title.jsx';
 
 function Notifs() {
   const { patients } = usePatients(); // Accédez aux données des patients depuis le contexte

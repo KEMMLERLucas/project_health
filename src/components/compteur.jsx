@@ -1,8 +1,8 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import React, {useContext, useEffect, useState} from 'react';
-import data from "./data.json";
+import data from "./json/data.json";
 import ProgressBar from "./ProgressBar"
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
 function Compteur({ name}) {
     const patient = useContext(SuiviPatientContext).pat

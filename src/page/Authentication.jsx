@@ -1,5 +1,5 @@
 // Authentication.jsx
-import './auth.css'
+import '../components/css/auth.css'
 import { Link } from 'react-router-dom'
 
 function Authentication({ onLogin }) {

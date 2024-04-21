@@ -1,4 +1,4 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 
 
 function Onglets({ name, active, onClick }) {

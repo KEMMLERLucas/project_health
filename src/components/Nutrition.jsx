@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react';
-import data from "./nutrition.json";
+import data from "./json/nutrition.json";
 import ChampNutrition from './ChampNutrition';
 import Ingrédients from './Ingrédients';
-import "./nutrition.css";
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import "./css/nutrition.css";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
 function Nutrition({name}){
     const patient = useContext(SuiviPatientContext).pat

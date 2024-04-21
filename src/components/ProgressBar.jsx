@@ -1,4 +1,4 @@
-import "./ProgressBar.css"
+import "./css/ProgressBar.css"
 
 function ProgressBar({pourcentage}) {
 

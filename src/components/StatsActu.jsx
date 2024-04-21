@@ -1,7 +1,7 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import ChampStatsActu from "./ChampStatsActu.jsx";
 import {useContext} from "react";
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 function StatsActu({name }) {
 
     /*

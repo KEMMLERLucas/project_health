@@ -1,4 +1,4 @@
-import "./nutrition.css";
+import "./css/nutrition.css";
 import { AiOutlineFire } from "react-icons/ai";
 import { MdOutlineTimer } from "react-icons/md";
 import { MdOutlineSports } from "react-icons/md";

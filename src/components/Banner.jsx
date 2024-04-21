@@ -1,11 +1,11 @@
-import "./banner.css";
+import "./css/banner.css";
 import React, {useEffect, useState,useContext} from 'react';
 import { FaCog } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
-import TokenContext from "./TokenContext.jsx";
+import TokenContext from "../context/TokenContext.jsx";
 
 function Banner(){
     const [username, setUsername] = useState("");

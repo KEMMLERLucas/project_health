@@ -2,8 +2,8 @@ import React, {useContext} from "react";
 import ImagePatient from "./ImagePatient.jsx";
 import PatientName from "./PatientName.jsx";
 import { Outlet, Link } from "react-router-dom";
-import TokenContext from "./TokenContext.jsx";
-import OnePatientContext from "./OnePatientContext.jsx";
+import TokenContext from "../context/TokenContext.jsx";
+import OnePatientContext from "../context/OnePatientContext.jsx";
 
 function Patient({patient}){
     const contextValue = useContext(TokenContext);

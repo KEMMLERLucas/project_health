@@ -1,4 +1,4 @@
-import './auth.css'
+import '../components/css/auth.css'
 import {Link, useNavigate} from 'react-router-dom'
 import {useState} from "react";
 import {useForm} from "react-hook-form"

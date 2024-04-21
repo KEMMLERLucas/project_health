@@ -1,4 +1,4 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import Badge from "./Badge.jsx";
 import axios from "axios";
 import {useEffect, useState} from "react";

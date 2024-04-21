@@ -1,8 +1,8 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import {useContext, useEffect, useState} from "react";
 import axios from "axios";
 import { LineChart, Line, BarChart, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
 function Graphes({ name, chartType}){
 

@@ -1,4 +1,4 @@
-import "./nutrition.css";
+import "./css/nutrition.css";
 import { AiOutlineFire } from "react-icons/ai";
 import { GiFruitBowl, GiSlicedBread, GiMilkCarton, GiTomato, GiBroccoli} from "react-icons/gi";
 import { FaEgg, FaFish } from "react-icons/fa";

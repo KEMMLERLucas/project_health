@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
-import data from "./training.json";
+import data from "./json/training.json";
 import ChampEntrainement from "./ChampEntrainement.jsx";
 import Exercice from "./Exercice.jsx";
-import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
 function Training2({name}) {
     const patient = useContext(SuiviPatientContext).pat

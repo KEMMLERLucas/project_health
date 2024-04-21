@@ -1,4 +1,4 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import ChampEntrainement from "./ChampEntrainement.jsx";
 import axios from "axios"
 import {useEffect, useState} from "react";
