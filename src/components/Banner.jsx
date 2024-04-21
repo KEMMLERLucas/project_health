@@ -5,14 +5,14 @@ import { FaCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
-import OurContext from "./OurContext.jsx";
+import TokenContext from "./TokenContext.jsx";
 
 function Banner(){
     const [username, setUsername] = useState("");
     const [isLoading, setLoading] = useState(false)
     const [isError, setError] = useState(false)
-    const contextValue = useContext(OurContext);
-    const jwt = contextValue.data.access_token
+    const contextValue = useContext(TokenContext);
+    const jwt = contextValue.tok.data.access_token
     const uid = jwtDecode(jwt).id
     useEffect(() => {
         async function getUser(){
