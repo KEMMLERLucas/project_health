@@ -15,7 +15,7 @@ Pour cela, nous avons utilisé le logiciel figma : [maquette Figma](https://www.
 
 Vous pourrez également retrouver un document précisant les sources d'inspiration et une étude de l'existant, qui nous ont été utiles pour la maquette. 
 
-### Les fonctionnalités : 
+### Les fonctionnalités principales : 
 
 Pour utiliser notre application, le coach sportif doit, dans un premier temps, se créer un compte et se connecter. 
 
@@ -25,21 +25,21 @@ Une fois connecté, il accède à la liste des patients qu'il suit : [Captures d
 Depuis cette page, il peut voir les informations de son profil, et les changer si nécessaire, en cliquant sur le bouton cloche, en haut à droite de l'interface (normal ?). 
 On retrouve également une bannière, confirmant l'état connecté du coach.
 
-Ensuite, en cliquant sur l'un de ses patients, il aura accès à l'ensemble des informatios le concernant. Il accède à la page de suivi du patient, qui comporte plusieurs onglets : "Aujourd'hui", "Historique" et "Récompenses".  
+Ensuite, en cliquant sur l'un de ses patients, il aura accès à l'ensemble des informatios le concernant. Il accède à la page de suivi du patient, qui comporte plusieurs onglets : "Aujourd'hui", "Entraînement", "Historique", "Nutrition" et "Récompenses".  
 
 Sur cette page, l'utilisateur peut retrouver l'avatar du patient, avec son nom et son prénom, son genre, son âge et son profil sportif (sédentaire, légèrement actif, peu actif, actif et très actif) : 
 
-![En_tete](https://github.com/KEMMLERLucas/project_health/assets/101339546/2846fe2d-a60c-4225-9220-66b532ab2e7c)
+![Frame 11](https://github.com/KEMMLERLucas/project_health/assets/101339546/957115b2-fe12-4d80-a728-ea29f48c7968)
 
 Cette bannière reste visible pendant la consultation de tous les onglets, pour faciliter la consultation des informations. L'utilisateur peut également accéder au bouton rouage, qui permet de modifier les informations du patient, en cas d'erreur ou de changement de situation. 
 
-![Modif_infos_patient](https://github.com/KEMMLERLucas/project_health/assets/101339546/9d436088-3fb3-4e91-a303-ce59914e30e1)
+![Frame 12](https://github.com/KEMMLERLucas/project_health/assets/101339546/1269c8c4-feed-405c-9592-b0ae931274cd)
 
 Pour revenir à la liste des patients, il peut cliquer sur la flèche gauche, en haut à gauche de la page. 
 
 L'onglet Aujourd'hui est l'onglet affiché par défaut lorsque l'utilisateur arrive sur la page. Cet onglet présente le nombre de pas effectués ce jour, son poids, son IMC et l'historique des activités sportives réalisées (avec la date de l'activité, sa durée, et le nombre de calories brûlées) : 
 
-![Aujourd'hui](https://github.com/KEMMLERLucas/project_health/assets/101339546/11861063-5074-4d74-964d-ec53b3574f06)
+![Frame 13](https://github.com/KEMMLERLucas/project_health/assets/101339546/158b9682-fb45-4a7d-97fd-ccee5c3048d3)
 
 Les patients ont tous un objectif de nombre de pas défini à l'avance, et le composant "Nombre de pas" présente le nombre de pas effectués par rapport à l'objectif, avec une barre de progression et un pourcentage, ce qui rend plus simple l'évaluation de l'avancée du patient.
 
@@ -47,17 +47,32 @@ Dans le composant Poids du patient, le coach sportif peut retrouver le poids act
 
 Il en est de même pour l'IMC : le stade de l'IMC (sous-poids, normal, surpoids, etc…) est affiché sous la valeur calculée, pour faciliter la consultation et le suivi. 
 
-Enfin, pour une consultation simplifiée des activités réalisées, elles sont classées dans trois catégories : "Activités de la semaine", "Activités plus anciennes" et "Activités de l'année dernière". Elles sont présentées dans l'ordre antéchronologique (du plus récent au plus ancien). 
+Enfin, pour une consultation simplifiée des activités réalisées, elles sont classées dans deux catégories : "Activités de la semaine" et "Activités plus anciennes". Elles sont présentées dans l'ordre antéchronologique (du plus récent au plus ancien). 
+
+Ensuite, l'onglet "Entraînement" présente un ensemble d'exercices de musculations proposées par le coach et adapté au patient. Ces exercices sont regroupés en fonction des groupes musculaires qui sont concernés. 
+Ainsi, en arrivant sur cet onglet, l'utilisateur peut visualiser l'ensemble des groupes musculaires, le niveau des exercices, le temps à y consacrer et le nombre d'exercices proposés. Ces informations sont présentées sous forme de listes déroulantes. 
+
+Pour voir le détail des exercices proposés, le coach doit déplier le groupe musculaire qui l'intéresse. Il pourra donc voir le nom des différents exercices, le nombre de séries et le nombre de répétitions à effectuer. 
+
+![Frame 17](https://github.com/KEMMLERLucas/project_health/assets/101339546/670496c3-dd41-4a5f-8fbd-e4cdae20b71f)
 
 L'application propose également des graphiques, pour faciliter la visualisation des évolutions du poids du patient, mais également l'historique des activités sportives. Les coachs sportifs pourront donc retrouver ces graphiques dans l'onglet "Historique" de la page de suivi du patient : 
 
-[Refaire capture]
+![Frame 14](https://github.com/KEMMLERLucas/project_health/assets/101339546/5b187c24-a33a-4199-a3a2-4702bb904c1e)
 
-Si L'utilisateur dispose d'un rôle de médecin, il accèdera à un graphique supplémentaire, présentant l'évolution de l'état psychique du patient. [Capture]
+Si L'utilisateur dispose d'un rôle de médecin, il accèdera à un graphique supplémentaire, présentant l'évolution de l'état psychique du patient. 
+
+![Frame 15](https://github.com/KEMMLERLucas/project_health/assets/101339546/2d0c2e1d-ff95-45ff-a01c-83e92da0175d)
+
+De plus, pour assurer un suivi complet et une évolution de poids suivant l'objectif posé par le patient, l'application propose un suivi nutritionniste. L'utilisateur pourra retrouver ce suivi dans l'onglet "Nutrition". 
+
+Il pourra y retrouver les aliments proposés pour chaque repas, ainsi que la quantité recommandée. 
+
+![Frame 18](https://github.com/KEMMLERLucas/project_health/assets/101339546/75c3724a-9e85-4eed-b66d-7f7cc97f0e80)
 
 Enfin, l'onglet "Récompenses" de la page de suivi propose de voir les badges gagnés par le patient en réalisant des séances de sport. Cela représente une aide pour le suivi du patient, car cela facilite la visualisation des objectifs réalisés, de manière ludique. 
 
-[Refaire capture]
+![Frame 16](https://github.com/KEMMLERLucas/project_health/assets/101339546/057e2059-5882-4765-bb96-d23d812eb648)
 
 
 
