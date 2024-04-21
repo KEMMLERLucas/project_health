@@ -106,7 +106,7 @@ function Inscription() {
 
             <span className="button_inscription">
           <button className="primary_button">S'inscrire</button>
-          <p>Déjà un compte ? <Link id="register" to="/connexion">Je me connecte !</Link></p>
+          <p>Déjà un compte ? <Link id="register" to="/">Je me connecte !</Link></p>
           </span>
           </form>
 
