@@ -5,7 +5,7 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
 
@@ -16,15 +16,40 @@ import Compteur from "./compteur.jsx";
 import Training2 from "./Training2.jsx";
 import Nutrition from "./Nutrition.jsx";
 
-
-
-function SuiviPatient({patient}){
+function SuiviPatient(){
     let authenticate = false; /*Permet de savoir si l'utilisateur est admin ou non. Si il l'est, on affiche l'évolution psychique
     du patient sous forme de graphique (onglet Historique), sinon on ne l'affiche pas (évite des erreurs sur les requêtes si le token n'est 
     pas bon)
     Passer à true pour tester + trouver un token admin  
     A voir comment le gérer au moment de merge, mais je pense qu'on pourrait connaître le rôle de l'utilisateur avec les cookies ? 
     */ 
+
+    let { patientId } = useParams();
+    const [isLoading, setLoading] = useState(false);
+    const [isError, setError] = useState(false);
+    const [patient, setPatient] = useState([]);
+
+    useEffect(() => {
+        async function getPatient(){
+            const api = `https://health.shrp.dev/items/people/${patientId}`
+            try{
+                setLoading(true)
+                setError(false)
+                const response = await axios.get(api)
+                const data  = await response.data.data
+
+                setLoading(false)
+                setError(false)
+
+                setPatient(data);
+            }catch (error){
+                console.error(error)
+                setLoading(false)
+                setError(true)
+            }
+        }
+        getPatient()
+    }, [patientId]);
 
     /* Gerer le clicked onglet (active)*/
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
@@ -49,9 +74,12 @@ function SuiviPatient({patient}){
             </div>
             </div>
 
-            {activeTab === "Aujourd'hui" && <div className="statsActuelles">
+            {activeTab === "Aujourd'hui" && <div className="all">
+                <Compteur patient={patient} name="Nombre de pas journaliers"/>
+                <div className="statsActuelles">
                 <StatsActu patient={patient} name="Poids actuel"/>
                 <StatsActu patient={patient} name="IMC actuel"/>
+            </div>
             </div>}
 
             {activeTab === "Entraînements" && <div className="all">
