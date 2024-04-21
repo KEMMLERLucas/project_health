@@ -33,7 +33,7 @@ function SuiviPatient() {
     }
 
 
-    return (<SuiviPatientContext.Provider value={{tok: token, pats: patient}}>
+    return (<SuiviPatientContext.Provider value={{tok: token, pat: patient}}>
             <div className="all">
                 <div className="infos_patients">
                 <Title name="Suivi du patient" patientId={patient.id}/>
