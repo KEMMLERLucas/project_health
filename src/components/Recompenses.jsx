@@ -68,6 +68,7 @@ function Recompenses({patient}){
 
 
     return(<div className="totalRecompenses">
+        <div className="name" id="pad">Badges récupérés</div>
         <div className="recompense">
             <Badge intitule="Case départ" icon="1" desc="Inscription validée"/>
             <Badge intitule="Forrest Gump" icon="3" desc="Au moins 10 000 pas en une journée."/>

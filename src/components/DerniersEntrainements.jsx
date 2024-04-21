@@ -92,7 +92,7 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
     return ( 
         <div>
 
-            <div id="titleStats" className="name">Activités de la semaine</div>
+            <div id="pad" className="name">Activités de la semaine</div>
             <div className="DerniersEntrainements">
 
                 {activities.map((activity)=> (
@@ -102,7 +102,7 @@ function DerniersEntrainements ({ patient, latestActivityOnly}) {
                     !activityThisWeek && <div className="noActivity">Pas d'activité enregistrée cette semaine...</div>
                 }
             </div>
-            <div className="name" id="titleStats">Activités plus anciennes</div>
+            <div className="name" id="pad">Activités plus anciennes</div>
             <div className="DerniersEntrainements">
     {activities
         .filter(activity => getThisYear(activity)) // Filtrer les activités de cette année

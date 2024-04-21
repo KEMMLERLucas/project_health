@@ -35,9 +35,10 @@ function SuiviPatient() {
 
     return (<SuiviPatientContext.Provider value={{tok: token, pats: patient}}>
             <div className="all">
+                <div className="infos_patients">
                 <Title name="Suivi du patient" patientId={patient.id}/>
                 <ImagePatient patient={patient}/>
-                <PatientName patient={patient}/>
+                <PatientName patient={patient}/></div>
                 <div className="horizontal-menu-container">
                     <div className="OngletsSuivi">
                         <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"}
@@ -60,6 +61,7 @@ function SuiviPatient() {
                 <StatsActu patient={patient} name="Poids actuel"/>
                 <StatsActu patient={patient} name="IMC actuel"/>
             </div>
+            <DerniersEntrainements patient={patient}/>
             </div>}
 
             {activeTab === "Entraînements" && <div className="all">
@@ -70,18 +72,8 @@ function SuiviPatient() {
                 <Nutrition patient={patient} name="Nutrition"/>
                 </div>}
 
-                {activeTab === "Entraînements" && <div className="all">
-                    <Training2 patient={patient} name="Plan d'entraînement"/>
-                </div>}
-
-                {activeTab === "Nutrition" && <div className="all">
-                    <Nutrition patient={patient} name="Nutrition"/>
-                </div>}
-
-                {activeTab === "Aujourd'hui" && <DerniersEntrainements patient={patient}/>}
-
                 {activeTab === "Historique" &&
-                    <div className="graphes">
+                    <div>
                         <Graphes patient={patient} name="Suivi du poids" chartType="line"/>
                         {authenticate && <Graphes patient={patient} name="Evolution psychique" chartType="lineEvo"/>}
                         <Graphes patient={patient} name="Suivi des activites" chartType="bar"/>

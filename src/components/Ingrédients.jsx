@@ -38,8 +38,8 @@ function Ingrédients({ name, quantity, kcal}) {
             <div className="nutritionName">{name}</div>
 
             <div className="nutritionMenu">
-                <div className="nutrition_kcal">
-                {getIcon()}
+                <div className="nutrition_quantity">
+                <div className="icone" id="calories">{getIcon()}</div>
                     <div className="quantity">{quantity}</div>
                 </div>
                 <div className="nutrition_kcal">
