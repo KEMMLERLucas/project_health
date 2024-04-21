@@ -1,50 +1,42 @@
-import React, {useEffect, useState} from 'react';
-import data from "./training.json";
-import ChampEntrainement from "./ChampEntrainement.jsx";
-import Exercice from "./Exercice.jsx";
+import React, {useContext, useEffect, useState} from 'react';
+import data from "./nutrition.json";
+import ChampNutrition from './ChampNutrition';
+import Ingrédients from './Ingrédients';
+import "./nutrition.css";
+import SuiviPatientContext from "./SuiviPatientContext.jsx";
 
-function Training2({ patient, name }) {
-    
-        const [jsonData, setJsonData] = useState(data);
-        const [filteredData, setFilteredData] = useState([]);
-        const [selectedTrainingId, setSelectedTrainingId] = useState(null);
+function Nutrition({name}){
+    const patient = useContext(SuiviPatientContext).pat
+    const [jsonData, setJsonData] = useState(data);
+    const [filteredData, setFilteredData] = useState([]);
+    const [selectedNutritionId, setSelectedNutritionId] = useState(null);
 
-        useEffect(() => {
-            if(patient.id && jsonData.length>0){
-                const patientData = jsonData.filter(training => training.who.includes(patient.id));
-                setFilteredData(patientData);
-            }
-        }, [patient, jsonData]);
+    useEffect(() => {
+        if(patient.id && jsonData.length>0){
+            const patientData = jsonData.filter(nutrition => nutrition.who.includes(patient.id));
+            setFilteredData(patientData);
+        }
+    }, [patient, jsonData]);
 
-        return (
-            <div className="steps_block">
-                <div className="name">{name}</div>
-                <div>
-                    {filteredData.map(training => (
-                        <div key={training.id}>
-                            <ChampEntrainement
-                                name={training.name}
-                                level={training.level}
-                                duration={training.timer + " minutes"}
-                                calories={training.number_ex + " exercices"}
-                                train={true}
-                                onClick={() => {
-                                    setSelectedTrainingId(training.id === selectedTrainingId ? null : training.id);
-                                    }}
-                                    />
-
-                            {selectedTrainingId === training.id &&
-                                <div>
-                                    {Object.keys(training.entraînements).map(key => (
-                                        <Exercice name = {training.entraînements[key].name} series = {training.entraînements[key].number_series} repetitions = {training.entraînements[key].number_repet}/> 
+    return (
+        <div className="steps_block">
+            <div>
+                {filteredData.map(nutrition => (
+                    <div key={nutrition.id}>
+                        <span>
+                        <ChampNutrition
+                            name={nutrition.name}
+                            onClick={() => {
+                                    setSelectedNutritionId(nutrition.id === selectedNutritionId ? null : nutrition.id);
+                                }}/></span>
+                                    {Object.keys(nutrition.menu).map(key => (
+                                        <Ingrédients name = {nutrition.menu[key].name} quantity = {nutrition.menu[key].quantity} kcal = {nutrition.menu[key].kcal}/> 
                                     ))}
-                                </div>
-                            }
-                        </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
-        );
-    }
+        </div>
+    );
+}
 
-export default Training2;
+export default Nutrition;
