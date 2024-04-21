@@ -109,7 +109,7 @@ function Graphes({ name, chartType}){
     return (
 
         <div>
-            <div className="name" id="titleStats">
+            <div className="name" id="pad">
                 {name}
             </div>
             {

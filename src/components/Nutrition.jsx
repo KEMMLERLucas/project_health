@@ -22,8 +22,8 @@ function Nutrition({name}){
         <div className="steps_block">
             <div>
                 {filteredData.map(nutrition => (
-                    <div key={nutrition.id} className="all">
-                        <span className="title">
+                    <div key={nutrition.id}>
+                        <span>
                         <ChampNutrition
                             name={nutrition.name}
                             onClick={() => {

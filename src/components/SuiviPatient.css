@@ -12,18 +12,28 @@
     top: 0px;
     align-items:center;
     width:100%;
-    font-size: 20px;
-    color: #000000;
+    font-size: 14px;
     font-weight: 400;
     display:flex;
     justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #A240B4;
+    letter-spacing:2px;
+    padding-bottom:8px;
+    background-color: white;
+    border-bottom:1px solid lightgrey;
+}
+
+.infos_patients{
+    padding-bottom:40px;
 }
 
 .steps_block{
     display:flex;
     flex-direction: column;
     gap:8px;
-    padding-top: 16px;
+    padding:16px;
     /*align-items:flex-start;*/
     text-align: left;
 }
@@ -51,8 +61,11 @@
 
 .high-back{
     background-color:#F5FEF4;
-    border:1px solid #A5FBB8;
     box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
+}
+
+#pad{
+    padding:16px 0 4px 16px;
 }
 
 .medium-text_container{
@@ -61,7 +74,6 @@
 
 .medium-back{
     background-color:#FEFDF4;
-    border:1px solid #F4FBA5;
     box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
 }
 
@@ -71,7 +83,6 @@
 
 .low-back{
     background-color:#FEFBF4;
-    border:1px solid #FBD3A5;
     box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
 }
 
@@ -81,7 +92,6 @@
 
 .very-low-back{
     background-color:#FEF4F4;
-    border:1px solid #FBA5A5;
     box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
@@ -131,6 +141,7 @@
     padding:8px;
     align-items:center;
     justify-content: center;
+    /*background-color: #F5F5F5;*/
     border:1px solid lightgrey;
     box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
     border-radius:32px;
@@ -171,7 +182,7 @@
     text-transform: uppercase;
     font-size:12px;
     font-weight: bold;
-    color: #A240B4;
+    color: grey;
     letter-spacing:2px;
     padding-bottom:4px;
     text-align: left;
@@ -185,14 +196,22 @@
 .OngletsSuivi{
     display: flex;
     flex-wrap:nowrap;
-    margin-top: 25px;
+    gap:16px;
+    border-bottom: 1px solid #F0E9E2;
+    border-top: 1px solid #F0E9E2;
+}
+
+.OngletsSuivi_infos{
+    display: flex;
+    flex-wrap:nowrap;
+    gap:16px;
+    margin-top:24px;
     border-bottom: 1px solid #F0E9E2;
 }
 
 #test{
-    padding-left:8px;
-    padding-right:8px;
-    padding-bottom:8px;
+    padding:8px;
+    font-size: 16px;
 }
 
 .horizontal-menu-container{
@@ -231,6 +250,7 @@
     display: flex;
     justify-content: space-between;
     gap:16px;
+    padding:0 16px 16px 16px;
     font-weight: 400;
 }
 
@@ -245,31 +265,26 @@
     border-radius: 8px;
     gap: 8px;
     padding: 10px;
-    border: 1px solid #A5FBB8;
     background-color: #F5FEF4;
     box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
 }
 
 #NameStatOverweight{
-    border: 1px solid #F4FBA5;
     background-color: #FEFDF4;
     box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
 }
 
 #NameStatMorbidObesity{
-    border: 1px solid #FFC8C8;
     background-color: #FEF4F4;
     box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
 #NameStatModerateObesity{
-    border: 1px solid #FFDCC8;
     background-color: #FEF9F4;
     box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
 }
 
 #NameStatUnderweight{
-    border: 1px solid #CFF3F3;
     background-color: #F4FEFE;
     box-shadow: 0px 1px 4px 0px rgba(67, 200, 218, 0.25);
 }
@@ -319,9 +334,11 @@
     margin-top: 5px;
     height: 40px;
     border-radius: 8px;
-    padding: 10px;
-    /*border: 1px solid #A5FBB8;*/
-    border-radius: 8px;
+    padding: 8px;
+}
+
+.DerniersEntrainements{
+    padding:0 16px 0 16px;
 }
 
 .ChampExercice{
@@ -329,11 +346,9 @@
     display: flex;
     margin-top: 5px;
     height: 40px;
-    padding: 10px;
     border: 1px solid #D0D0D0;
     padding: 8px 16px;
     align-items: center;
-    gap: 10px;
 }
 
 .ChampEntrainementTrain:hover{
@@ -341,32 +356,50 @@
 }
 
 #Bike{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../public/cyclisme.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/cyclisme.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
 #Swimming{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../public/natation.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/natation.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
 #Footing{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../public/courseAPieds.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/courseAPieds.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
 #Walking{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../public/marche.png') lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/marche.png') lightgray 50% / cover no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
 #Arm{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../public/arm_sport.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/arm_sport.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Back{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_back.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: center;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Leg{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_legs.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
 #Ass{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../public/arm_sport.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_ass.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: bottom;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Abs{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../assets/training_abs.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: center;
     box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
 }
 
@@ -441,20 +474,21 @@
 .EvolutionPoids{
     flex: 1;
     display: flex;
+    padding-left: 16px;
+    padding-right:16px;
 }
 
 /*
 * Info patient formulaire
 */
 
-.informationPatient {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .formulaire{
     width: 100%;
+}
+
+.formulaire_infos{
+    padding-left:16px;
+    padding-right:16px;
 }
 
 .champ input[type="text"] {
@@ -479,8 +513,8 @@
     color: white;
     text-align: center;
     border-radius: 10% 10% 0 0;
-}
-.badge:after {
+  }
+  .badge:after {
     content: "";
     position: absolute;
     left: 0;
@@ -490,16 +524,18 @@
     border-bottom: 10px solid;
     border-left: 22px solid transparent;
     border-right: 22px solid transparent;
-}
+  }
 
-.recompense{
+  .recompense{
     display: flex;
     align-items: center;
     gap: 16px;
+    padding-left:16px;
+    padding-right:16px;
     align-self: stretch;
-}
+  }
 
-.containerBadge{
+  .containerBadge{
     display: flex;
     padding: 8px;
     flex-direction: column;
@@ -508,9 +544,9 @@
     flex: 1 0 0;
     align-self: stretch;
     border-radius: 4px;
-}
+  }
 
-.nomBadge{
+  .nomBadge{
     align-self: stretch;
     color: #1E925B;
     text-align: center;
@@ -518,28 +554,26 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+  }
 
-.descBadge{
+  .descBadge{
     color: #2D2D2D;
     text-align: center;
-    font-size: 10px;
+    font-size: 10px; 
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-}
+  }
 
-.totalRecompenses{
+  .totalRecompenses{
     display: flex;
-    padding: 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
     flex-shrink: 0;
-    border-radius: 8px;
-}
+  }
 
-.iconBadge{
+  .iconBadge{
     position: relative;
     transform: rotate(20deg);
     color: #79C578;
@@ -552,7 +586,7 @@
     width: 18px;
     height: 20px;
     bottom: 2px;
-}
+  }
 
 #badgeBleu{
     background: #D0F5EA;
@@ -659,4 +693,31 @@
     color: #959595;
     background: rgba(234, 234, 234, 0.25);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button_infos{
+    display:flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: stretch;
+    gap:8px;
+    margin-top:24px;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.primary_button_infos{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height:48px;
+    background-color: #A240B4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: stretch;
+    text-decoration: none;
+    font-size: 20px;
 }

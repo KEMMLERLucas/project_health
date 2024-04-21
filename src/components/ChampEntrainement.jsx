@@ -4,7 +4,7 @@ import { MdOutlineTimer } from "react-icons/md";
 import { MdOutlineSports } from "react-icons/md";
 import React from "react";
 
-function ChampEntrainement({ name, duration, calories, date, train = false, onClick }) {
+function ChampEntrainement({ name, duration, calories, date, level, train = false, onClick }) {
 
     let idActivity = "";
     let activityName = "";
@@ -31,26 +31,22 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
             idActivity = "Arm";
             activityName = name;
             break;
-        case "Séance fesses":
+        case "Séance fessiers":
             idActivity = "Ass";
             activityName = name;
             break;
-        case "Breakfast":
-            idActivity = "Breakfast";
+        case "Séance cuisses":
+            idActivity = "Leg";
             activityName = name;
             break;
-        case "Snack":
-            idActivity = "Breakfast";
+        case "Séance dos":
+            idActivity = "Back";
+            activityName = name;
+            break;  
+        case "Séance abdos":
+            idActivity = "Abs";
             activityName = name;
             break;
-        case "Lunch":
-            idActivity = "Breakfast";
-            activityName = name;
-            break;
-        case "Dinner":
-            idActivity = "Breakfast";
-            activityName = name;
-            break;    
     }
 
     function getDate(){
@@ -87,6 +83,11 @@ function ChampEntrainement({ name, duration, calories, date, train = false, onCl
             {!train && 
                 <div className="date">{getDate(date)}</div>
             }
+            
+            {train &&
+                <div className="level">{level}</div>
+            }
+
             </div>
 
             <div className="activityDurationCalories">

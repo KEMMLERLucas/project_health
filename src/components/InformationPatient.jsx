@@ -35,8 +35,8 @@ function InformationPatient(){
 
     return (
         <div className="all">
-            <Title name="Informations du patient" flecheOn={true} infoOn={false}/>
-            <div className="OngletsSuivi">
+            <Title name="Informations du patient" flecheOn={true} signoutOn={true} infoOn={false}/>
+            <div className="OngletsSuivi_infos">
                 <Onglets name="Personnelles" active={activeTab === "Personnelles"}
                          onClick={() => setActiveTab("Personnelles")}/>
                 <Onglets name="Sportives" active={activeTab === "Sportives"}
@@ -44,8 +44,7 @@ function InformationPatient(){
             </div>
 
             {activeTab === "Personnelles" && (
-                <div className="informationPatient">
-                    <div className="formulaire">
+                    <div className="formulaire_infos">
                         <div className="champ">
                             <label htmlFor="prénom">Prénom</label>
                             <input type="text" id="prénom" placeholder={patient.firstname}/>
@@ -71,14 +70,13 @@ function InformationPatient(){
                             <input type="text" id="taille" placeholder={patient.height + " cm"}/>
                         </div>
 
-                        <span className="button"><button className="primary_button">Mettre à jour les informations</button></span>
+                        <span className="button_infos"><button className="primary_button_infos">Mettre à jour les informations</button></span>
                     </div>
-                </div>
             )}
             
             {activeTab === "Sportives" && (
                 <div className="informationPatient">
-                    <div className="formulaire">
+                    <div className="formulaire_infos">
                         <div className="champ">
                             <label htmlFor="profil">Profil sportif</label>
                             <input type="text" id="profil" placeholder={getActivityProfile(patient.activityProfile)}/>
@@ -94,7 +92,7 @@ function InformationPatient(){
                             <input type="text" id="obj" placeholder={patient.weightGoal+" kg"}/>
                         </div>
 
-                        <span className="button"><button className="primary_button">Modifier l'objectif de poids</button></span>
+                        <span className="button_infos"><button className="primary_button_infos">Modifier l'objectif de poids</button></span>
                     </div>
                 </div>
             )}
