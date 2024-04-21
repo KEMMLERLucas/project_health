@@ -1,14 +1,88 @@
-h1{
+/* PAGE AUTHENTIFICATION */
+
+.full_page_auth_container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#FFDD00;
+    padding-bottom:32px;
+}
+
+.auth_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:64px;
+}
+
+.auth_image{
+    background: url(../assets/auth.jpg);
+    height: 250px;
+    width:160px;
+    background-position: center;
+    background-size:cover;
+}
+
+#titre{
     text-transform: uppercase;
-    color:yellow;
+    color:white;
     text-align: center;
     font-variant-numeric: lining-nums tabular-nums;
     font-family: Impact;
-    font-size: 48px;
+    font-size: 72px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
+.button{
+    display:flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: center;
+    width: 100%;
+    gap:8px;
+}
+
+.primary_button{
+    text-align: center;
+    line-height: 56px;
+    background-color: #A240B4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: stretch;
+    text-decoration: none;
+    font-size: 24px;
+    margin:0 24px 0 24px;
+}
+
+.secondary_button{
+    text-align: center;
+    line-height: 56px;
+    background-color: white;
+    border: 1px solid #A240B4;
+    color: #A240B4;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    margin:0 24px 0 24px;
+}
+
+
+
+
+
+
+
+
+
 
 h2{
     font-family:'Arial Narrow';
@@ -25,24 +99,15 @@ label{
     text-align: left;
 }
 
-.picture{
-    height:200px;
-    width:140px;
-    background: url(public/fond_auth.jpg) lightgray 50% / cover no-repeat;
-}
-
 .block{
     background-color: #FFDD00;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height:100%;
 }
 
 .block_log{
-    /*background-image: url(/public/fond_log.jpg);
-    background-repeat: repeat;*/
     display: flex;
     width:100%;
     flex-direction: column;
@@ -51,37 +116,11 @@ label{
 
 .formulaire{
     background-color: white;
+    width:100%;
 }
 
-.primary_button{
-    text-align: center;
-    line-height: 40px;
-    background-color: #A240B4;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-}
 
-.secondary_button{
-    text-align: center;
-    line-height: 40px;
-    background-color: white;
-    border: 1px solid #A240B4;
-    color: #A240B4;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.button{
-    display:flex;
-    flex-direction: column;
-    align-self:stretch;
-    margin:16px;
-    gap:8px;
-}
 
 #forget_mdp{
     color:#DA8243;

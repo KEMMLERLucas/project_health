@@ -4,7 +4,8 @@ import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import swal from 'sweetalert2'
 import axios from "axios";
-import './sweetalert.css'
+import './sweetalert.css';
+import "./auth.css";
 
 function Connexion({onLogin}) {
     /*Constantes pour la classe connexion
