@@ -18,7 +18,10 @@ Vous pourrez également retrouver un document précisant les sources d'inspirati
 ### Les fonctionnalités : 
 
 Pour utiliser notre application, le coach sportif doit, dans un premier temps, se créer un compte et se connecter. 
-[Captures créaton de compte et connexion]
+
+![image](https://github.com/KEMMLERLucas/project_health/assets/93048928/a1afe752-25b9-48c1-8d95-11be7caac6b9)
+![image](https://github.com/KEMMLERLucas/project_health/assets/93048928/147a7b1e-a7c9-4af0-8965-a3af7fdf74d0)
+![image](https://github.com/KEMMLERLucas/project_health/assets/93048928/f0884faa-a2e7-47e2-b743-a012f768a363)
 
 Une fois connecté, il accède à la liste des patients qu'il suit : [Captures d'écran de la liste des patients]
 Depuis cette page, il peut voir les informations de son profil, et les changer si nécessaire, en cliquant sur le bouton cloche, en haut à droite de l'interface (normal ?). 
