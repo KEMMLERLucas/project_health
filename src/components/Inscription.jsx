@@ -1,5 +1,5 @@
 import './auth.css'
-import { Link } from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {useState} from "react";
 import {useForm} from "react-hook-form"
 import swal from 'sweetalert2'
@@ -7,6 +7,7 @@ import axios from "axios";
 function Inscription() {
   const [isLoading, setLoading] = useState(false)
   const [isError, setError] = useState(false)
+  const navigate = useNavigate()
   const customClass = {
     title:'custom-title',
     header: 'custom-header',
@@ -24,6 +25,7 @@ function Inscription() {
       expires.setTime(expires.getTime() + (data.expires*10000))
       setLoading(false)
       setError(false)
+      navigate("/")
     } catch (error) {
       console.error(error)
       setLoading(false)
@@ -34,6 +36,7 @@ function Inscription() {
     register, handleSubmit
   } = useForm()
   const onSubmit = (data) =>{
+    data.role="16317dcf-1e2f-4fba-969f-6f6b15ba1062"
     switch(data){
       case data.password.length < 8:
         swal.fire({
@@ -51,7 +54,6 @@ function Inscription() {
           customClass:customClass
         })
         break;
-
       default : auth(data)
     }
   }
@@ -64,7 +66,7 @@ function Inscription() {
             <div className="champs">
               <div className="champ">
                 <label htmlFor="prenom">Prénom</label>
-                <input type="text" id="prenom" placeholder="Saisir votre prénom"{...register("last-name", {
+                <input type="text" id="prenom" placeholder="Saisir votre prénom"{...register("last_name", {
                   required: true,
                   maxLength: 90
                 })}/>
@@ -72,7 +74,7 @@ function Inscription() {
 
               <div className="champ">
                 <label htmlFor="nom">Nom</label>
-                <input type="text" id="nom" placeholder="Saisir votre nom"{...register("first-name", {
+                <input type="text" id="nom" placeholder="Saisir votre nom"{...register("first_name", {
                   required: true,
                   maxLength: 90
                 })}/>
@@ -80,7 +82,7 @@ function Inscription() {
 
               <div className="champ">
                 <label htmlFor="city">Ville</label>
-                <input type="text" id="city" placeholder="Saisir votre ville" {...register("city", {
+                <input type="text" id="city" placeholder="Saisir votre ville" {...register("location", {
                   required: true,
                   maxLength: 90
                 })}/>

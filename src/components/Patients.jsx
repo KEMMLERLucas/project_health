@@ -3,13 +3,16 @@ import {useEffect, useState} from "react";
 import Banner from "./Banner.jsx";
 import PatientPreview from "./PatientPreview.jsx";
 import React from 'react';
-import OurContext from './OurContext';
+import TokenContext from './TokenContext.jsx';
+import ContextPatient from "./TokenContext.jsx";
+
 
 
 function Patients({token}) {
     const [isLoading, setLoading] = useState(false)
     const [isError, setError] = useState(false)
     const [patients, setPatients] = useState([])
+
     useEffect(() => {
         async function loadPatient() {
             const api = "https://health.shrp.dev/items/people"
@@ -60,20 +63,20 @@ function Patients({token}) {
     }, [patients]);
 
     return (
-        <OurContext.Provider value={token}>
-            <div className="Patients">
-                {isLoading && <p>Chargement....</p>}
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                {isError && <p> Une erreur s'est produite</p>}
-                <Banner/>
-                <p className="name" id="padding">Mes patients</p>
-                <div className="patients">
-                    {patients.map((patient) => (
-                        < PatientPreview key={patient.id} patient={patient}/>))
-                    }
+        <TokenContext.Provider value={{tok : token,pats : patients}}>
+                <div className="Patients">
+                    {isLoading && <p>Chargement....</p>}
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    {isError && <p> Une erreur s'est produite</p>}
+                    <Banner/>
+                    <p id="title">Mes patients</p>
+                    <div className="patients">
+                        {patients.map((patient) => (
+                            < PatientPreview key={patient.id} patient={patient}/>))
+                        }
+                    </div>
                 </div>
-            </div>
-        </OurContext.Provider>
+        </TokenContext.Provider>
     )
 }
 

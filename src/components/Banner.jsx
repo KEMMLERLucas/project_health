@@ -5,14 +5,14 @@ import { FaCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
-import OurContext from "./OurContext.jsx";
+import TokenContext from "./TokenContext.jsx";
 
 function Banner(){
     const [username, setUsername] = useState("");
     const [isLoading, setLoading] = useState(false)
     const [isError, setError] = useState(false)
-    const contextValue = useContext(OurContext);
-    const jwt = contextValue.data.access_token
+    const contextValue = useContext(TokenContext);
+    const jwt = contextValue.tok.data.access_token
     const uid = jwtDecode(jwt).id
     useEffect(() => {
         async function getUser(){
@@ -24,10 +24,10 @@ function Banner(){
                 const data  = await response.data.data
                 setLoading(false)
                 setError(false)
-                if(data.first_name ===null && data.last_name===null || data.first_name===undefined && data.last_name ===undefined){
+                if(data[0].first_name ===null && data[0].last_name===null || data[0].first_name===undefined && data[0].last_name ===undefined){
                     setUsername("utilisateur inconnu");
                 }else{
-                    setUsername(`${data.first_name} ${data.last_name} `);
+                    setUsername(`${data[0].last_name} ${data[0].first_name}`);
                 }
 
             }catch (error){
