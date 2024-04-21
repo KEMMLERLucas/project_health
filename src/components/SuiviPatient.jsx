@@ -102,7 +102,6 @@ function SuiviPatient(){
 
             {activeTab === "Récompenses" && <Recompenses patient={patient}/>} 
 
-
         </div>
     )
 
