@@ -1,19 +1,14 @@
-.test{
-    padding:16px;
-}
-
 .ChampNutrition{
     flex: 1;
     display: flex;
     margin-top: 5px;
     border: 1px solid lightgrey;
     padding: 8px 16px;
+    border-radius:8px;
     align-items: center;
 }
 
 .nutritionName{
-    margin: auto;
-    text-align: left;
     color: grey;
     font-size: 16px;
     font-weight: 600;
@@ -24,9 +19,8 @@
     display:flex;
     flex-direction: column;
     width:100%;
-    justify-content: center;
     align-items: flex-end;
-    gap:4px;
+    gap:2px;
 }
 
 .nutrition_kcal{
@@ -34,11 +28,20 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap:8px;
+    gap:2px;
+}
+
+.nutrition_quantity{
+    display:flex;
+    flex-direction: row;
+    gap:2px;
+    align-items:center;
+    justify-content: flex-end;
 }
 
 #calories, #bread, #fruit, #milk, #egg, #meat, #cru, #feculent, #vert, #fish{
     color:grey;
+    font-size:14px;
 }
 
 .activityCalories{
@@ -50,7 +53,17 @@
     text-align: left;
 }
 
-.title{
-    margin-top:8px;
-    margin-bottom:8px;
+.name{
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight: bold;
+    color: grey;
+    letter-spacing:2px;
+    padding-bottom:4px;
+    margin-top:24px;
+    text-align: left;
+}
+
+.kcal, .quantity{
+    font-size:14px;
 }

@@ -4,7 +4,7 @@ import ChampNutrition from './ChampNutrition';
 import Ingrédients from './Ingrédients';
 import "./nutrition.css";
 
-function Nutrition({patient, name}){
+function Nutrition({patient}){
 
     const [jsonData, setJsonData] = useState(data);
     const [filteredData, setFilteredData] = useState([]);
@@ -21,8 +21,8 @@ function Nutrition({patient, name}){
         <div className="steps_block">
             <div>
                 {filteredData.map(nutrition => (
-                    <div key={nutrition.id} className="all">
-                        <span className="title">
+                    <div key={nutrition.id}>
+                        <span>
                         <ChampNutrition
                             name={nutrition.name}
                             onClick={() => {

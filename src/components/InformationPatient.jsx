@@ -6,8 +6,6 @@ import Title from "./Title.jsx";
 import React, {useState, useEffect} from "react";
 import Onglets from "./Onglets.jsx";
 
-
-
 function InformationPatient(){
 
     const { patientId } = useParams();
@@ -35,7 +33,7 @@ function InformationPatient(){
 
     return (
         <div className="all">
-            <Title name="Informations du patient" flecheOn={true} infoOn={false}/>
+            <Title name="Informations du patient" flecheOn={true} infoOn={false} signoutOn={true}/>
             <div className="OngletsSuivi">
                 <Onglets name="Personnelles" active={activeTab === "Personnelles"}
                          onClick={() => setActiveTab("Personnelles")}/>

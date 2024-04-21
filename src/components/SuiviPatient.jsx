@@ -45,10 +45,11 @@ function SuiviPatient(){
     const [activeTab, setActiveTab] = useState("Aujourd'hui");
 
     return (<div className="all">
+        <div className="infos_patients">
             <Title name="Suivi du patient" patientId={patient.id} />
             <ImagePatient patient={patient}/>
 
-            <PatientName patient={patient}/>
+            <PatientName patient={patient}/></div>
             <div className="horizontal-menu-container">
             <div className="OngletsSuivi">
                 <Onglets name="Aujourd'hui" active={activeTab === "Aujourd'hui"}

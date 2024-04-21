@@ -30,9 +30,7 @@ function ChampNutrition({ name }) {
 
     return (
         <div id={idActivity}>
-            <div className="all">
-            <div className="test">{activityName}</div>
-            </div>
+            <div className="name">{activityName}</div>
         </div>
     );
 }

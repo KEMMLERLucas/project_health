@@ -21,14 +21,19 @@
     color: #A240B4;
     letter-spacing:2px;
     padding-bottom:8px;
+    background-color: white;
     border-bottom:1px solid lightgrey;
+}
+
+.infos_patients{
+    padding-bottom:40px;
 }
 
 .steps_block{
     display:flex;
     flex-direction: column;
     gap:8px;
-    padding-top: 16px;
+    padding:16px;
     /*align-items:flex-start;*/
     text-align: left;
 }
@@ -56,8 +61,11 @@
 
 .high-back{
     background-color:#F5FEF4;
-    border:1px solid #A5FBB8;
     box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
+}
+
+#pad{
+    padding:16px 0 4px 16px;
 }
 
 .medium-text_container{
@@ -66,7 +74,6 @@
 
 .medium-back{
     background-color:#FEFDF4;
-    border:1px solid #F4FBA5;
     box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
 }
 
@@ -76,7 +83,6 @@
 
 .low-back{
     background-color:#FEFBF4;
-    border:1px solid #FBD3A5;
     box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
 }
 
@@ -86,7 +92,6 @@
 
 .very-low-back{
     background-color:#FEF4F4;
-    border:1px solid #FBA5A5;
     box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
@@ -191,10 +196,9 @@
 .OngletsSuivi{
     display: flex;
     flex-wrap:nowrap;
-    margin-top: 24px;
     gap:16px;
     border-bottom: 1px solid #F0E9E2;
-    border-top: 1px solid #F0E9E2
+    border-top: 1px solid #F0E9E2;
 }
 
 #test{
@@ -238,6 +242,7 @@
     display: flex;
     justify-content: space-between;
     gap:16px;
+    padding:0 16px 16px 16px;
     font-weight: 400;
 }
 
@@ -252,31 +257,26 @@
     border-radius: 8px;
     gap: 8px;
     padding: 10px;
-    border: 1px solid #A5FBB8;
     background-color: #F5FEF4;
     box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
 }
 
 #NameStatOverweight{
-    border: 1px solid #F4FBA5;
     background-color: #FEFDF4;
     box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
 }
 
 #NameStatMorbidObesity{
-    border: 1px solid #FFC8C8;
     background-color: #FEF4F4;
     box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
 }
 
 #NameStatModerateObesity{
-    border: 1px solid #FFDCC8;
     background-color: #FEF9F4;
     box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
 }
 
 #NameStatUnderweight{
-    border: 1px solid #CFF3F3;
     background-color: #F4FEFE;
     box-shadow: 0px 1px 4px 0px rgba(67, 200, 218, 0.25);
 }
@@ -326,9 +326,11 @@
     margin-top: 5px;
     height: 40px;
     border-radius: 8px;
-    padding: 10px;
-    /*border: 1px solid #A5FBB8;*/
-    border-radius: 8px;
+    padding: 8px;
+}
+
+.DerniersEntrainements{
+    padding:0 16px 0 16px;
 }
 
 .ChampExercice{
@@ -336,11 +338,9 @@
     display: flex;
     margin-top: 5px;
     height: 40px;
-    padding: 10px;
     border: 1px solid #D0D0D0;
     padding: 8px 16px;
     align-items: center;
-    gap: 10px;
 }
 
 .ChampEntrainementTrain:hover{
@@ -466,6 +466,8 @@
 .EvolutionPoids{
     flex: 1;
     display: flex;
+    padding-left: 16px;
+    padding-right:16px;
 }
 
 /*
@@ -521,6 +523,8 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    padding-left:16px;
+    padding-right:16px;
     align-self: stretch;
   }
 
@@ -556,12 +560,10 @@
 
   .totalRecompenses{
     display: flex;
-    padding: 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
     flex-shrink: 0;
-    border-radius: 8px;
   }
 
   .iconBadge{
