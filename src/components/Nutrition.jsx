@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import data from "./nutrition.json";
 import ChampNutrition from './ChampNutrition';
 import Ingrédients from './Ingrédients';
 import "./nutrition.css";
+import SuiviPatientContext from "./SuiviPatientContext.jsx";
 
-function Nutrition({patient, name}){
-
+function Nutrition({name}){
+    const patient = useContext(SuiviPatientContext).pat
     const [jsonData, setJsonData] = useState(data);
     const [filteredData, setFilteredData] = useState([]);
     const [selectedNutritionId, setSelectedNutritionId] = useState(null);

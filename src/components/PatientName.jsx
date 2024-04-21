@@ -10,10 +10,12 @@ import { FaCar } from "react-icons/fa";
 import { FaCakeCandles } from "react-icons/fa6";
 import { IoMdMale } from "react-icons/io";
 import { IoMdFemale } from "react-icons/io";
+import {useContext} from "react";
+import OnePatientContext from "./OnePatientContext.jsx";
+import SuiviPatientContext from "./SuiviPatientContext.jsx";
 
 
 function PatientName({patient, isSmall}){
-
     function calculAge(year){
         var today = new Date();
         return (today.getFullYear() - year);

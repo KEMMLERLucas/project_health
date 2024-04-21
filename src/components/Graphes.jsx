@@ -1,9 +1,12 @@
 import "./SuiviPatient.css";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import axios from "axios";
 import { LineChart, Line, BarChart, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
+import SuiviPatientContext from "./SuiviPatientContext.jsx";
 
-function Graphes({patient, name, chartType}){
+function Graphes({ name, chartType}){
+
+    const patient = useContext(SuiviPatientContext).pat
 
     const [activitiesCount, setActivitiesCount] = useState([]);
     const[physiologicalData, setPhysiology] = useState([]);
