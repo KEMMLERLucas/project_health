@@ -4,7 +4,6 @@ import {useContext, useEffect, useState} from "react";
 import OnePatientContext from "./OnePatientContext.jsx";
 import SuiviPatientContext from "./SuiviPatientContext.jsx";
 
-
 function ImagePatient({patient} ){
     const [img, setImg] = useState("");
 
