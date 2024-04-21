@@ -1,14 +1,13 @@
 import "./SuiviPatient.css";
 import { FaCog, FaSignOutAlt } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
-import { useNavigate, Link } from "react-router-dom";
-import { useCookies } from 'react-cookie';
+import { useNavigate, Link } from "react-router-dom"
+import Cookies from 'js-cookie'
 /*import { withRouter } from "react-router-dom";*/
 import swal from 'sweetalert2';
 import './sweetalert.css'
 
 function Title({name, patientId, flecheOn = true, infoOn = true, signoutOn = false}) {
-    const [, , removeCookies] = useCookies();
     const navigate = useNavigate();
 
     const handleGoBack = () => {
@@ -26,8 +25,10 @@ function Title({name, patientId, flecheOn = true, infoOn = true, signoutOn = fal
             cancelButtonText: "Annuler",
             confirmButtonText: "Confirmer",
           }).then((result)=>{
-              if(result.isConfirmed){
-              }
+            if (result.isConfirmed) {
+                Cookies.remove('data')
+                navigate("/")
+            }
         })
     };
 

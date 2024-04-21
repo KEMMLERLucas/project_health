@@ -9,12 +9,12 @@ import './sweetalert.css'
 import Onglets from "./Onglets";
 import Title from "./Title";
 import "./auth.css";
+import Swal from "sweetalert2";
 
 function Infos() {
     /*Constantes pour la classe connexion
     * */
     const [activeTab, setActiveTab] = useState("Informations");
-
     const [isLoading, setLoading] = useState(false);
     const [isError, setError] = useState(false);
     const [cookies, setCookie] = useCookies(["access_token", "refresh_token"]);
@@ -63,8 +63,16 @@ function Infos() {
             cancelButtonColor: "#d33",
             cancelButtonText: "Annuler",
             confirmButtonText: "Confirmer",
-          })
-    };
+          }).then((result)=>{
+              console.log(result)
+            if (result.isConfirmed) {
+                console.log("Logout")
+                //document.cookie = "data=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                console.log(document.cookie)
+                //navigate("/")
+            }
+        }
+        )};
 
     return (
         <div className="block_log">
