@@ -15,8 +15,6 @@ import Nutrition from "./Nutrition.jsx";
 import SuiviPatientContext from "./SuiviPatientContext.jsx";
 import Compteur from "./compteur.jsx";
 
-
-
 function SuiviPatient() {
     let authenticate=false
     const [isLoading, setLoading] = useState(false);
@@ -91,13 +89,9 @@ function SuiviPatient() {
                 }
 
                 {activeTab === "Récompenses" && <Recompenses patient={patient}/>}
-
-
             </div>
         </SuiviPatientContext.Provider>
-
     )
-
 }
 
 export default SuiviPatient
