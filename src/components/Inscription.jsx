@@ -37,7 +37,7 @@ function Inscription() {
     switch(data){
       case data.password.length < 8:
         swal.fire({
-          title: 'La longueur du mot de passe doit-être supérieur à 8 caractères !',
+          title: 'La longueur du mot de passe doit être supérieure à 8 caractères !',
           icon: 'error',
           confirmButtonText: 'Modifier',
           customClass:customClass
@@ -45,7 +45,7 @@ function Inscription() {
         break;
       case data.email.length >= 48 :
         swal.fire({
-          title: 'La longueur du mot de passe doit-être inférieur à 48 caractères !',
+          title: 'La longueur du mot de passe doit être inférieure à 48 caractères !',
           icon: 'error',
           confirmButtonText: 'Modifier',
           customClass:customClass
@@ -56,9 +56,10 @@ function Inscription() {
     }
   }
     return (
-      <div className="block_log">
-        <div className="formulaire">
-          <h2>Inscription</h2>
+      <div className="full_page_co_container">
+        <div className="formulaire_inscription">
+          <h2 id="sous_titre">Inscription</h2>
+
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="champs">
               <div className="champ">
@@ -101,12 +102,12 @@ function Inscription() {
               </div>
             </div>
 
-            <span className="button">
+            <span className="button_inscription">
           <button className="primary_button">S'inscrire</button>
+          <p>Déjà un compte ? <Link id="register" to="/connexion">Je me connecte !</Link></p>
           </span>
           </form>
 
-          <p>Déjà un compte ? <Link id="register" to="/connexion">Je me connecte !</Link></p>
         </div>
       </div>
     )

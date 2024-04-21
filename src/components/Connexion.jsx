@@ -86,8 +86,8 @@ function Connexion({onLogin}) {
 
                         <p id="forget_mdp">Mot de passe oublié ?</p>
 
-<span className="end_formulaire">
-                        <span className="button">
+        <span className="end_formulaire">
+                        <span className="button_connexion">
             <button className="primary_button">Se connecter</button>
           </span>
                         <p>
