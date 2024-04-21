@@ -156,7 +156,7 @@
                 "kcal" : 190
             },
             "fruit" : {
-                "name" : "Smoothie",
+                "name" : "Jus d'orange",
                 "quantity" : "1 verre",
                 "kcal" : 98
             }
@@ -386,8 +386,8 @@
                 "kcal" : 202
             },
             "prot" : {
-                "name" : "Steak de soja",
-                "quantity" : "175g",
+                "name" : "Oeufs au plat",
+                "quantity" : "2 unités",
                 "kcal" : 239
             },
             "starchy" : {
@@ -445,7 +445,7 @@
 "fae997ca-9b72-4cd4-bda1-f4bbdb36b0d6"],
         "menu": {
             "starter" :{
-                "name" : "Tomates",
+                "name" : "Crudités",
                 "quantity" : "100g",
                 "kcal" : 202
             },
@@ -455,7 +455,7 @@
                 "kcal" : 239
             },
             "starchy" : {
-                "name" : "Pâtes",
+                "name" : "Féculents",
                 "quantity" : "120g",
                 "kcal" : 120
             },
@@ -491,7 +491,7 @@
         "a4750918-af97-4512-bd9a-cadb337d68e1"],
         "menu": {
             "nuts" :{
-                "name" : "Noix",
+                "name" : "Arachides",
                 "quantity" : "100g",
                 "kcal" : 202
             },
@@ -540,7 +540,7 @@
 "fae997ca-9b72-4cd4-bda1-f4bbdb36b0d6"],
         "menu": {
             "nuts" :{
-                "name" : "Beurre de cacahuètes",
+                "name" : "Beurre d'arachides'",
                 "quantity" : "1 cuillère",
                 "kcal" : 202
             },

@@ -1,34 +1,50 @@
 import "./css/nutrition.css";
 import { AiOutlineFire } from "react-icons/ai";
-import { GiFruitBowl, GiSlicedBread, GiMilkCarton, GiTomato, GiBroccoli} from "react-icons/gi";
+import { GiFruitBowl, GiSlicedBread, GiMilkCarton, GiTomato, GiBroccoli, GiAvocado} from "react-icons/gi";
 import { FaEgg, FaFish } from "react-icons/fa";
 import React from "react";
-import { TbMeat } from "react-icons/tb";
+import { TbCarrot, TbCheese, TbMeat, TbSoup } from "react-icons/tb";
 import { BiBowlRice } from "react-icons/bi";
+import { LuNut } from "react-icons/lu";
+import { FaBowlFood, FaGlassWater } from "react-icons/fa6";
 
 function Ingrédients({ name, quantity, kcal}) {
 
     const getIcon = () => {
         switch(true){
-            case name.includes("pain"):
-                return <GiSlicedBread className="icone" id="bread"/>;
+            case name.toLowercase().includes("pain"):
+                return <GiSlicedBread className="icone" id="icone"/>;
             case name.includes("Fruit"):
-                return <GiFruitBowl className="icone" id="fruit"/>;
+                return <GiFruitBowl className="icone" id="icone"/>;
             case name.includes("Laitage"):
-                return <GiMilkCarton className="icone" id="milk"/>;
+                return <GiMilkCarton className="icone" id="icone"/>;
             case name.includes("Oeuf"):
-                return <FaEgg classname="icone" id="egg"/>;
+                return <FaEgg classname="icone" id="icone"/>;
             case name.includes("Viande"):
-                return <TbMeat className="icone" id="meat"/>;
+                return <TbMeat className="icone" id="icone"/>;
             case name.includes("Crudités"):
-                return <GiTomato className="icone" id="cru"/>;
+                return <GiTomato className="icone" id="icone"/>;
             case name.includes("Féculents"):
-                return <BiBowlRice className="icone" id="feculent"/>;
+                return <BiBowlRice className="icone" id="icone"/>;
             case name.includes("verts"):
-                return <GiBroccoli className="icone" id="vert"/>;
+                return <GiBroccoli className="icone" id="icone"/>;
             case name.includes("Poisson"):
-                return <FaFish className="icone" id="fish"/>;
-            default:
+                return <FaFish className="icone" id="icone"/>;
+            case name.includes("Soupe"):
+                return <TbSoup className="icone" id="icone"/>;
+            case name.toLowercase().includes("arachides"):
+                return <LuNut className="icone" id="icone"/>;
+            case name.includes("Carottes"):
+                return <TbCarrot className="icone" id="icone"/>;
+            case name.includes("Fromage"):
+                return <TbCheese className="icone" id="icone"/>;
+            case name.includes("Porridge"):
+                return <FaBowlFood className="icone" id="icone"/>;
+            case name.includes("Jus"):
+                return <FaGlassWater className="icone" id="icone"/>;
+            case name.toLowercase().includes("avocat"):
+                return <GiAvocado className="icone" id="icone"/>;
+                default:
                 return null;
         }
     }

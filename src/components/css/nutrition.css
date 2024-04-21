@@ -39,7 +39,7 @@
     justify-content: flex-end;
 }
 
-#calories, #bread, #fruit, #milk, #egg, #meat, #cru, #feculent, #vert, #fish{
+#icone{
     color:grey;
     font-size:14px;
 }

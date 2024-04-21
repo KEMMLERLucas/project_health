@@ -6,8 +6,6 @@ import Title from "../components/Title.jsx";
 import React, {useState, useEffect} from "react";
 import Onglets from "../components/Onglets.jsx";
 
-
-
 function InformationPatient(){
 
     const { patientId } = useParams();
