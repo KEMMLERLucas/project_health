@@ -7,7 +7,7 @@ import SuiviPatientContext from "./SuiviPatientContext.jsx";
 function Graphes({ name, chartType}){
 
     const patient = useContext(SuiviPatientContext).pat
-
+    const tok = useContext(SuiviPatientContext).tok
     const [activitiesCount, setActivitiesCount] = useState([]);
     const[physiologicalData, setPhysiology] = useState([]);
     const [psychicData, setPsychicData] = useState([]);
@@ -39,19 +39,15 @@ function Graphes({ name, chartType}){
     useEffect(() => {
         async function authenticateAndGetPsychicData() {
             try {
-                const authResponse = await axios.post('https://health.shrp.dev/auth/login', {
-                    email: 'juju1@gmail.com',
-                    password: '123456'
-                });
 
                 /*  A changer  */
-                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4MDQ4ZjJjLTU1NWEtNGY3Zi1iMzk0LWI3ZTVhMGViYjJmYyIsInJvbGUiOiI1ZmNkMDU4MS1iZmJjLTRhZmEtOGRmOS1iNDBjMjRlMzViZmEiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTcxMzM2Mjk2MiwiZXhwIjoxNzEzMzYzODYyLCJpc3MiOiJkaXJlY3R1cyJ9.ZYRgUhaCJNGRAJTnEHjmJUFrRtIJNadPIwApUOJ31Ns"
+                const token = tok.access_token
 
                 const config = {
                     headers: { Authorization: `Bearer ${token}` }
                 };
-
-                const psychicApi = `https://health.shrp.dev/items/psychicData?filter[people_id][_eq]=814daa5b-0ea7-499f-80bf-e79e26da8ca5`;
+                const patientId= patient.id
+                const psychicApi = `https://health.shrp.dev/items/psychicData?filter[people_id][_eq]=${patientId}`;
                 const response = await axios.get(psychicApi, config);
                 const data = response.data.data.map(item => ({
                     ...item,
