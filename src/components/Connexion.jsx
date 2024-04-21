@@ -59,9 +59,9 @@ function Connexion({onLogin}) {
     };
 
     return (
-            <div className="block_log">
+            <div className="full_page_co_container">
                 <div className="formulaire">
-                    <h2>Connexion</h2>
+                    <h2 id="sous_titre">Connexion</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="champ">
                             <label htmlFor="email">Adresse e-mail</label>
@@ -86,6 +86,7 @@ function Connexion({onLogin}) {
 
                         <p id="forget_mdp">Mot de passe oublié ?</p>
 
+<span className="end_formulaire">
                         <span className="button">
             <button className="primary_button">Se connecter</button>
           </span>
@@ -95,6 +96,7 @@ function Connexion({onLogin}) {
                                 Je m'inscris !
                             </Link>
                         </p>
+                        </span>
                     </form>
                 </div>
             </div>
