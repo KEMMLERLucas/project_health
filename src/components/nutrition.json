@@ -113,5 +113,165 @@
                 "kcal" : 92
             }
         }
+    },
+    {
+        "id": 6,
+        "name" : "Breakfast",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "bread" :{
+                "name" : "Tartine d'avocat",
+                "quantity" : "1 unité",
+                "kcal" : 190
+            },
+            "fruit" : {
+                "name" : "Fruit",
+                "quantity" : "2 unités",
+                "kcal" : 98
+            },
+            "dairy" : {
+                "name" : "Laitage",
+                "quantity" : "1 unité",
+                "kcal" : 120
+            }
+        }
+    },
+    {
+        "id": 7,
+        "name" : "Breakfast",
+        "who" : [""],
+        "menu": {
+            "bread" :{
+                "name" : "Porridge",
+                "quantity" : "1 bol",
+                "kcal" : 190
+            },
+            "fruit" : {
+                "name" : "Smoothie",
+                "quantity" : "1 verre",
+                "kcal" : 98
+            }
+        }
+    },
+    {
+        "id": 8,
+        "name" : "Lunch",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "starter" :{
+                "name" : "Carottes râpées",
+                "quantity" : "100g",
+                "kcal" : 202
+            },
+            "prot" : {
+                "name" : "Steak de soja",
+                "quantity" : "175g",
+                "kcal" : 239
+            },
+            "starchy" : {
+                "name" : "Pain",
+                "quantity" : "50g",
+                "kcal" : 120
+            },
+            "vegetables" :{
+                "name" : "Légumes verts",
+                "quantity" : "200g",
+                "kcal" : 162
+            },
+            "dairy" :{
+                "name" : "Fromage",
+                "quantity" : "100g",
+                "kcal" : 92
+            }
+        }
+    },
+    {
+        "id": 9,
+        "name" : "Lunch",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "starter" :{
+                "name" : "Tomates",
+                "quantity" : "100g",
+                "kcal" : 202
+            },
+            "prot" : {
+                "name" : "Poisson",
+                "quantity" : "175g",
+                "kcal" : 239
+            },
+            "starchy" : {
+                "name" : "Pâtes",
+                "quantity" : "120g",
+                "kcal" : 120
+            },
+            "vegetables" :{
+                "name" : "Légumes verts",
+                "quantity" : "200g",
+                "kcal" : 162
+            },
+            "fruit" :{
+                "name" : "Fruit",
+                "quantity" : "1 unité",
+                "kcal" : 92
+            }
+        }
+    },
+    {
+        "id": 10,
+        "name" : "Snack",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "nuts" :{
+                "name" : "Noix",
+                "quantity" : "100g",
+                "kcal" : 202
+            },
+            "fruit" : {
+                "name" : "Fruit",
+                "quantity" : "1 unité",
+                "kcal" : 239
+            }
+        }
+    },
+    {
+        "id": 11,
+        "name" : "Snack",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "nuts" :{
+                "name" : "Beurre de cacahuètes",
+                "quantity" : "1 cuillère",
+                "kcal" : 202
+            },
+            "fruit" : {
+                "name" : "Fruit",
+                "quantity" : "1 unité",
+                "kcal" : 239
+            }
+        }
+    },
+    {
+        "id": 12,
+        "name" : "Dinner",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "03267270-c67d-41c2-97f5-daeca0474952"],
+        "menu": {
+            "starter" :{
+                "name" : "Soupe",
+                "quantity" : "1 bol",
+                "kcal" : 202
+            },
+            "dairy" :{
+                "name" : "Laitage",
+                "quantity" : "1 unité",
+                "kcal" : 92
+            }
+        }
     }
 ]
