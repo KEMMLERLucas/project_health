@@ -4,7 +4,8 @@ import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import swal from 'sweetalert2'
 import axios from "axios";
-import './sweetalert.css'
+import './sweetalert.css';
+import "./auth.css";
 
 function Connexion({onLogin}) {
     /*Constantes pour la classe connexion
@@ -58,9 +59,9 @@ function Connexion({onLogin}) {
     };
 
     return (
-            <div className="block_log">
+            <div className="full_page_co_container">
                 <div className="formulaire">
-                    <h2>Connexion</h2>
+                    <h2 id="sous_titre">Connexion</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="champ">
                             <label htmlFor="email">Adresse e-mail</label>
@@ -85,7 +86,8 @@ function Connexion({onLogin}) {
 
                         <p id="forget_mdp">Mot de passe oublié ?</p>
 
-                        <span className="button">
+        <span className="end_formulaire">
+                        <span className="button_connexion">
             <button className="primary_button">Se connecter</button>
           </span>
                         <p>
@@ -94,6 +96,7 @@ function Connexion({onLogin}) {
                                 Je m'inscris !
                             </Link>
                         </p>
+                        </span>
                     </form>
                 </div>
             </div>

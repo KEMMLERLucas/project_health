@@ -1,6 +1,6 @@
 import "./banner.css";
 import React, {useEffect, useState,useContext} from 'react';
-import { FaRegBell } from "react-icons/fa";
+import { FaCog } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
@@ -38,21 +38,25 @@ function Banner(){
         getUser()
     }, );
 
-    return (<div className="banner">
-        <div className="infos_banner">
-        <Link to="/infos">
-        <div className="test">
-            <div id="photo"></div>
-            <div id="text">
-        Bienvenue {username} !
-        <div className="online">
-        <FaCircle className="icone" id="circle"/> Connecté
-        </div>
-        </div>
-        </div></Link>
-        </div>
-        <FaRegBell className="icone" id="bell"/>        
-    </div>)
+    return (
+    <div className="banner">
+        
+            <span className="banner_container">
+                <span className="banner_infos">
+                    <div id="photo_de_profil"></div>
+                    <div id="nom_connecté">
+                        <span id="texte">Bienvenue {username} !</span>
+                        <div className="online">
+                            <FaCircle className="icone" id="circle"/> Connecté
+                            </div>
+                            </div>
+                            </span>
+                            <Link to="/infos" className="border">
+                                <FaCog className="icone" id="rouage"/>
+                            </Link> 
+                            </span>       
+    </div>
+)
 }
 
 export default Banner

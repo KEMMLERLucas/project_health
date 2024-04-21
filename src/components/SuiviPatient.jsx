@@ -5,7 +5,7 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
 import {jwtDecode} from "jwt-decode";
@@ -15,9 +15,12 @@ import Nutrition from "./Nutrition.jsx";
 import SuiviPatientContext from "./SuiviPatientContext.jsx";
 
 
+
 function SuiviPatient() {
     let authenticate=false
-
+    let { patientId } = useParams();
+    const [isLoading, setLoading] = useState(false);
+    const [isError, setError] = useState(false);
     /* Gerer le clicked onglet (active)*/
     const arole = "16317dcf-1e2f-4fba-969f-6f6b15ba1062"
     const location = useLocation();
@@ -52,9 +55,21 @@ function SuiviPatient() {
                     </div>
                 </div>
 
-                {activeTab === "Aujourd'hui" && <div className="statsActuelles">
-                    <StatsActu patient={patient} name="Poids actuel"/>
-                    <StatsActu patient={patient} name="IMC actuel"/>
+
+            {activeTab === "Aujourd'hui" && <div className="all">
+                <Compteur patient={patient} name="Nombre de pas journaliers"/>
+                <div className="statsActuelles">
+                <StatsActu patient={patient} name="Poids actuel"/>
+                <StatsActu patient={patient} name="IMC actuel"/>
+            </div>
+            </div>}
+
+            {activeTab === "Entraînements" && <div className="all">
+                <Training2 patient={patient} name="Plan d'entraînement"/>
+            </div>}
+
+            {activeTab === "Nutrition" && <div className="all">
+                <Nutrition patient={patient} name="Nutrition"/>
                 </div>}
 
                 {activeTab === "Entraînements" && <div className="all">
