@@ -5,7 +5,7 @@ import PatientName from "./PatientName";
 import Onglets from "./Onglets";
 import Graphes from "./Graphes";
 import StatsActu from "./StatsActu.jsx";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import DerniersEntrainements from "./DerniersEntrainements.jsx";
 import Recompenses from "./Recompenses.jsx";
 import {jwtDecode} from "jwt-decode";
@@ -13,12 +13,12 @@ import {useLocation} from 'react-router-dom';
 import Training2 from "./Training2.jsx";
 import Nutrition from "./Nutrition.jsx";
 import SuiviPatientContext from "./SuiviPatientContext.jsx";
+import Compteur from "./compteur.jsx";
 
 
 
 function SuiviPatient() {
     let authenticate=false
-    let { patientId } = useParams();
     const [isLoading, setLoading] = useState(false);
     const [isError, setError] = useState(false);
     /* Gerer le clicked onglet (active)*/
