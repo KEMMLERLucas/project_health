@@ -21,9 +21,22 @@ Pour utiliser notre application, le coach sportif doit, dans un premier temps, s
 
 ![image](https://github.com/KEMMLERLucas/project_health/assets/93048928/0c635ed5-6542-485e-83a1-2948d972de42)
 
-Une fois connecté, il accède à la liste des patients qu'il suit : [Captures d'écran de la liste des patients]
-Depuis cette page, il peut voir les informations de son profil, et les changer si nécessaire, en cliquant sur le bouton cloche, en haut à droite de l'interface (normal ?). 
+Une fois connecté, il accède à la liste des patients qu'il suit : 
+
+![Frame 19](https://github.com/KEMMLERLucas/project_health/assets/101339546/6f9527a6-b81c-45a3-9561-1df5ca3c7b9f)
+
+Depuis cette page, il peut voir les informations de son profil, et les changer si nécessaire, en cliquant sur le bouton rouage, en haut à droite de l'interface. 
 On retrouve également une bannière, confirmant l'état connecté du coach.
+
+Page de modification des informations de l'utilisateur : 
+
+![Frame 20](https://github.com/KEMMLERLucas/project_health/assets/101339546/ee2e4302-311a-488a-b85f-570a71b0d168)
+
+Il peut également se déconnecter en cliquant sur le bouton rouge, en haut à droite. S'il clique, une popup de confirmation s'ouvre, pour s'assurer que l'utilisateur veut bien se déconnecter. S'il confirme cette action, il est déconnecté et redirigé à la page d'accueil de l'application. 
+
+![Frame 21](https://github.com/KEMMLERLucas/project_health/assets/101339546/c863de35-de69-45b0-8835-674e62b4c3fa)
+
+Le coach peut ensuite revenir à la liste des patients en cliquant sur la flèche en haut à gauche de l'interface. 
 
 Ensuite, en cliquant sur l'un de ses patients, il aura accès à l'ensemble des informatios le concernant. Il accède à la page de suivi du patient, qui comporte plusieurs onglets : "Aujourd'hui", "Entraînement", "Historique", "Nutrition" et "Récompenses".  
 
