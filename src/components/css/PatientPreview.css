@@ -1,30 +1,25 @@
-.patientName{
-    margin-top: 5px;
+#patientName{
+    margin-top:8px;
     color: #6D350D;
     font-size: 12px;
 }
 
 /* Vignette représentant le profil du patient */
 .PatientElement{
-    display: flex;
     padding: 8px;
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    gap: 4px;
-    flex: 1 0 0;
-    width: 150px; /* Ajustez cette valeur en fonction de la taille souhaitée */
-    height: 250px;
-    align-self: stretch;
+    justify-content: center;
+    width:150px;
+    height:180px;
     border-radius: 8px;
     border: 1px solid  #DA8243;
     background: white;
+    margin:8px;
     box-shadow: 0px 1px 4px 0px rgba(218, 157, 67, 0.25);
 }
 
 .PatientList{
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
-    padding:8px;
 }

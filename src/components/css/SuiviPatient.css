@@ -1,0 +1,727 @@
+.icone{
+    position: relative;
+}
+
+.all{
+    height:100%;
+    width:100%;
+}
+
+.title{
+    position: relative;
+    top: 0px;
+    align-items:center;
+    width:100%;
+    font-size: 14px;
+    font-weight: 400;
+    display:flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #A240B4;
+    letter-spacing:2px;
+    padding-bottom:8px;
+    background-color: white;
+    border-bottom:1px solid lightgrey;
+}
+
+.infos_patients{
+    padding-bottom:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps_block{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    padding:16px;
+    /*align-items:flex-start;*/
+    text-align: left;
+}
+
+.steps{
+    padding:16px;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    font-size:24px;
+    border-radius:8px;
+    align-self: stretch;
+}
+
+.nb_steps{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.high-text_container{
+    color:#43DA64;
+}
+
+.high-back{
+    background-color:#F5FEF4;
+    box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
+}
+
+#pad{
+    padding:16px 0 4px 16px;
+}
+
+.medium-text_container{
+    color:#DAB943;
+}
+
+.medium-back{
+    background-color:#FEFDF4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
+}
+
+.low-text_container{
+    color:#DA8243;
+}
+
+.low-back{
+    background-color:#FEFBF4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
+}
+
+.very-low-text_container{
+    color:#DA4343;
+}
+
+.very-low-back{
+    background-color:#FEF4F4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
+}
+
+
+
+
+
+
+
+#total{
+    font-size: 12px;
+    color:black;
+}
+
+#titleStats{
+    margin-top: 25px;
+    text-align: left;
+    width:100%;
+}
+
+#titleEntrainement{
+    text-align:center;
+    margin-top:16px;
+    margin-bottom:16px;
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight: bold;
+    color: #DA8243;
+    letter-spacing:2px;
+    cursor:pointer;
+}
+
+#ImageSport{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-top: 30px;
+}
+
+#fleche{
+    color: #000000;
+    font-size: 20px;
+}
+
+.border{
+    display:flex;
+    padding:8px;
+    align-items:center;
+    justify-content: center;
+    /*background-color: #F5F5F5;*/
+    border:1px solid lightgrey;
+    box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
+    border-radius:32px;
+}
+
+#rouage{
+    color: black;
+    font-size: 20px;
+}
+
+#signOut{
+    color: #DA4343;
+}
+
+#duration{
+    right: 5px;
+    color: white;
+}
+
+#calories{
+    right: 5px;
+    color: white;
+}
+
+#patientName{
+    color: #6D350D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#name{
+    font-size: 16px;
+}
+
+.name{
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight: bold;
+    color: grey;
+    letter-spacing:2px;
+    padding-bottom:4px;
+    text-align: left;
+}
+
+#padding{
+    padding-left:32px;
+    margin-top:32px;
+}
+
+.OngletsSuivi{
+    display: flex;
+    flex-wrap:nowrap;
+    gap:16px;
+    border-bottom: 1px solid #F0E9E2;
+    border-top: 1px solid #F0E9E2;
+}
+
+.OngletsSuivi_infos{
+    display: flex;
+    flex-wrap:nowrap;
+    gap:16px;
+    margin-top:24px;
+    border-bottom: 1px solid #F0E9E2;
+}
+
+#test{
+    padding:8px;
+    font-size: 16px;
+    text-align:center;
+}
+
+.horizontal-menu-container{
+    width:100%;
+    overflow-x:auto;
+}
+
+.Onglets{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1A202C;
+}
+
+.Onglets:hover{
+    cursor: pointer;
+    color: #DA8243;
+    font-weight: 400;
+}
+
+#OngletsClicked {
+    color: #DA8243;
+}
+
+.Onglets.active{
+    color: #DA8243;
+}
+
+
+/*
+*  Statistiques Actuelles
+*/
+
+/* Stats Bar : nom de stat + carré des résultats */
+.statsActuelles {
+    display: flex;
+    justify-content: space-between;
+    gap:16px;
+    padding:0 16px 16px 16px;
+    font-weight: 400;
+}
+
+
+/* carré des résultats */
+
+.ChampStatsActu{
+    flex: 1;
+    text-align: center;
+    margin-top: 5px;
+    height: 60px;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 10px;
+    background-color: #F5FEF4;
+    box-shadow: 0px 1px 4px 0px rgba(70, 218, 67, 0.25);
+}
+
+#NameStatOverweight{
+    background-color: #FEFDF4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 203, 67, 0.25);
+}
+
+#NameStatMorbidObesity{
+    background-color: #FEF4F4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 67, 67, 0.25);
+}
+
+#NameStatModerateObesity{
+    background-color: #FEF9F4;
+    box-shadow: 0px 1px 4px 0px rgba(218, 139, 67, 0.25);
+}
+
+#NameStatUnderweight{
+    background-color: #F4FEFE;
+    box-shadow: 0px 1px 4px 0px rgba(67, 200, 218, 0.25);
+}
+
+.statValue{
+    color: #46DA43;
+    font-size: 24px;
+}
+
+.statValueUnderweight{
+    color: #43D1DA;
+    font-size: 24px;
+}
+
+.statValueOverweight{
+    color: #DAB943;
+    font-size: 24px;
+}
+
+.statValueMorbidObesity{
+    color: #DA4343;
+    font-size: 24px;
+}
+
+.statValueModerateObesity{
+    color: #DA9D43;
+    font-size: 24px;
+}
+
+.statCaption{
+    color: #2D2D2D;
+    font-weight: lighter;
+    font-size: 12px;
+}
+#ChampStatsActClicked {
+    color: #DA8243;
+}
+
+
+/*
+*  Derniers Entraînement
+*/
+
+.ChampEntrainement, .ChampEntrainementTrain{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.DerniersEntrainements{
+    padding:0 16px 0 16px;
+}
+
+.ChampExercice{
+    flex: 1;
+    display: flex;
+    margin-top: 5px;
+    height: 40px;
+    border: 1px solid #D0D0D0;
+    padding: 8px 16px;
+    align-items: center;
+}
+
+.ChampEntrainementTrain:hover{
+    cursor: pointer;
+}
+
+#Bike{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/cyclisme.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Swimming{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/natation.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Footing{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/courseAPieds.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Walking{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/marche.png') lightgray 50% / cover no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Arm{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../public/arm_sport.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Back{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../assets/training_back.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: center;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Leg{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../assets/training_legs.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Ass{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../assets/training_ass.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: bottom;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+#Abs{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('../../assets/training_abs.png') lightgray 1.662px -19.791px / 100% 368.526% no-repeat;
+    background-position: center;
+    box-shadow: 0px 1px 4px 0px rgba(209, 209, 209, 0.25);
+}
+
+.date, .level{
+    color:white;
+    text-align:left;
+    font-size: 10px;
+}
+
+.activityName{
+    flex: 2;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.activityDurationCalories{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    align-items: flex-end;
+    gap:4px;
+}
+
+.exerciceName{
+    flex: 2;
+    margin: auto;
+    text-align: left;
+    color: black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.activityDuration, .activityCalories{
+    display: flex;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: left;
+}
+
+.exerciceSeriesRep{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.exerciceSeries, .exerciceRep{
+    flex: 1;
+    display: flex;
+    color: black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    gap: 4px;
+}
+
+#ChampEntrainementActClicked {
+    color: #DA8243;
+}
+
+.EvolutionPoids{
+    flex: 1;
+    display: flex;
+    padding-left: 16px;
+    padding-right:16px;
+}
+
+/*
+* Info patient formulaire
+*/
+
+.formulaire{
+    width: 100%;
+}
+
+.formulaire_infos{
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.champ input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.badge {
+    width: 44px;
+    height: 34px;
+    padding-top: 15px;
+    position: relative;
+    background: #D0F5D0;
+    color: white;
+    text-align: center;
+    border-radius: 10% 10% 0 0;
+  }
+  .badge:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+  }
+
+  .recompense{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left:16px;
+    padding-right:16px;
+    align-self: stretch;
+  }
+
+  .containerBadge{
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 4px;
+  }
+
+  .nomBadge{
+    align-self: stretch;
+    color: #1E925B;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .descBadge{
+    color: #2D2D2D;
+    text-align: center;
+    font-size: 10px; 
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .totalRecompenses{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .iconBadge{
+    position: relative;
+    transform: rotate(20deg);
+    color: #79C578;
+    text-align: center;
+    font-family: "Font Awesome 6 Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    width: 18px;
+    height: 20px;
+    bottom: 2px;
+  }
+
+#badgeBleu{
+    background: #D0F5EA;
+}
+
+#iconBleu{
+    color: #78C5C5;
+}
+
+#intituleBleu{
+    color: #1E9276;
+}
+
+#badgeRose{
+    background: #F5D0EB;
+}
+
+#iconRose{
+    color: #C578C1;
+}
+
+#intituleRose{
+    color: #921E8D;
+}
+
+#badgeOrange{
+    background: #F5E6D0;
+}
+
+#iconOrange{
+    color: #C5A178;
+}
+
+#intituleOrange{
+    color: #92641E;
+}
+
+#badgeJaune{
+    background: #F4F5D0;
+}
+
+#iconJaune{
+    color: #C5C178;
+}
+
+#intituleJaune{
+    color: #928D1E;
+}
+
+.profilActivity{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+}
+
+#sedentary{
+    background-color: #FFC8C8;
+    color: #8D1616;
+    box-shadow: 0px 1px 4px 0px rgba(141, 22, 22, 0.25);
+}
+
+#somewhat_active{
+    background-color: #FFDCC8;
+    color: #AD5516;
+    box-shadow: 0px 1px 4px 0px rgba(173, 85, 22, 0.25);
+}
+
+#highly_active{
+    background-color: #C8FFD4;
+    color: #084F17;
+    box-shadow: 0px 1px 4px 0px rgba(8, 79, 23, 0.25);
+}
+
+#active{
+    background-color: #EAFFC8;
+    color: #557D14;
+    box-shadow: 0px 1px 4px 0px rgba(85, 125, 20, 0.25);
+}
+
+#low_active{
+    background-color: #FFFDC8;
+    color: #797510;
+    box-shadow: 0px 1px 4px 0px rgba(121, 117, 16, 0.25);
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 10px;
+}
+
+.ageAndSex{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    color: #959595;
+    background: rgba(234, 234, 234, 0.25);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button_infos{
+    display:flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: stretch;
+    gap:8px;
+    margin-top:24px;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.primary_button_infos{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height:48px;
+    background-color: #A240B4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: stretch;
+    text-decoration: none;
+    font-size: 20px;
+}

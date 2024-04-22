@@ -1,4 +1,4 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import { FaFlag } from "react-icons/fa";
 import { GiRabbit } from "react-icons/gi";
 import { FaPersonRunning } from "react-icons/fa6";

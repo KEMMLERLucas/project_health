@@ -1,0 +1,774 @@
+[
+    {
+        "id": 1,
+        "name" : "Séance bras",
+        "number_ex" : 3,
+        "timer" : 15,
+        "level" : "Débutant",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "08f55531-0065-4595-88c5-3a815143ff56",
+    "0f2cf735-9cb0-475d-928c-caae64b99b8c",
+"13bebeed-d63a-45ed-8c85-d1d66146d4a7",
+"207149e4-fc20-47e3-829b-4fe2fa58a031",
+"20e42721-5413-4e00-b4f7-9e7f8ff64d80",
+"2c8c3e53-ff5c-4d65-bc1b-28b99132c292",
+"2ff6df6c-074b-425f-977e-ac113c3a905c",
+"3787e5f3-28c3-42d2-a512-a4e7405e5422",
+"4ef91bc3-a582-477b-a133-20c6ae221962",
+"55e9f6df-15b6-4cba-94fe-29f732a55435",
+"5ad8741e-ccb0-4a0d-a176-f636538a9e4d",
+"62e930a5-aa8b-4071-9710-3cede17cd54a",
+"78126b7d-a7a9-4e3c-aa6f-ff677603b75b",
+"7c7b1cf5-03d0-4729-9c2c-aada3cc1fc41",
+"809283a4-c237-465d-b54c-4b4dbbf6d28a",
+"82189fc8-f408-4730-9340-e9f52a685224",
+"8b5e4491-55d2-437f-af66-53d145ede433",
+"91e6cc7f-79e8-468b-81cd-e1fa3f3163d5",
+"9c97a6af-eb5a-4f82-8d81-35385615a65b",
+"a06a301c-f5d2-478e-b254-77d088077b58",
+"b126ae42-dbc0-4bf6-868b-7a8d1bae0336",
+"bbb17cd0-9b1a-4298-916f-351d4f35f5db",
+"c465b17f-d01c-446b-9d78-ea661457c69f",
+"ccaa34ba-dcb5-44ce-bba6-4a666f991b62",
+"d1286edf-1e69-41cf-81a3-e0cbec4bb4d7",
+"d5784a02-776e-4ba9-ac07-9b05ef85f43b",
+"dc42a67f-2cd4-438b-a4d7-2f3fe60f733c",
+"e31e59ff-ade6-44fa-94cf-87c0a87c25f6",
+"e6831abe-7eeb-4b79-b866-3dc3079fa403",
+"ea443338-2b4b-469a-9004-05d3c1b9b550",
+"efc0d8ba-b9c0-4b14-b79b-debfbf97c6ad",
+"f988785d-f384-43fa-ba42-708a18c39a15",
+"feccea70-8c6a-480f-b136-a09af79db736"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Curl avec des haltères",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_2" : {
+                "name" : "Extension triceps",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_3" : {
+                "name" : "Flexions des bras sur chaise",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 2,
+        "name" : "Séance bras",
+        "number_ex" : 4,
+        "timer" : 20,
+        "level" : "Intermédiaire",
+        "who" : ["0b67e888-3bf1-468c-8223-46c1a47d3862",
+        "0a5c626f-b7c3-423f-97ed-4ddc1b9a189b",
+        "13bebeed-d63a-45ed-8c85-d1d66146d4a7",
+        "207149e4-fc20-47e3-829b-4fe2fa58a031",
+        "20e42721-5413-4e00-b4f7-9e7f8ff64d80",
+        "2c8c3e53-ff5c-4d65-bc1b-28b99132c292",
+        "552607e4-e081-462f-bd32-4f70a7e6e462",
+"5ad6bcdb-5679-4192-bed1-47a387476a07",
+"5e731df1-0f17-45b6-bf45-90b81793be32",
+"67634223-2f08-4521-81b3-e519d5bbf13c",
+"79c8c638-a7e0-49b3-ba24-9c0bd69d1e5c",
+"7f0a32ca-aef9-4244-8970-6cbe051ecbb1",
+"820e8469-cd23-46e0-8583-495c84284753",
+"88955fd0-eb40-402c-b8b6-14d56988ecd2",
+"91e03f02-1713-4cab-b6a8-b5ea0864be6e",
+"9ae8f438-a406-4344-b212-c3075cd7e22d"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Curl avec des haltères",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Extension triceps",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Flexions des bras sur chaise",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Pompes",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 3,
+        "name" : "Séance bras",
+        "number_ex" : 5,
+        "timer" : 25,
+        "level" : "Avancé",
+        "who" : ["03267270-c67d-41c2-97f5-daeca0474952",
+        "0a5c626f-b7c3-423f-97ed-4ddc1b9a189b",
+    "0f4d0a37-5f59-4ec9-a35d-854f56689900",
+    "187957d3-dedd-4dbe-b91a-c1805a622545",
+    "2075b286-4129-4249-9967-091882a5e0bc",
+    "2163445f-94fe-4ab7-92c1-bf702aad4533",
+    "2d4c8cfd-5ef5-40c7-ab1c-13d3966fa326",
+    "339a4da6-fb55-493e-9890-062ec153c1f2",
+    "3b227cb0-4639-446d-81c7-65fc77e88528",
+    "534c8abd-8e3e-4893-9b14-978c625c104b",
+    "592d2d00-4777-4d86-a7e1-fed5022d4209",
+    "5bccba49-2740-43ad-af9a-a6a0e441071b",
+    "6664898e-c226-41f6-92b3-023738c58d6b",
+    "79332384-7462-4c4b-a8f2-26593299c4e0",
+    "7e885cc6-db6e-40d0-a7a6-3ddeb510c2bb",
+    "814daa5b-0ea7-499f-80bf-e79e26da8ca5",
+    "83f3e7ee-fb49-45fa-a6f8-e128d5577e7c",
+    "90f73436-6a8f-46f7-9db3-8886f300577c",
+    "92af8b47-37e4-432f-a2ee-d5140a6056e3",
+    "9d1e9a48-1c53-4d39-8390-e1015b1b7875",
+    "a4750918-af97-4512-bd9a-cadb337d68e1",
+    "b6d9fb50-93b9-410d-9138-766ff4c4e85e",
+    "be73ad42-a3b4-4f08-a323-8836edbfef70",
+    "c71af541-45b2-4e47-9227-d7d2f0509349",
+    "cf19ccd1-5f52-4b14-acef-df6a3fd20959",
+    "d17acb68-db9d-494f-abfc-c00f71c15e6d",
+    "d6da1bee-d312-4215-ab42-e7914f2d6421",
+    "de6b8b74-a59f-4134-8105-5985fada1ab3",
+    "e454853d-5d8d-4be0-ab19-202a8378fc73",
+    "e6c35b3f-158e-420e-88e9-5d3cbf4dbbba",
+    "ec739273-efad-4db2-8e31-d0f822de080f",
+    "f75e52d8-2df0-4feb-ad14-054046b2e260",
+    "fa37d12d-e01a-43c0-8970-46d3f4ac0fcb"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Curl avec des haltères",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Extension triceps",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Flexions des bras sur chaise",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Pompes",
+                "number_series" : 4,
+                "number_repet" : 10
+            },
+            "ex_5" : {
+                "name" : "Tractions à la barre fixe",
+                "number_series" : 4,
+                "number_repet" : 8
+            }
+        }
+    },
+    {
+        "id": 4,
+        "name" : "Séance fessiers",
+        "number_ex" : 3,
+        "timer" : 15,
+        "level" : "Débutant",
+        "who" : ["03f2487e-eda1-43c0-851d-cbeb8b86a922",
+        "0a5c626f-b7c3-423f-97ed-4ddc1b9a189b",
+        "0f2cf735-9cb0-475d-928c-caae64b99b8c",
+        "101a97b8-806c-4cc5-b5c6-0f86cf98ce49",
+        "207149e4-fc20-47e3-829b-4fe2fa58a031",
+        "2c8c3e53-ff5c-4d65-bc1b-28b99132c292",
+        "2d4c8cfd-5ef5-40c7-ab1c-13d3966fa326",
+        "b8080341-f691-4cdd-bea0-161486aa5749",
+"c15e94f0-f11a-4855-a7dc-a844ad2702a7",
+"ca740b2b-fa02-418b-b7cc-bb6188ca4b6c",
+"d0c06b4f-f4f3-4758-aa6e-f4016a9a2cb3",
+"d3ef9dab-e33d-4b90-913b-f18f186843ee",
+"db8b6149-e23e-4c15-8b02-f993839334b2",
+"e09d91fa-9495-4018-a247-5eab0c347e66",
+"e4ed0b0f-3402-4223-b853-fb6aad8ef8db"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Squats",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_2" : {
+                "name" : "Fentes avant",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_3" : {
+                "name" : "Glute bridges",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 5,
+        "name" : "Séance fessiers",
+        "number_ex" : 4,
+        "timer" : 20,
+        "level" : "Intermédiaire",
+        "who" : ["00657896-d299-48a7-8a41-aae1c2b4f606",
+        "08f55531-0065-4595-88c5-3a815143ff56",
+    "0f2cf735-9cb0-475d-928c-caae64b99b8c",
+"13bebeed-d63a-45ed-8c85-d1d66146d4a7",
+"207149e4-fc20-47e3-829b-4fe2fa58a031",
+"20e42721-5413-4e00-b4f7-9e7f8ff64d80",
+"2c8c3e53-ff5c-4d65-bc1b-28b99132c292",
+"2ff6df6c-074b-425f-977e-ac113c3a905c",
+"3787e5f3-28c3-42d2-a512-a4e7405e5422",
+"4ef91bc3-a582-477b-a133-20c6ae221962",
+"55e9f6df-15b6-4cba-94fe-29f732a55435",
+"5ad8741e-ccb0-4a0d-a176-f636538a9e4d",
+"62e930a5-aa8b-4071-9710-3cede17cd54a",
+"78126b7d-a7a9-4e3c-aa6f-ff677603b75b",
+"7c7b1cf5-03d0-4729-9c2c-aada3cc1fc41",
+"809283a4-c237-465d-b54c-4b4dbbf6d28a",
+"82189fc8-f408-4730-9340-e9f52a685224",
+"8b5e4491-55d2-437f-af66-53d145ede433",
+"91e6cc7f-79e8-468b-81cd-e1fa3f3163d5",
+"9c97a6af-eb5a-4f82-8d81-35385615a65b",
+"a06a301c-f5d2-478e-b254-77d088077b58",
+"b126ae42-dbc0-4bf6-868b-7a8d1bae0336",
+"bbb17cd0-9b1a-4298-916f-351d4f35f5db",
+"c465b17f-d01c-446b-9d78-ea661457c69f",
+"ccaa34ba-dcb5-44ce-bba6-4a666f991b62",
+"d1286edf-1e69-41cf-81a3-e0cbec4bb4d7",
+"d5784a02-776e-4ba9-ac07-9b05ef85f43b",
+"dc42a67f-2cd4-438b-a4d7-2f3fe60f733c",
+"e31e59ff-ade6-44fa-94cf-87c0a87c25f6",
+"e6831abe-7eeb-4b79-b866-3dc3079fa403",
+"ea443338-2b4b-469a-9004-05d3c1b9b550",
+"efc0d8ba-b9c0-4b14-b79b-debfbf97c6ad",
+"f988785d-f384-43fa-ba42-708a18c39a15",
+"feccea70-8c6a-480f-b136-a09af79db736"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Squats",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Fentes avant",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Glute bridges",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Kick-backs",
+                "number_series" : 3,
+                "number_repet" : 12
+            }
+        }
+    },
+    {
+        "id": 6,
+        "name" : "Séance fessiers",
+        "number_ex" : 5,
+        "timer" : 25,
+        "level" : "Avancé",
+        "who" : ["2163445f-94fe-4ab7-92c1-bf702aad4533",
+        "2d4c8cfd-5ef5-40c7-ab1c-13d3966fa326",
+        "339a4da6-fb55-493e-9890-062ec153c1f2",
+        "3b227cb0-4639-446d-81c7-65fc77e88528",
+        "534c8abd-8e3e-4893-9b14-978c625c104b",
+        "592d2d00-4777-4d86-a7e1-fed5022d4209",
+        "5bccba49-2740-43ad-af9a-a6a0e441071b",
+        "6664898e-c226-41f6-92b3-023738c58d6b",
+        "79332384-7462-4c4b-a8f2-26593299c4e0",
+        "7e885cc6-db6e-40d0-a7a6-3ddeb510c2bb",
+        "814daa5b-0ea7-499f-80bf-e79e26da8ca5",
+        "83f3e7ee-fb49-45fa-a6f8-e128d5577e7c"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Squats",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Fentes avant",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Glute bridges",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Kick-backs",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_5" : {
+                "name" : "Hip trusts",
+                "number_series" : 4,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 7,
+        "name" : "Séance cuisses",
+        "number_ex" : 3,
+        "timer" : 15,
+        "level" : "Débutant",
+        "who" : ["03267270-c67d-41c2-97f5-daeca0474952",
+        "0a5c626f-b7c3-423f-97ed-4ddc1b9a189b",
+    "0f4d0a37-5f59-4ec9-a35d-854f56689900",
+    "187957d3-dedd-4dbe-b91a-c1805a622545",
+    "2075b286-4129-4249-9967-091882a5e0bc",
+    "2163445f-94fe-4ab7-92c1-bf702aad4533",
+    "2d4c8cfd-5ef5-40c7-ab1c-13d3966fa326",
+    "339a4da6-fb55-493e-9890-062ec153c1f2",
+    "3b227cb0-4639-446d-81c7-65fc77e88528",
+    "534c8abd-8e3e-4893-9b14-978c625c104b",
+    "592d2d00-4777-4d86-a7e1-fed5022d4209",
+    "5bccba49-2740-43ad-af9a-a6a0e441071b",
+    "6664898e-c226-41f6-92b3-023738c58d6b",
+    "79332384-7462-4c4b-a8f2-26593299c4e0",
+    "7e885cc6-db6e-40d0-a7a6-3ddeb510c2bb",
+    "814daa5b-0ea7-499f-80bf-e79e26da8ca5",
+    "83f3e7ee-fb49-45fa-a6f8-e128d5577e7c",
+    "90f73436-6a8f-46f7-9db3-8886f300577c",
+    "92af8b47-37e4-432f-a2ee-d5140a6056e3",
+    "9d1e9a48-1c53-4d39-8390-e1015b1b7875",
+    "a4750918-af97-4512-bd9a-cadb337d68e1",
+    "b6d9fb50-93b9-410d-9138-766ff4c4e85e",
+    "be73ad42-a3b4-4f08-a323-8836edbfef70",
+    "c71af541-45b2-4e47-9227-d7d2f0509349",
+    "cf19ccd1-5f52-4b14-acef-df6a3fd20959",
+    "d17acb68-db9d-494f-abfc-c00f71c15e6d",
+    "d6da1bee-d312-4215-ab42-e7914f2d6421",
+    "de6b8b74-a59f-4134-8105-5985fada1ab3",
+    "e454853d-5d8d-4be0-ab19-202a8378fc73",
+    "e6c35b3f-158e-420e-88e9-5d3cbf4dbbba",
+    "ec739273-efad-4db2-8e31-d0f822de080f",
+    "f75e52d8-2df0-4feb-ad14-054046b2e260",
+    "fa37d12d-e01a-43c0-8970-46d3f4ac0fcb"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Squats",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_2" : {
+                "name" : "Lunges",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_3" : {
+                "name" : "Leg curls",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 8,
+        "name" : "Séance cuisses",
+        "number_ex" : 4,
+        "timer" : 20,
+        "level" : "Intermédiaire",
+        "who" : ["78126b7d-a7a9-4e3c-aa6f-ff677603b75b",
+        "7c7b1cf5-03d0-4729-9c2c-aada3cc1fc41",
+        "809283a4-c237-465d-b54c-4b4dbbf6d28a",
+        "82189fc8-f408-4730-9340-e9f52a685224",
+        "8b5e4491-55d2-437f-af66-53d145ede433",
+        "91e6cc7f-79e8-468b-81cd-e1fa3f3163d5",
+        "9c97a6af-eb5a-4f82-8d81-35385615a65b",
+        "a06a301c-f5d2-478e-b254-77d088077b58",
+        "b126ae42-dbc0-4bf6-868b-7a8d1bae0336",
+        "bbb17cd0-9b1a-4298-916f-351d4f35f5db",
+        "c465b17f-d01c-446b-9d78-ea661457c69f",
+        "ccaa34ba-dcb5-44ce-bba6-4a666f991b62",
+        "d1286edf-1e69-41cf-81a3-e0cbec4bb4d7",
+        "d5784a02-776e-4ba9-ac07-9b05ef85f43b"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Squats",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Lunges",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Leg curls",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Jump squats",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 9,
+        "name" : "Séance cuisses",
+        "number_ex" : 5,
+        "timer" : 25,
+        "level" : "Avancé",
+        "who" : ["03f2487e-eda1-43c0-851d-cbeb8b86a922",
+        "0b67e888-3bf1-468c-8223-46c1a47d3862",
+    "101a97b8-806c-4cc5-b5c6-0f86cf98ce49",
+"1a5470e1-d489-4094-aa82-b77f2c7f0eea",
+"20dc6044-341c-4acf-a5ad-efce3bc7a82e",
+"2b0a3408-8905-4708-bdcc-527bec518b26",
+"2ddd9e76-5744-4eeb-891e-386fa2a6b9e1",
+"361b62d7-3a4c-4c73-9101-876cf34400bf",
+"489faada-e2ed-443b-9218-3952109537c3",
+"552607e4-e081-462f-bd32-4f70a7e6e462",
+"5ad6bcdb-5679-4192-bed1-47a387476a07",
+"5e731df1-0f17-45b6-bf45-90b81793be32",
+"67634223-2f08-4521-81b3-e519d5bbf13c",
+"79c8c638-a7e0-49b3-ba24-9c0bd69d1e5c",
+"7f0a32ca-aef9-4244-8970-6cbe051ecbb1",
+"820e8469-cd23-46e0-8583-495c84284753",
+"88955fd0-eb40-402c-b8b6-14d56988ecd2",
+"91e03f02-1713-4cab-b6a8-b5ea0864be6e",
+"9ae8f438-a406-4344-b212-c3075cd7e22d",
+"a0018bf8-eebd-499e-a189-e32b53681b6d",
+"aac529ec-a58c-4500-b90a-151124cdee09",
+"b8080341-f691-4cdd-bea0-161486aa5749",
+"c15e94f0-f11a-4855-a7dc-a844ad2702a7",
+"ca740b2b-fa02-418b-b7cc-bb6188ca4b6c",
+"d0c06b4f-f4f3-4758-aa6e-f4016a9a2cb3",
+"d3ef9dab-e33d-4b90-913b-f18f186843ee",
+"db8b6149-e23e-4c15-8b02-f993839334b2",
+"e09d91fa-9495-4018-a247-5eab0c347e66",
+"e4ed0b0f-3402-4223-b853-fb6aad8ef8db",
+"e75b33f6-19ab-4bcb-a8bc-380c867da929",
+"ecc72949-1a6d-4550-b80a-becf38b2d71f",
+"f91cbf7e-968d-4658-af6f-9502608a6b42",
+"fae997ca-9b72-4cd4-bda1-f4bbdb36b0d6"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Squats",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Lunges",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Leg curls",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Jump squats",
+                "number_series" : 4,
+                "number_repet" : 10
+            },
+            "ex_5" : {
+                "name" : "Deadlifts",
+                "number_series" : 4,
+                "number_repet" : 8
+            }
+        }
+    },
+    {
+        "id": 10,
+        "name" : "Séance dos",
+        "number_ex" : 3,
+        "timer" : 15,
+        "level" : "Débutant",
+        "who" : ["c465b17f-d01c-446b-9d78-ea661457c69f",
+        "ccaa34ba-dcb5-44ce-bba6-4a666f991b62",
+        "d1286edf-1e69-41cf-81a3-e0cbec4bb4d7",
+        "d5784a02-776e-4ba9-ac07-9b05ef85f43b",
+        "dc42a67f-2cd4-438b-a4d7-2f3fe60f733c",
+        "e31e59ff-ade6-44fa-94cf-87c0a87c25f6",
+        "e6831abe-7eeb-4b79-b866-3dc3079fa403",
+        "ea443338-2b4b-469a-9004-05d3c1b9b550",
+        "efc0d8ba-b9c0-4b14-b79b-debfbf97c6ad",
+        "f988785d-f384-43fa-ba42-708a18c39a15",
+        "feccea70-8c6a-480f-b136-a09af79db736"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Rows avec haltères",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_2" : {
+                "name" : "Superman",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_3" : {
+                "name" : "Deadlifts avec haltères",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 11,
+        "name" : "Séance dos",
+        "number_ex" : 4,
+        "timer" : 20,
+        "level" : "Intermédiaire",
+        "who" : ["9d1e9a48-1c53-4d39-8390-e1015b1b7875",
+        "a4750918-af97-4512-bd9a-cadb337d68e1",
+        "b6d9fb50-93b9-410d-9138-766ff4c4e85e",
+        "be73ad42-a3b4-4f08-a323-8836edbfef70",
+        "c71af541-45b2-4e47-9227-d7d2f0509349",
+        "cf19ccd1-5f52-4b14-acef-df6a3fd20959",
+        "d17acb68-db9d-494f-abfc-c00f71c15e6d",
+        "d6da1bee-d312-4215-ab42-e7914f2d6421"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Rows avec haltères",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Superman",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Deadlifts avec haltères",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Pull-ups",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 12,
+        "name" : "Séance dos",
+        "number_ex" : 5,
+        "timer" : 25,
+        "level" : "Avancé",
+        "who" : ["03f2487e-eda1-43c0-851d-cbeb8b86a922",
+        "0b67e888-3bf1-468c-8223-46c1a47d3862",
+    "101a97b8-806c-4cc5-b5c6-0f86cf98ce49",
+"1a5470e1-d489-4094-aa82-b77f2c7f0eea",
+"20dc6044-341c-4acf-a5ad-efce3bc7a82e",
+"2b0a3408-8905-4708-bdcc-527bec518b26",
+"2ddd9e76-5744-4eeb-891e-386fa2a6b9e1",
+"361b62d7-3a4c-4c73-9101-876cf34400bf",
+"489faada-e2ed-443b-9218-3952109537c3",
+"552607e4-e081-462f-bd32-4f70a7e6e462",
+"5ad6bcdb-5679-4192-bed1-47a387476a07",
+"5e731df1-0f17-45b6-bf45-90b81793be32",
+"67634223-2f08-4521-81b3-e519d5bbf13c",
+"79c8c638-a7e0-49b3-ba24-9c0bd69d1e5c",
+"7f0a32ca-aef9-4244-8970-6cbe051ecbb1",
+"820e8469-cd23-46e0-8583-495c84284753",
+"88955fd0-eb40-402c-b8b6-14d56988ecd2",
+"91e03f02-1713-4cab-b6a8-b5ea0864be6e",
+"9ae8f438-a406-4344-b212-c3075cd7e22d",
+"a0018bf8-eebd-499e-a189-e32b53681b6d",
+"aac529ec-a58c-4500-b90a-151124cdee09",
+"b8080341-f691-4cdd-bea0-161486aa5749",
+"c15e94f0-f11a-4855-a7dc-a844ad2702a7",
+"ca740b2b-fa02-418b-b7cc-bb6188ca4b6c",
+"d0c06b4f-f4f3-4758-aa6e-f4016a9a2cb3",
+"d3ef9dab-e33d-4b90-913b-f18f186843ee",
+"db8b6149-e23e-4c15-8b02-f993839334b2",
+"e09d91fa-9495-4018-a247-5eab0c347e66",
+"e4ed0b0f-3402-4223-b853-fb6aad8ef8db",
+"e75b33f6-19ab-4bcb-a8bc-380c867da929",
+"ecc72949-1a6d-4550-b80a-becf38b2d71f",
+"f91cbf7e-968d-4658-af6f-9502608a6b42",
+"fae997ca-9b72-4cd4-bda1-f4bbdb36b0d6"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Rows avec haltères",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Superman",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_3" : {
+                "name" : "Deadlifts avec haltères",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Pull-ups",
+                "number_series" : 4,
+                "number_repet" : 10
+            },
+            "ex_5" : {
+                "name" : "T-bar rows",
+                "number_series" : 4,
+                "number_repet" : 8
+            }
+        }
+    },
+    {
+        "id": 13,
+        "name" : "Séance abdos",
+        "number_ex" : 5,
+        "timer" : 15,
+        "level" : "Débutant",
+        "who" : ["03f2487e-eda1-43c0-851d-cbeb8b86a922",
+        "187957d3-dedd-4dbe-b91a-c1805a622545",
+        "207149e4-fc20-47e3-829b-4fe2fa58a031",
+        "20e42721-5413-4e00-b4f7-9e7f8ff64d80",
+        "2d4c8cfd-5ef5-40c7-ab1c-13d3966fa326",
+        "20dc6044-341c-4acf-a5ad-efce3bc7a82e",
+"2b0a3408-8905-4708-bdcc-527bec518b26",
+"2ddd9e76-5744-4eeb-891e-386fa2a6b9e1",
+"361b62d7-3a4c-4c73-9101-876cf34400bf",
+"489faada-e2ed-443b-9218-3952109537c3"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Crunchs",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_2" : {
+                "name" : "Planche dynamique",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_3" : {
+                "name" : "Relevé de jambes",
+                "number_series" : 3,
+                "number_repet" : 10
+            },
+            "ex_4" :{
+                "name" : "Russian twists",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_5" :{
+                "name" : "Gainage avec rotation",
+                "number_series" : 3,
+                "number_repet" : 10
+            }
+        }
+    },
+    {
+        "id": 14,
+        "name" : "Séance abdos",
+        "number_ex" : 5,
+        "timer" : 20,
+        "level" : "Intermédiaire",
+        "who" : ["82189fc8-f408-4730-9340-e9f52a685224",
+        "8b5e4491-55d2-437f-af66-53d145ede433",
+        "91e6cc7f-79e8-468b-81cd-e1fa3f3163d5",
+        "9c97a6af-eb5a-4f82-8d81-35385615a65b",
+        "a06a301c-f5d2-478e-b254-77d088077b58",
+        "b126ae42-dbc0-4bf6-868b-7a8d1bae0336",
+        "bbb17cd0-9b1a-4298-916f-351d4f35f5db",
+        "c465b17f-d01c-446b-9d78-ea661457c69f",
+        "ccaa34ba-dcb5-44ce-bba6-4a666f991b62",
+        "d1286edf-1e69-41cf-81a3-e0cbec4bb4d7",
+        "d5784a02-776e-4ba9-ac07-9b05ef85f43b",
+        "dc42a67f-2cd4-438b-a4d7-2f3fe60f733c",
+        "e31e59ff-ade6-44fa-94cf-87c0a87c25f6"],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Crunchs inversés",
+                "number_series" : 3,
+                "number_repet" : 15
+            },
+            "ex_2" : {
+                "name" : "Moutain climbers",
+                "number_series" : 3,
+                "number_repet" : 20
+            },
+            "ex_3" : {
+                "name" : "Planche dynamique",
+                "number_series" : 3,
+                "number_repet" : 12
+            },
+            "ex_4" :{
+                "name" : "Gainage avec rotation",
+                "number_series" : 3,
+                "number_repet" : 15
+            },
+            "ex_5" :{
+                "name" : "V-ups",
+                "number_series" : 3,
+                "number_repet" : 12
+            }
+        }
+    },
+    {
+        "id": 15,
+        "name" : "Séance abdos",
+        "number_ex" : 5,
+        "timer" : 25,
+        "level" : "Avancé",
+        "who" : ["5bccba49-2740-43ad-af9a-a6a0e441071b",
+        "6664898e-c226-41f6-92b3-023738c58d6b",
+        "79332384-7462-4c4b-a8f2-26593299c4e0",
+        "7e885cc6-db6e-40d0-a7a6-3ddeb510c2bb",
+        "814daa5b-0ea7-499f-80bf-e79e26da8ca5",
+        "83f3e7ee-fb49-45fa-a6f8-e128d5577e7c",
+        "90f73436-6a8f-46f7-9db3-8886f300577c",
+        "92af8b47-37e4-432f-a2ee-d5140a6056e3",
+        "9d1e9a48-1c53-4d39-8390-e1015b1b7875",
+        "a4750918-af97-4512-bd9a-cadb337d68e1",
+        "b6d9fb50-93b9-410d-9138-766ff4c4e85e",
+        "be73ad42-a3b4-4f08-a323-8836edbfef70",
+        "c71af541-45b2-4e47-9227-d7d2f0509349",
+        "cf19ccd1-5f52-4b14-acef-df6a3fd20959",
+        "d17acb68-db9d-494f-abfc-c00f71c15e6d",
+        "d6da1bee-d312-4215-ab42-e7914f2d6421"
+        ],
+        "entraînements": {
+            "ex_1" :{
+                "name" : "Sit-ups pondérés",
+                "number_series" : 4,
+                "number_repet" : 15
+            },
+            "ex_2" : {
+                "name" : "Toes to bar",
+                "number_series" : 4,
+                "number_repet" : 10
+            },
+            "ex_3" : {
+                "name" : "Planche avec extension de bras",
+                "number_series" : 4,
+                "number_repet" : 12
+            },
+            "ex_4" : {
+                "name" : "Dragon flags",
+                "number_series" : 4,
+                "number_repet" : 8
+            },
+            "ex_5" : {
+                "name" : "Bicyle crunches",
+                "number_series" : 4,
+                "number_repet" : 20
+            }
+        }
+    }
+]

@@ -1,7 +1,7 @@
 
-import "./PatientPreview.css"
+import "./css/PatientPreview.css"
 
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import { FaCouch } from "react-icons/fa6";
 import { GrBike } from "react-icons/gr";
 import { FaRocket } from "react-icons/fa";
@@ -10,10 +10,12 @@ import { FaCar } from "react-icons/fa";
 import { FaCakeCandles } from "react-icons/fa6";
 import { IoMdMale } from "react-icons/io";
 import { IoMdFemale } from "react-icons/io";
+import {useContext} from "react";
+import OnePatientContext from "../context/OnePatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
 
 function PatientName({patient, isSmall}){
-
     function calculAge(year){
         var today = new Date();
         return (today.getFullYear() - year);

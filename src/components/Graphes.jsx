@@ -1,12 +1,25 @@
-import "./SuiviPatient.css";
-import {useEffect, useState} from "react";
+import "./css/SuiviPatient.css";
+import {useContext, useEffect, useState} from "react";
 import axios from "axios";
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, BarChart, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
-function Graphes({patient, name, chartType}){
+function Graphes({ name, chartType}){
 
+    const patient = useContext(SuiviPatientContext).pat
+    const tok = useContext(SuiviPatientContext).tok
     const [activitiesCount, setActivitiesCount] = useState([]);
-    const[physiologicalData, setPhysiology] = useState([])
+    const[physiologicalData, setPhysiology] = useState([]);
+    const [psychicData, setPsychicData] = useState([]);
+
+    const feelingScores = {
+        "hopeless": 1,
+        "lazy": 2,
+        "losing motivation": 3,
+        "motivated": 4,
+        "enduring": 5,
+        "addicted": 6
+    };
 
     useEffect(() => {
         async function loadPhysiology(){
@@ -23,6 +36,37 @@ function Graphes({patient, name, chartType}){
         loadPhysiology()
     }, []);
 
+    useEffect(() => {
+        async function authenticateAndGetPsychicData() {
+            try {
+
+                /*  A changer  */
+                const token = tok.access_token
+
+                const config = {
+                    headers: { Authorization: `Bearer ${token}` }
+                };
+                const patientId= patient.id
+                const psychicApi = `https://health.shrp.dev/items/psychicData?filter[people_id][_eq]=${patientId}`;
+                const response = await axios.get(psychicApi, config);
+                const data = response.data.data.map(item => ({
+                    ...item,
+                    date: item.date,
+                    feelingScore: feelingScores[item.feeling.toLowerCase()]
+                }));
+
+                setPsychicData(data);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        authenticateAndGetPsychicData();
+    }, []);
+
+    psychicData.sort(function(a,b){
+        return new Date(b.date) < new Date(a.date);
+    });
 
     useEffect(() => {
         async function loadPhysicalActivities() {
@@ -54,10 +98,14 @@ function Graphes({patient, name, chartType}){
         loadPhysicalActivities();
     }, [patient.physicalActivities]);
 
+    physiologicalData.sort(function(a,b){
+        return new Date(b.date) < new Date(a.date);
+    });
+
     return (
 
         <div>
-            <div className="title" id="titleStats">
+            <div className="name" id="pad">
                 {name}
             </div>
             {
@@ -65,12 +113,30 @@ function Graphes({patient, name, chartType}){
                         <div className="EvolutionPoids">
                             <LineChart width={400} height={250} data={physiologicalData}>
                                 <CartesianGrid strokeDasharray="3 3"/>
-                                <XAxis/>
+                                <XAxis
+                                    dataKey="date"
+                                    tickFormatter={(date) => {
+                                        const newDate = new Date(date);
+                                        const today = new Date();
+                                        let day = newDate.getDate();
+                                        let month = newDate.getMonth() + 1;
+                                        if(month<10){ month = "0"+month }
+                                        if(day<10){ day = "0"+day }
+                                        return `${day}/${month}`; // Converts to DD/MM/YY format
+                                    }}
+                                    angle={-45}
+                                    textAnchor="end"
+                                    height={70}
+                                    style={{fontSize: '14px'}}
+                                >
+                                    <Label value="Année 2023" offset={0} position="insideBottom"/>
+                                </XAxis>
                                 <YAxis
                                     domain={['dataMin - 1', 'dataMax + 1']}
                                     tickFormatter={(value) => value.toFixed(2)}
                                     type="number"
                                     allowDecimals={true}
+                                    style={{fontSize: '14px'}}
                                 />
                                 <Tooltip />
                                 <Line type="monotone" dataKey="weight" stroke="#DA9D43"/>
@@ -81,13 +147,49 @@ function Graphes({patient, name, chartType}){
                         <div className="EvolutionPoids">
                             <BarChart width={350} height={250} data={activitiesCount}>
                                 <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" tickFormatter={getActivityNameInFrench} />
+                                <XAxis dataKey="name" 
+                                tickFormatter={getActivityNameInFrench} 
+                                />
                                 <YAxis/>
                                 <Bar dataKey="count" fill="#BBDCDD" label={{ position: 'insideEnd' }}/>
                             </BarChart>
                         </div>
 
-                    )   : null
+                    )   : chartType === 'lineEvo' ? (
+                        <div className="EvolutionPoids">
+                            <LineChart width={450} height={300} data={psychicData}>
+                                <CartesianGrid strokeDasharray="5 5"/>
+                                <XAxis dataKey="date"
+                                       tickFormatter={(date) => {
+                                           const newDate = new Date(date);
+                                           const today = new Date();
+                                           let day = newDate.getDate();
+                                           let month = newDate.getMonth() + 1;
+                                           if(month<10){ month = "0"+month }
+                                           if(day<10){ day = "0"+day }
+                                           return `${day}/${month}`; // Converts to DD/MM/YY format
+                                       }}
+                                       angle={-45}
+                                       textAnchor="end"
+                                       height={70}
+                                       style={{fontSize: '14px'}}
+                                >
+                                    <Label value="Année 2023" offset={0} position="insideBottom"/>
+                                </XAxis>
+                                <YAxis
+                                    domain={[1, 6]}
+                                    ticks={[1, 2, 3, 4, 5, 6]}
+                                    tickFormatter={(value) => Object.keys(feelingScores).find(key => feelingScores[key] === value)}
+                                    type="number"
+                                    allowDecimals={false}
+                                    style={{fontSize: '10px'}}
+                                />
+                                <Tooltip
+                                    formatter={(value) => Object.keys(feelingScores).find(key => feelingScores[key] === value)}/>
+                                <Line type="monotone" dataKey="feelingScore" stroke="#DA9D43"/>
+                            </LineChart>
+                        </div>
+                    ) : null
 
             }
 

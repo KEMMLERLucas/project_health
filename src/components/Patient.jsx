@@ -1,13 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import ImagePatient from "./ImagePatient.jsx";
 import PatientName from "./PatientName.jsx";
 import { Outlet, Link } from "react-router-dom";
+import TokenContext from "../context/TokenContext.jsx";
+import OnePatientContext from "../context/OnePatientContext.jsx";
 
 function Patient({patient}){
+    const contextValue = useContext(TokenContext);
+    const token = contextValue.tok.data
     return <div className="PatientElement">
-        <Link to={`/patients/${patient.id}`}>
-            <ImagePatient patient={patient}/>
-            <PatientName patient={patient} isSmall={true}/>
+        <Link to={`/patients/${patient.id}`} state={{ patient : patient,token : token }}>
+            <ImagePatient patient={patient} />
+            <PatientName  patient ={patient} isSmall={true}/>
         </Link>
     </div>
 }

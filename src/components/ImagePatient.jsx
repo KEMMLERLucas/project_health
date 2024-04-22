@@ -1,32 +1,20 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import "./PatientName"
+import {useContext, useEffect, useState} from "react";
+import OnePatientContext from "../context/OnePatientContext.jsx";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
 
+function ImagePatient({patient} ){
+    const [img, setImg] = useState("");
 
-function ImagePatient( {patient} ){
-    function getImage(sex){
-        if(sex == 1){
-            let num = Math.floor(Math.random() * (3 - 0) + 0);
-            if(num == 2){
-                return "_homme2"
-            }else if(num==1){
-                return "_homme"
-            }else{
-                return"_homme3"
-            }
-        }else{
-            let num = Math.floor(Math.random() * (3 - 0) + 0);
-            if(num == 2){
-                return "_femme2"
-            }else if(num==1){
-                return "_femme"
-            }else{
-                return""
-            }
+    useEffect(() => {
+        const json = JSON.parse(localStorage.getItem("patients"));
+        if (json && json[patient.id]) {
+            setImg(json[patient.id]);
         }
-    }
+    }, [patient]);
 
-    return (<div><img src={"/image_sport"+getImage(patient.sex)+".jpg"} id="ImageSport"/></div>)
-    
+    return <div><img src={img} id="ImageSport" alt="Patient Image" /></div>;
 }
 
 export default ImagePatient

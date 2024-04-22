@@ -1,7 +1,8 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 import ChampStatsActu from "./ChampStatsActu.jsx";
-function StatsActu({ patient, name }) {
-
+import {useContext} from "react";
+import SuiviPatientContext from "../context/SuiviPatientContext.jsx";
+function StatsActu({name }) {
 
     /*
     * Calcul de stat actuel : poids ou IMC
@@ -12,18 +13,19 @@ function StatsActu({ patient, name }) {
     * 3. Calculate BMI ;
     *   bmi = weight / squared height in meters
     * */
+    const patient = useContext(SuiviPatientContext).pat
     const heightInMeters = patient.height / 100;
     const imcStart = (patient.weightStart / (heightInMeters ** 2)).toFixed(1);
 
     /* calcul stats pour poids ou IMC actuel */
-    const stat = name === "Poids actuel" ? patient.weightStart + "Kg" : imcStart;
+    const stat = name === "Poids actuel" ? patient.weightStart + "kg" : imcStart;
 
     /* calcul l'intervalle en caption pour le poids (dif entre weightGoal et weightStart) ou IMC*/
-    const caption = name === "Poids actuel" ? "~ " + (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
+    const caption = name === "Poids actuel" ? (patient.weightGoal - patient.weightStart).toFixed(1) + " Kg" : patient.bmiStart;
 
     return (
-        <div className="title" id="titleStats">
-            {name}
+        <div id="titleStats">
+            <span className="name">{name}</span>
             <ChampStatsActu stat={stat} caption={caption}/>
         </div>
     );

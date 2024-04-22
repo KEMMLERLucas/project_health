@@ -1,10 +1,10 @@
-import "./SuiviPatient.css";
+import "./css/SuiviPatient.css";
 
 /*
 * stat = l'info dans la 1ere ligne du champs
 * caption = l'infos dans la 2eme ligne du champs
 * */
-function ChampStatsActu({stat, caption}){
+function ChampStatsActu({stat, caption, steps}){
 
     let idNameStat = "NameStat";
     let classNameStatValue = "statValue";
