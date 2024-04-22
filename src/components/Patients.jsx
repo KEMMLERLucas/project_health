@@ -64,16 +64,18 @@ function Patients({token}) {
 
     return (
         <TokenContext.Provider value={{tok : token,pats : patients}}>
-                <div className="Patients">
+                <div>
                     {isLoading && <p>Chargement....</p>}
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     {isError && <p> Une erreur s'est produite</p>}
                     <Banner/>
+                    <div className="Patients">
                     <p className="name" id="padding">Mes patients</p>
                     <div className="patients">
                         {patients.map((patient) => (
                             < PatientPreview key={patient.id} patient={patient}/>))
                         }
+                    </div>
                     </div>
                 </div>
         </TokenContext.Provider>

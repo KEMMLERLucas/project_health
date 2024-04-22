@@ -7,8 +7,10 @@
 /* Vignette représentant le profil du patient */
 .PatientElement{
     padding: 8px;
-    display: grid;
-    width:120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:150px;
     height:180px;
     border-radius: 8px;
     border: 1px solid  #DA8243;
