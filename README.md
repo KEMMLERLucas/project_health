@@ -13,7 +13,7 @@ Cela nous a permis de planifier les différentes tâches à réaliser, de les pr
 Ensuite, nous nous sommes concentré sur la réalisation d'une maquette, pour organiser l'application, planifier ses visuels et s'assurer de son ergonomie.
 Pour cela, nous avons utilisé le logiciel figma : [maquette Figma](https://www.figma.com/file/jwhtKrLGsfRS5ISWh5Svie/Health-application?type=design&node-id=0%3A1&mode=design&t=GGX37UxZ0c74jspS-1). 
 
-Vous pourrez également retrouver un document regroupant notre étude et nos réflexions quant au sujet, qui nous ont été utiles pour la maquette. 
+Vous pourrez également retrouver un [document](Réflexions & analyse du sujet.pdf) regroupant l'étude et les réflexions quant au sujet, qui nous ont été utiles pour la maquette. 
 
 ### Les fonctionnalités principales : 
 
